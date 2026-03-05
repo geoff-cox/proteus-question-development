@@ -251,79 +251,45 @@
 			</blocks>
 		</exercise>
 
-		<exercise xml:id="matching-steps" label="ex-matching-steps">
-		<title> List the Steps </title>
-		<idx>matching steps to order</idx>
-		<statement>
-			<p>
-				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
-				<me>y - y^2 = 3x</me>.
-				List the implicit differentiation steps in the correct order in the right column.
-			</p>
-		</statement>
-		<cardsort>
-			<match>
-				<premise order="1"><me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me></premise>
-				<response>Step 1</response>
-			</match>
-			<match>
-				<premise order="2"><me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me></premise>
-				<response>Step 2</response>
-			</match>
-			<match>
-				<premise order="3"><me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me></premise>
-				<response>Step 3</response>
-			</match>
-			<match>
-				<premise order="3"><me>\frac{dy}{dx}\left(1-2y\right) = 3</me></premise>
-				<response>Step 4</response>
-			</match>
-			<match>
-				<premise order="4"><me>\frac{dy}{dx} = \frac{3}{1-2y}</me></premise>
-				<response>Step 5</response>
-			</match>
-		</cardsort>
-		</exercise>
-
 		<exercise xml:id="parson-steps1" label="ex-parson-steps">
 		<title> List the Steps </title>
 		<idx>order steps</idx>
 		<statement>
 			<p>
-				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
+				Suppose <m>y</m> is a function of <m>x</m>, and we want to find <m>\frac{dy}{dx}</m> given the equation:
 				<me>y - y^2 = 3x</me>.
 				List the implicit differentiation steps in the correct order in the right column.
 			</p>
 		</statement>
 		<blocks>
 			<block>
-				<me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me>
+				<m>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</m>
 			</block>
 			<block>
-				<me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me>
+				<m>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</m>
 			</block>
 			<block>
-				<me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me>
+				<m>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</m>
 			</block>
 			<block>
-				<me>\frac{dy}{dx}\left(1-2y\right) = 3</me>
+				<m>\frac{dy}{dx}\left(1-2y\right) = 3</m>
 			</block>
 			<block>
-				<me>\frac{dy}{dx} = \frac{3}{1-2y}</me>
+				<m>\frac{dy}{dx} = \frac{3}{1-2y}</m>
 			</block>
 		</blocks>
 		</exercise>
 
 		<exercise xml:id="reason-steps2" label="ex-matching-step-reason">
-		<title> Product Rule Match </title>
+			<title> Product Rule Match </title>
 
-		<statement>
-			<p>
-				The product rule is given by the formula
-				<me>\frac{d}{dx}(f\cdot g) = f\frac{dg}{dx} + g\frac{df}{dx}</me>.
-				Match two functions on the left with the product rule they would produce on the right.
-			</p>
-		</statement>
+			<statement>
+				<p>
+					The product rule is given by the formula
+					<me>\frac{d}{dx}(f\cdot g) = f\frac{dg}{dx} + g\frac{df}{dx}</me>.
+					Match two functions on the left with the product rule they would produce on the right.
+				</p>
+			</statement>
 			<cardsort>
 				<match>
 					<premise><me>x^2</me></premise>
@@ -346,35 +312,6 @@
 					<premise><me>\cos x</me></premise>
 				</match>
 			</cardsort>
-		</exercise>
-
-		<exercise xml:id="parson-steps3" label="ex-parson-steps1">
-		<title> List the Steps </title>
-		<idx>order steps</idx>
-		<statement>
-			<p>
-				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
-				<me>y - y^2 = 3x</me>.
-				List the implicit differentiation steps in the correct order in the right column.
-			</p>
-		</statement>
-		<blocks>
-			<block>
-				<me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me>
-			</block>
-			<block>
-				<me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me>
-			</block>
-			<block>
-				<me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me>
-			</block>
-			<block>
-				<me>\frac{dy}{dx}\left(1-2y\right) = 3</me>
-			</block>
-			<block>
-				<me>\frac{dy}{dx} = \frac{3}{1-2y}</me>
-			</block>
-		</blocks>
 		</exercise>
 
 		<exercise xml:id="reason-steps4" label="ex-matching-step-reason1">

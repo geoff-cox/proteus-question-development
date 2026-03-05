@@ -8,7 +8,6 @@
     <target name="web" format="html">
       <stringparams html.css.extra="external/custom-style/custom-styles.css" />
     </target>
-
     <target name="print" format="pdf" />
   </targets>
 </project>
