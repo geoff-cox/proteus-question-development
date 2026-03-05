@@ -1,0 +1,439 @@
+<chapter>
+	<title>Chapter 2 Questions</title>
+
+	<section xml:id="sec-chain-rule">
+		<title>Chain Rule</title>
+		
+		<exercise label="chain-rule-matching">
+			<title> What's Missing in the Chain Rule? </title>
+			<statement>
+				<p>
+					Drag the parts missing in each chain rule derivative below.  
+				</p>
+
+				<p>
+					<tabular top="minor"  bottom="minor" left="minor" valign="top">
+						<col right="minor" width="100%"/>
+						<row>
+							<cell>
+								<p>
+								<em>Directions: Drag one or more <m>\color{RoyalBlue}\text{cards}</m>, on the left, onto a single <m>\color{BurntOrange}\text{slot}</m>, on the right. One <m>\color{RoyalBlue}\text{card}</m> may be used for multiple boxes on the same <m>\color{BurntOrange}\text{slot}</m>. It is possible that some <m>\color{RoyalBlue}\text{cards}</m> may not be used.</em>
+								</p>
+							</cell>
+						</row>
+					</tabular>
+				</p>
+		
+				<sidebyside widths="28% 72%">
+					<p>
+						<m>\color{RoyalBlue}\small\text{Cards}\ </m>👇
+					</p>
+					<p>
+						<m>\color{BurntOrange}\small\text{Slots}\ </m>👇
+					</p>
+				</sidebyside>
+
+			</statement>
+				
+			<feedback>
+			</feedback>
+			<cardsort widths="20% 80%">
+				<match>
+					<premise>	
+						<me> 4 </me>
+					</premise>
+					<response>
+						<md> 
+							<mrow>
+								\Big[\sin\left(x^{ \blank{3}{3} }\right)\amp \Big]' = \blank{4}{5} x^3\cos\left(x^{ \blank{3}{3} }\right)
+							</mrow>
+						</md>	
+					</response>
+				</match>
+				<match>
+					<premise>
+						<me> x^2 </me>
+					</premise>
+					<premise>
+						<me> 1 </me>
+					</premise>
+					<response>
+						<me> 
+							\left[\left(\blank{4}{5}+x\right)^6\right]' = 6\left(2x+\blank{4}{5}\right)\left(\blank{4}{5}+x\right)^5
+						</me>
+					</response>
+				</match>
+				<match>
+					<premise> 
+						<me> 2x </me>
+					</premise>
+					<premise>
+						<me> 4x </me>
+					</premise>
+					<premise>
+						<me> \ln </me>
+					</premise>
+					<response>
+						<me> 
+							\left[\blank{4}{5}\!\!\left(e^{\blank{3}{3}} + \blank{4}{5}\right)\right]' = \frac{2e^{\blank{3}{3}}+4}{e^{\blank{3}{3}} + \blank{4}{5}}
+						</me>
+					</response>
+				</match>
+				<match>
+					<premise>
+						<me> 2 </me>
+					</premise>
+					<premise>
+						<me> 2/x </me>
+					</premise>
+				</match>
+			</cardsort>
+		</exercise>
+
+		<exercise label="related-rates-matching">
+			<title> Converting Words Into Math </title>
+
+			<statement>
+				<p>
+					Match the mathematical expressions on the left to the corresponding statements about changing quantities in a saltwater tank on the right.
+				</p>
+
+				<p>
+					All quantities are functions of time, <m>t</m> (min), defined as follows:
+					<tabular>
+						<row>
+							<cell><m>V(t)</m></cell>
+							<cell>Volume of water in a tank (m<m>^3</m>) at time, <m>t</m></cell>
+						</row>
+						<row>
+							<cell><m>C(t)</m></cell>
+							<cell>Concentration of salt in a tank (kg/m<m>^3</m>) at time, <m>t</m></cell>
+						</row>
+					</tabular>
+				</p>
+
+				<p>
+					<tabular top="minor"  bottom="minor" left="minor" valign="top">
+						<col right="minor" width="100%"/>
+						<row>
+							<cell>
+								<p>
+								<em>Directions: Drag one or more <m>\color{RoyalBlue}\text{cards}</m>, on the left, onto a single <m>\color{BurntOrange}\text{slot}</m>, on the right. It is possible that some <m>\color{RoyalBlue}\text{cards}</m> may not be used.</em>
+								</p>
+							</cell>
+						</row>
+					</tabular>
+				</p>
+
+				<sidebyside widths="28% 72%">
+					<p>
+						<m>\color{RoyalBlue}\small\text{Cards}\ </m>👇
+					</p>
+					<p>
+						<m>\color{BurntOrange}\small\text{Slots}\ </m>👇
+					</p>
+				</sidebyside>
+
+			</statement>
+
+			<feedback>
+				<p>
+					Be sure to distinguish between values (like <m>h(3)</m> or <m>C(3)</m>) and rates of change (like <m>\frac{dV}{dt}(3)</m>). Units and context help decide what a statement implies.
+				</p>
+			</feedback>
+
+			<cardsort>
+
+				<match>
+					<premise> <m>V(1) = 0.7</m> </premise>
+					<response>
+						After 1 minute, the tank contains 0.7 m<m>^3</m> of water.
+					</response>
+				</match>
+
+				<match>
+					<premise> <m>V(3) = 1.2</m> </premise>
+					<premise> <m>\frac{dV}{dt}(3) = -0.7</m> </premise>
+					<response>
+						After 3 minutes, the tank contains 1.2 m<m>^3</m> of water, but drains at 0.7 m<m>^3</m>/min.
+					</response>
+				</match>
+
+				<match>
+					<premise> <m>C(3) = 0.8</m> </premise>
+					<response>
+						The salt concentration at t = 3 is 0.1 kg/m<m>^3</m>
+					</response>
+				</match>
+
+				<match>
+					<premise> <m>C(0) = 0</m> </premise>
+					<premise> <m>\frac{dC}{dt}(1) = 0.02</m> </premise>
+					<response>
+						Initially, the tank has no salt. After 1 minute, salt is added, increasing the concentration by 0.02 kg/m<m>^3</m> per minute.
+					</response>
+				</match>
+
+				<match>
+					<premise> <m>\frac{dV}{dt}(1) = 0.1</m> </premise>
+					<response>
+						At t=1, the tank is filling by 0.1 m<m>^3</m>/min.
+					</response>
+				</match>
+				
+				<match>
+					<premise> <m>\frac{dV}{dt}(3) = 0.8</m> </premise>
+					<premise> <m>\frac{dC}{dt}(1) = 0.7</m> </premise>
+				</match>
+				
+			</cardsort>
+		</exercise>
+
+		<exercise label="chain-rule-matching-template">
+			<title> Matching Problem Template </title>
+			<statement>
+				<p>
+					Matching Question Statement
+				</p>
+			</statement>
+			<feedback>
+				<p>
+					General Feedback (displays when "Check Me" is clicked).
+				</p>
+			</feedback>
+			<cardsort>
+				<match>
+					<premise> Premise 1 </premise>
+					<response> Response 1 </response>
+				</match>
+				<match>
+					<premise> Premise 2 </premise>
+					<response> Response 2 </response>
+				</match>
+				<match>
+					<premise> Premise 3 </premise>
+					<premise> Premise 4 </premise>
+					<response> Response 3 </response>
+				</match>
+				<match>
+					<premise> Premise Distractor 1 </premise>
+					<premise> Premise Distractor 2 </premise>
+				</match>
+				<match>
+					<response> Response Distractor 1 </response>
+				</match>
+			</cardsort>
+		</exercise>
+
+	</section>
+
+	<section xml:id="sec-implicit-diff">
+		<title>Implicit Differentiation</title>
+
+		<exercise label="hparson-derivative" language="math">
+			<title> Unscramble the Derivative </title>
+			<statement>
+			<p>
+				Rearrange the blocks to form a valid derivative statement.
+			</p>
+			</statement>
+			<blocks layout="horizontal" randomize="yes">
+				<block order="1"><m>\left(\right.</m></block>
+				<block order="2"><m>x^2</m></block>
+				<block order="3"><m>\sin x</m></block>
+				<block order="4"><m>\left.\right)'</m></block>
+				<block order="1"><m>=</m></block>
+				<block order="1"><m>2x</m></block>
+				<block order="3"><m>\sin x</m></block>
+				<block order="4"><m>+</m></block>
+				<block order="1"><m>x^2</m></block>
+				<block order="1"><m>\cos x</m></block>
+			</blocks>
+		</exercise>
+
+		<exercise xml:id="matching-steps" label="ex-matching-steps">
+		<title> List the Steps </title>
+		<idx>matching steps to order</idx>
+		<statement>
+			<p>
+				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
+				<me>y - y^2 = 3x</me>.
+				List the implicit differentiation steps in the correct order in the right column.
+			</p>
+		</statement>
+		<cardsort>
+			<match>
+				<premise order="1"><me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me></premise>
+				<response>Step 1</response>
+			</match>
+			<match>
+				<premise order="2"><me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me></premise>
+				<response>Step 2</response>
+			</match>
+			<match>
+				<premise order="3"><me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me></premise>
+				<response>Step 3</response>
+			</match>
+			<match>
+				<premise order="3"><me>\frac{dy}{dx}\left(1-2y\right) = 3</me></premise>
+				<response>Step 4</response>
+			</match>
+			<match>
+				<premise order="4"><me>\frac{dy}{dx} = \frac{3}{1-2y}</me></premise>
+				<response>Step 5</response>
+			</match>
+		</cardsort>
+		</exercise>
+
+		<exercise xml:id="parson-steps1" label="ex-parson-steps">
+		<title> List the Steps </title>
+		<idx>order steps</idx>
+		<statement>
+			<p>
+				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
+				<me>y - y^2 = 3x</me>.
+				List the implicit differentiation steps in the correct order in the right column.
+			</p>
+		</statement>
+		<blocks>
+			<block>
+				<me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me>
+			</block>
+			<block>
+				<me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx}\left(1-2y\right) = 3</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx} = \frac{3}{1-2y}</me>
+			</block>
+		</blocks>
+		</exercise>
+
+		<exercise xml:id="reason-steps2" label="ex-matching-step-reason">
+		<title> Product Rule Match </title>
+
+		<statement>
+			<p>
+				The product rule is given by the formula
+				<me>\frac{d}{dx}(f\cdot g) = f\frac{dg}{dx} + g\frac{df}{dx}</me>.
+				Match two functions on the left with the product rule they would produce on the right.
+			</p>
+		</statement>
+			<cardsort>
+				<match>
+					<premise><me>x^2</me></premise>
+					<premise><me>\tan x</me></premise>
+					<response><me>2x\tan x + x^2 \sec^2 x</me></response>
+				</match>
+				<match>
+					<premise><me>\ln x</me></premise>
+					<premise><me>\sin x</me></premise>
+					<response><me>\frac{\sin x}{x} + \cos x \ln x</me></response>
+				</match>
+				<match>
+					<premise><me>\sin x</me></premise>
+					<premise><me>\csc x</me></premise>
+					<response><me>-\cos x \csc x + \sin x \csc x \cot x</me></response>
+				</match>
+				<match>
+					<premise><me>\sfrac{1}{x}</me></premise>
+					<premise><me>2x</me></premise>
+					<premise><me>\cos x</me></premise>
+				</match>
+			</cardsort>
+		</exercise>
+
+		<exercise xml:id="parson-steps3" label="ex-parson-steps1">
+		<title> List the Steps </title>
+		<idx>order steps</idx>
+		<statement>
+			<p>
+				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
+				<me>y - y^2 = 3x</me>.
+				List the implicit differentiation steps in the correct order in the right column.
+			</p>
+		</statement>
+		<blocks>
+			<block>
+				<me>\frac{d}{dx}(y - y^2) = \frac{d}{dx}(3x)</me>
+			</block>
+			<block>
+				<me>\frac{d}{dx}(y) - \frac{d}{dx}(y^2) = \frac{d}{dx}(3x)</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx} - 2y\frac{dy}{dx} = 3</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx}\left(1-2y\right) = 3</me>
+			</block>
+			<block>
+				<me>\frac{dy}{dx} = \frac{3}{1-2y}</me>
+			</block>
+		</blocks>
+		</exercise>
+
+		<exercise xml:id="reason-steps4" label="ex-matching-step-reason1">
+		<title> Match the Reason to the Step </title>
+		<idx>matching steps to order</idx>
+		<statement>
+			<p>
+				Suppose we want apply implicit differentiation to find <m>\frac{dy}{dx}</m> for the equation
+				<me>y + y^2 = 3x^6</me>.
+				Match the one or more tasks on the right that was applied in each step on the left.
+			</p>
+		</statement>
+		<cardsort>
+			<match>
+				<premise>apply the derivative with respect <m>x</m> to both sides</premise>
+				<response><me>\frac{d}{dx}(y + y^2) = \frac{d}{dx}(3x^6)</me></response>
+			</match>
+			<match>
+				<premise>sum rule</premise>
+				<response><me>\frac{d}{dx}(y) + \frac{d}{dx}(y^2) = \frac{d}{dx}(3x^6)</me></response>
+			</match>
+			<match>
+				<premise>chain rule</premise>
+				<premise>power rule</premise>
+				<response><me>\frac{dy}{dx} + 2y\frac{dy}{dx} = 18x^5</me></response>
+			</match>
+			<match>
+				<premise>factor</premise>
+				<response><me>\frac{dy}{dx}\left(1+2y\right) = 18x^5</me></response>
+			</match>
+			<match>
+				<premise>divide both sides by <m>1+2y</m></premise>
+				<response><me>\frac{dy}{dx} = \frac{18x^5}{1+2y}</me></response>
+			</match>
+			<match>
+				<premise>quotient rule</premise>
+				<premise>simplify</premise>
+			</match>
+		</cardsort>
+		</exercise>
+
+		<exercise>
+			<statement>
+				<p>
+					State or describe what the word <q>implicit</q> refers to in <q>implicit differentiation</q>. 
+				</p>
+			</statement>
+			<response />
+		</exercise>
+
+		<exercise>
+			<statement>
+				<p>
+					Suppose you are given the derivative, <m>f'(x)</m>, but not the function <m>f(x)</m> itself. Describe the type of information you can obtain about <m>f(x)</m>.   
+				</p>
+			</statement>
+			<response />
+		</exercise>
+
+	</section>
+
+</chapter>

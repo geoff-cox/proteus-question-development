@@ -2,15 +2,12 @@
 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-	<xi:include href="book-docs/doc-info.ptx" />
+	<xi:include href="doc-info.ptx" />
 
 	<book><title> Test Environment </title>
 
-		<xi:include href="matching-questions.ptx" />
-		<xi:include href="hparsons-questions.ptx" />
-		<xi:include href="newtons-reading-questions.ptx" />
-		<xi:include href="differentials-reading-questions.ptx" />
-		<xi:include href="differential-eqn-proteus-questions.ptx" />
+		<xi:include href="chpt2-questions.ptx" />
+		<xi:include href="chpt4-questions.ptx" />
 		<xi:include href="chpt7-questions.ptx" />
 		<xi:include href="chpt8-questions.ptx" />
 		<xi:include href="chpt9-questions.ptx" />

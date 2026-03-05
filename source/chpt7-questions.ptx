@@ -1,4 +1,5 @@
-<chapter><title> Proteus Chpt 7 Questions </title>
+<chapter>
+	<title>Chapter 7 Questions</title>
 
 	<exercise label="APEX-PROTEUS-area-between-curves-1-v1" component="proteus">
 		<title> Matching Question </title>
@@ -100,4 +101,5 @@
 			</choice>
 		</choices>
 	</exercise>
+
 </chapter>

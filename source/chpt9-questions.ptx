@@ -1,5 +1,5 @@
 <chapter>
-  <title> Proteus Chpt 9 Questions </title>
+	<title>Chapter 9 Questions</title>
 
   <exercise label="chkpt-sequences-02">
     <title>Range of a sequence</title>
@@ -238,7 +238,8 @@
     </choices>
   </exercise>
 
-  <exercise label="chkpt-sequences-cardsort-01"><title>Sequence vocabulary</title>
+  <exercise label="chkpt-sequences-cardsort-01">
+    <title>Sequence vocabulary</title>
     <statement>
       <p>
       Match each term or notation to its meaning.
@@ -273,7 +274,8 @@
     </cardsort>
   </exercise>
 
-  <exercise label="chkpt-sequences-cardsort-03"><title>Limit language: informal to formal</title>
+  <exercise label="chkpt-sequences-cardsort-03">
+    <title>Limit language: informal to formal</title>
     <statement>
       <p>
       Match each informal description to the precise statement or term it corresponds to.
@@ -326,7 +328,8 @@
 
   <!-- CHECKPOINT QUESTION 3: After Definition 8.1.3 (def_seq_limit) -->
   <!-- Tests conceptual understanding of limit definition using epsilon -->
-  <exercise label="chkpt-seq-limit-concept"><title>Understanding Limits of Sequences</title>
+  <exercise label="chkpt-seq-limit-concept">
+    <title>Understanding Limits of Sequences</title>
     <statement>
       <p>
       Which of the following best describes what it means for a sequence <m>\{a_n\}</m> to have limit <m>L</m>?
@@ -403,7 +406,8 @@
 
   <!-- CHECKPOINT QUESTION 4: After Theorem 8.1.2 (thm_seq_limit) -->
   <!-- Tests ability to apply the theorem connecting function and sequence limits -->
-  <exercise label="chkpt-seq-function-limit"><title>Connecting Function and Sequence Limits</title>
+  <exercise label="chkpt-seq-function-limit">
+    <title>Connecting Function and Sequence Limits</title>
     <statement>
       <p>
       Consider the function <m>f(x) = \frac{3x^2+5x}{x^2+1}</m>. If we know that <m>\lim\limits_{x\to\infty} f(x) = 3</m>, what can we conclude about the sequence <m>\{a_n\} = \left\{\frac{3n^2+5n}{n^2+1}\right\}</m>?
@@ -463,7 +467,8 @@
 
   <!-- CHECKPOINT QUESTION 5: After Example 8.1.4 (ex_seq4) -->
   <!-- Multiple-answer question about convergence/divergence properties -->
-  <exercise label="chkpt-seq-converge-properties"><title>Convergence and Divergence Properties</title>
+  <exercise label="chkpt-seq-converge-properties">
+    <title>Convergence and Divergence Properties</title>
     <statement>
       <p>
       Which of the following statements are TRUE?
@@ -535,7 +540,8 @@
 
   <!-- CHECKPOINT QUESTION 6: After Definition 8.1.7 (def_bounded) -->
   <!-- Matching exercise connecting sequences to boundedness properties -->
-  <exercise label="chkpt-seq-bounded-matching"><title>Identifying Bounded Sequences</title>
+  <exercise label="chkpt-seq-bounded-matching">
+    <title>Identifying Bounded Sequences</title>
     <statement>
       <p>
       Match each sequence to its boundedness property.
@@ -569,7 +575,8 @@
 
   <!-- CHECKPOINT QUESTION 7: After Theorem 8.1.8 (thm_converge_bounded) -->
   <!-- True/False about the converse of the theorem -->
-  <exercise label="chkpt-seq-bounded-converse"><title>Bounded Sequences and Convergence</title>
+  <exercise label="chkpt-seq-bounded-converse">
+    <title>Bounded Sequences and Convergence</title>
     <statement correct="no">
       <p>
       True or False: If a sequence <m>\{a_n\}</m> is bounded, then it must converge.
@@ -584,7 +591,8 @@
 
   <!-- CHECKPOINT QUESTION 8: After Definition 8.1.9 (def_monotonic) -->
   <!-- Clickable area question about monotonicity -->
-  <exercise label="chkpt-seq-monotonic-identify"><title>Identifying Monotonic Behavior</title>
+  <exercise label="chkpt-seq-monotonic-identify">
+    <title>Identifying Monotonic Behavior</title>
     <statement>
       <p>
       Click on all sequences below that are monotonically increasing.
@@ -608,7 +616,8 @@
 
   <!-- CHECKPOINT QUESTION 10: After Theorem 8.1.10 (thm_monotonic_converge) -->
   <!-- Comprehensive question applying the Monotonic Convergence Theorem -->
-  <exercise label="chkpt-seq-monotonic-converge"><title>Applying the Monotonic Convergence Theorem</title>
+  <exercise label="chkpt-seq-monotonic-converge">
+    <title>Applying the Monotonic Convergence Theorem</title>
     <statement>
       <p>
       Consider the sequence <m>\{a_n\}</m> where <m>a_1 = 2</m> and <m>a_{n+1} = \sqrt{2 + a_n}</m> for all <m>n \geq 1</m>. Suppose we can show that:
@@ -674,4 +683,5 @@
       </choice>
     </choices>
   </exercise>
+
 </chapter>

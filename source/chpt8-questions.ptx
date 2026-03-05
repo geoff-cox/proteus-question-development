@@ -1,7 +1,6 @@
 <chapter>
-  <title> Proteus Chpt 8 Questions </title>
+	<title>Chapter 8 Questions</title>
 
-  <!-- Question 1: Multiple-Choice -->
   <exercise label="chkpt-ivp-solution">
     <title>Initial Value Problem Solution</title>
     <statement>
@@ -61,7 +60,6 @@
     </choices>
   </exercise>
 
-  <!-- Question 2: Multiple-Choice with Images -->
   <exercise label="chkpt-slope-field-matching">
     <title>Slope Field Identification</title>
     <statement>
@@ -124,7 +122,6 @@
     </choices>
   </exercise>
 
-  <!-- Question 3: Cardsort/Matching -->
   <exercise label="chkpt-matching-diffeq-solutions">
     <title>Match Differential Equations with Solutions</title>
     <statement>
@@ -180,238 +177,1008 @@
     </cardsort>
   </exercise>
 
+  <image>
+    <latex-image>
+      \begin{tikzpicture}[samples=50]
 
-				<image>
-					<latex-image>
-						\begin{tikzpicture}[samples=50]
+        % === colors ===
+        \def\fColor{blue}			\def\fFill{\fColor!15}
+        \def\gColor{green!60!black}	\def\gFill{\gColor!15}
 
-							% === colors ===
-							\def\fColor{blue}			\def\fFill{\fColor!15}
-							\def\gColor{green!60!black}	\def\gFill{\gColor!15}
+        % === figure/domain/tick bounds ===
+        \def\tmin{-0.6}	\def\tmax{2.45}
+        \def\ymin{-1.8}		\def\ymax{7.5}
+        \def\tticks{1, 2}
+        \def\yticks{2, 4}
 
-							% === figure/domain/tick bounds ===
-							\def\tmin{-0.6}	\def\tmax{2.45}
-							\def\ymin{-1.8}		\def\ymax{7.5}
-							\def\tticks{1, 2}
-							\def\yticks{2, 4}
+        % === Function definitions ===
+        \newcommand{\f}[1]{e^(#1)}	\def\ftex{e^t}
+        \def\a{0}	\def\b{2}
+        \def\c{0.65}
 
-							% === Function definitions ===
-							\newcommand{\f}[1]{e^(#1)}	\def\ftex{e^t}
-							\def\a{0}	\def\b{2}
-							\def\c{0.65}
-
-							\begin{axis}[
-								width=15cm, height=7cm, scale=0.35,
-								xlabel={$t$}, ylabel={$y$},
-								title={Analytic Solution},
-								title style={font=\small},
-								grid=none,
-								tick style={thick},
-								line width=1pt,
-								axis lines=middle,
-								xtick distance=1, ytick distance=4,
-								minor x tick num=1, minor y tick num=1,
-								xmin=\tmin, xmax=\tmax, ymin=\ymin, ymax=\ymax,
-							]
-							
-								% Read and plot data from file
-								\addplot [domain=\a:\b, \fColor] {e^x};
-								\draw[gray, thin]	(\b, 0) -- (\b, {\f{\b}});
-								
-
-								\draw[dashed, thick]	(\c, {\f{\c}}) -- (\c, 0);
-								\draw[dashed, thick]	(\c, {\f{\c}}) -- (0, {\f{\c}});
-								\node[below, font=\small] at (\c, 0) {\c};
-								\node[left, font=\small] at (0,{\f{\c}}) {$1.916$};
-
-								% === Labels ===
-								\node[\fColor, font=\large, above] at (1.5, 5) {$\ftex$};
-
-							\end{axis}
-
-						\end{tikzpicture}
-					</latex-image>
-				</image>
-
-
-		  <exercise cols="2" label="ex-graphical-numerical-match-slope">
-        <statement>
-          <p>
-            Match each slope field below with the appropriate differential equation.
-          </p>
-          <sbsgroup>
-            <sidebyside widths="40% 40%">
-              <image>
-                <shortdescription>
-                  Graph of slope field used in the exercise.
-                </shortdescription>
-                <description>
-                  <p>
-                    The <m>y</m> and the <m>x</m> axis are shown both uncalibrated. In the second and the third
-                    quadrants the field lines towards larger negative values are south facing. The field lines
-                    closer to the <m>y</m> axis are south-east facing. Around the <m>y</m> axis the field lines
-                    are almost horizontal. In the first and the fourth quadrants the field lines closer to the
-                    <m>y</m> axis are east facing but for greater values of <m>x</m> they are south-east facing.
-                  </p>
-                </description>
-                <latex-image label="img_slopefield_exercise_a">
-                  \begin{tikzpicture}
-
-                  \begin{axis}[
-                    view={0}{90},
-                    domain = -2:2,
-                    y domain = -2:2,
-                  	ytick={-3,-2,-1,0,1,2,3},
-                  ]
-
-                  \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(x*(1-x))^2))}, v = {(x*(1-x))/(sqrt(1+(x*(1-x))^2))},scale arrows=.1},samples=15]{0};
-
-                  \end{axis}
-
-                  %\node [right] at (myplot.right of origin) { $x$};
-                  %\node [above] at (myplot.above origin) { $y$};
-
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-              <image>
-                <shortdescription>
-                  Graph of slope field used in the exercise.
-                </shortdescription>
-                <description>
-                  <p>
-                    The field lines are concentric facing upwards in the second and the first quadrant along the
-                    positive <m>y</m> axis. The lines furthest away from the origin are more circular and the lines
-                    closest to the <m>x</m> axis are almost parallel to the <m>x</m> axis. Similarly in the third
-                    and the fourth quadrant the field lines are concentric along the negative <m>y</m> axis and the
-                    ones away from origin are more circular and the ones closest to the <m>x</m> axis are almost
-                    parallel to the <m>x</m> axis.
-                  </p>
-                </description>
-                <latex-image label="img_slopefield_exercise_b">
-                  \begin{tikzpicture}
-
-                  \begin{axis}[
-                    view={0}{90},
-                    domain = -2:2,
-                    y domain = -2:2,
-                  	ytick={-3,-2,-1,0,1,2,3},
-                  ]
-
-                  \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(x*y)^2))}, v = {(x*y)/(sqrt(1+(x*y)^2))},scale arrows=.1},samples=15]{0};
-
-                  \end{axis}
-
-                  %\node [right] at (myplot.right of origin) { $x$};
-                  %\node [above] at (myplot.above origin) { $y$};
-
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
-            <sidebyside widths="40% 40%">
-                <p>
-                  (a)
-                </p>
-                <p>
-                  (b)
-                </p>
-            </sidebyside>
-            <sidebyside widths="40% 40%">
-              <image>
-                <shortdescription>
-                  Graph of slope field used in the exercise.
-                </shortdescription>
-                <description>
-                  <p>
-                    The field lines in the second and the first quadrant are south-east facing and appear to be east
-                    facing when they come very close to the <m>x</m> axis. Similarly the field lines in the third
-                    and the fourth quadrants are north-east facing and become east facing when they come very close
-                    to the <m>x</m> axis.
-                  </p>
-                </description>
-                <latex-image label="img_slopefield_exercise_c">
-                  \begin{tikzpicture}
-
-                  \begin{axis}[
-                    view={0}{90},
-                    domain = -2:2,
-                    y domain = -2:2,
-                  	ytick={-3,-2,-1,0,1,2,3},
-                  ]
-
-                  \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(-y)^2))}, v = {(-y)/(sqrt(1+(-y)^2))},scale arrows=.1},samples=15]{0};
-
-                  \end{axis}
-
-                  %\node [right] at (myplot.right of origin) { $x$};
-                  %\node [above] at (myplot.above origin) { $y$};
-
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-              <image>
-                <shortdescription>
-                  Graph of slope field used in the exercise.
-                </shortdescription>
-                <description>
-                  <p>
-                    The field lines appear to be concentric dome shaped lines with peaks along the positive <m>y</m>
-                    axis.
-                  </p>
-                </description>
-                <latex-image label="img_slopefield_exercise_d">
-                  \begin{tikzpicture}
-
-                  \begin{axis}[
-                    view={0}{90},
-                    domain = -2:2,
-                    y domain = -2:2,
-                  	ytick={-3,-2,-1,0,1,2,3},
-                  ]
-
-                  \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(-x)^2))}, v = {(-x)/(sqrt(1+(-x)^2))},scale arrows=.1},samples=15]{0};
-
-                  \end{axis}
-
-                  %\node [right] at (myplot.right of origin) { $x$};
-                  %\node [above] at (myplot.above origin) { $y$};
-
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
-            <sidebyside widths="40% 40%">
-              <p>
-                (c)
-              </p>
-
-              <p>
-                (d)
-              </p>
-            </sidebyside>
-          </sbsgroup>
-        </statement>
-
-        <cardsort>
-          <match>
-            <premise><m>\yp=xy</m></premise>
-            <response>(b)</response>
-          </match>
-          <match>
-            <premise><m>\yp = -y</m></premise>
-            <response>(c)</response>
-          </match>
-          <match>
-            <premise><m>\yp = -x</m></premise>
-            <response>(d)</response>
-          </match>
-          <match>
-            <premise><m>\yp = x(1-x)</m></premise>
-            <response>(a)</response>
-          </match>
+        \begin{axis}[
+          width=15cm, height=7cm, scale=0.35,
+          xlabel={$t$}, ylabel={$y$},
+          title={Analytic Solution},
+          title style={font=\small},
+          grid=none,
+          tick style={thick},
+          line width=1pt,
+          axis lines=middle,
+          xtick distance=1, ytick distance=4,
+          minor x tick num=1, minor y tick num=1,
+          xmin=\tmin, xmax=\tmax, ymin=\ymin, ymax=\ymax,
+        ]
+        
+          % Read and plot data from file
+          \addplot [domain=\a:\b, \fColor] {e^x};
+          \draw[gray, thin]	(\b, 0) -- (\b, {\f{\b}});
           
-        </cardsort>
 
-      </exercise>
+          \draw[dashed, thick]	(\c, {\f{\c}}) -- (\c, 0);
+          \draw[dashed, thick]	(\c, {\f{\c}}) -- (0, {\f{\c}});
+          \node[below, font=\small] at (\c, 0) {\c};
+          \node[left, font=\small] at (0,{\f{\c}}) {$1.916$};
+
+          % === Labels ===
+          \node[\fColor, font=\large, above] at (1.5, 5) {$\ftex$};
+
+        \end{axis}
+
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+
+  <exercise cols="2" label="ex-graphical-numerical-match-slope">
+    <statement>
+      <p>
+        Match each slope field below with the appropriate differential equation.
+      </p>
+      <sbsgroup>
+        <sidebyside widths="40% 40%">
+          <image>
+            <shortdescription>
+              Graph of slope field used in the exercise.
+            </shortdescription>
+            <description>
+              <p>
+                The <m>y</m> and the <m>x</m> axis are shown both uncalibrated. In the second and the third
+                quadrants the field lines towards larger negative values are south facing. The field lines
+                closer to the <m>y</m> axis are south-east facing. Around the <m>y</m> axis the field lines
+                are almost horizontal. In the first and the fourth quadrants the field lines closer to the
+                <m>y</m> axis are east facing but for greater values of <m>x</m> they are south-east facing.
+              </p>
+            </description>
+            <latex-image label="img_slopefield_exercise_a">
+              \begin{tikzpicture}
+
+              \begin{axis}[
+                view={0}{90},
+                domain = -2:2,
+                y domain = -2:2,
+                ytick={-3,-2,-1,0,1,2,3},
+              ]
+
+              \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(x*(1-x))^2))}, v = {(x*(1-x))/(sqrt(1+(x*(1-x))^2))},scale arrows=.1},samples=15]{0};
+
+              \end{axis}
+
+              %\node [right] at (myplot.right of origin) { $x$};
+              %\node [above] at (myplot.above origin) { $y$};
+
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image>
+            <shortdescription>
+              Graph of slope field used in the exercise.
+            </shortdescription>
+            <description>
+              <p>
+                The field lines are concentric facing upwards in the second and the first quadrant along the
+                positive <m>y</m> axis. The lines furthest away from the origin are more circular and the lines
+                closest to the <m>x</m> axis are almost parallel to the <m>x</m> axis. Similarly in the third
+                and the fourth quadrant the field lines are concentric along the negative <m>y</m> axis and the
+                ones away from origin are more circular and the ones closest to the <m>x</m> axis are almost
+                parallel to the <m>x</m> axis.
+              </p>
+            </description>
+            <latex-image label="img_slopefield_exercise_b">
+              \begin{tikzpicture}
+
+              \begin{axis}[
+                view={0}{90},
+                domain = -2:2,
+                y domain = -2:2,
+                ytick={-3,-2,-1,0,1,2,3},
+              ]
+
+              \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(x*y)^2))}, v = {(x*y)/(sqrt(1+(x*y)^2))},scale arrows=.1},samples=15]{0};
+
+              \end{axis}
+
+              %\node [right] at (myplot.right of origin) { $x$};
+              %\node [above] at (myplot.above origin) { $y$};
+
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+        <sidebyside widths="40% 40%">
+            <p>
+              (a)
+            </p>
+            <p>
+              (b)
+            </p>
+        </sidebyside>
+        <sidebyside widths="40% 40%">
+          <image>
+            <shortdescription>
+              Graph of slope field used in the exercise.
+            </shortdescription>
+            <description>
+              <p>
+                The field lines in the second and the first quadrant are south-east facing and appear to be east
+                facing when they come very close to the <m>x</m> axis. Similarly the field lines in the third
+                and the fourth quadrants are north-east facing and become east facing when they come very close
+                to the <m>x</m> axis.
+              </p>
+            </description>
+            <latex-image label="img_slopefield_exercise_c">
+              \begin{tikzpicture}
+
+              \begin{axis}[
+                view={0}{90},
+                domain = -2:2,
+                y domain = -2:2,
+                ytick={-3,-2,-1,0,1,2,3},
+              ]
+
+              \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(-y)^2))}, v = {(-y)/(sqrt(1+(-y)^2))},scale arrows=.1},samples=15]{0};
+
+              \end{axis}
+
+              %\node [right] at (myplot.right of origin) { $x$};
+              %\node [above] at (myplot.above origin) { $y$};
+
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image>
+            <shortdescription>
+              Graph of slope field used in the exercise.
+            </shortdescription>
+            <description>
+              <p>
+                The field lines appear to be concentric dome shaped lines with peaks along the positive <m>y</m>
+                axis.
+              </p>
+            </description>
+            <latex-image label="img_slopefield_exercise_d">
+              \begin{tikzpicture}
+
+              \begin{axis}[
+                view={0}{90},
+                domain = -2:2,
+                y domain = -2:2,
+                ytick={-3,-2,-1,0,1,2,3},
+              ]
+
+              \addplot3 [secondcolor,quiver = {u = {1/(sqrt(1+(-x)^2))}, v = {(-x)/(sqrt(1+(-x)^2))},scale arrows=.1},samples=15]{0};
+
+              \end{axis}
+
+              %\node [right] at (myplot.right of origin) { $x$};
+              %\node [above] at (myplot.above origin) { $y$};
+
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+        <sidebyside widths="40% 40%">
+          <p>
+            (c)
+          </p>
+
+          <p>
+            (d)
+          </p>
+        </sidebyside>
+      </sbsgroup>
+    </statement>
+
+    <cardsort>
+      <match>
+        <premise><m>\yp=xy</m></premise>
+        <response>(b)</response>
+      </match>
+      <match>
+        <premise><m>\yp = -y</m></premise>
+        <response>(c)</response>
+      </match>
+      <match>
+        <premise><m>\yp = -x</m></premise>
+        <response>(d)</response>
+      </match>
+      <match>
+        <premise><m>\yp = x(1-x)</m></premise>
+        <response>(a)</response>
+      </match>
+      
+    </cardsort>
+
+  </exercise>
+
+  <exercise>
+    <title>Interactive Questions</title>
+    <introduction>
+      <p>
+        Consider the differential equation:
+        <me>
+          \frac{dy}{dx} = 2xy - 6x,
+        </me>
+        which has the general solution:
+        <me>
+          y = c e^{x^2} + 3.
+        </me>
+        Since the constant <m>c</m> can take any value, there are many possible solutions as seen by the green curves in the figure below. Notice, each green curve can be identified by where it crosses the <m>y</m>-axis (e.g., <m>y(0) = 2</m>). This point is called the initial condition and it leads to both <m>c</m> and the particular solution in blue.
+      </p>
+
+      <p label="vspace-plz"><m/></p>
+
+      <sidebyside width="50%">
+        <interactive xml:id="interactive-drag-ic" platform="jsxgraph" source="code/jsxgraph/initial-condition.js">
+          <slate xml:id="interactive-drag-ic-slate" surface="jsxboard"/>
+        </interactive>
+      </sidebyside>
+
+      <p>Adjust the initial condition in this interactive figure to answer the following.</p>
+
+    </introduction>
+
+    <task label="chkpt-visualizing-solutions-1">
+      <title>Find the particular solution</title>
+      <statement>
+        <p>
+          Find the particular solution that satisfies <m>y(0)=5</m>.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement><m>\quad y = -2e^{x^2}+3</m></statement>
+          <feedback>Incorrect. The value of <m>c</m> must make the solution pass through <m>(0, 5)</m>. Hover over the curve in the figure that passes through <m>(0,5)</m>.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad y = 0.5e^{x^2}+3</m></statement>
+          <feedback>Incorrect. Remember that at <m>x = 0</m>, the exponential term <m>e^{x^2}</m> equals 1, so <m>y(0) = c + 3</m>. What value of <m>c</m> gives <m>y(0) = 5</m>? Hover over the curve in the figure that passes through <m>(0,5)</m>.</feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><m>\quad y = 2e^{x^2}+3</m></statement>
+          <feedback>Correct! The value <m>c = 2</m> ensures that <m>y(0) = 2 + 3 = 5</m>, so this solution passes through <m>(0, 5)</m>.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad y = 5e^{x^2}+3</m></statement>
+          <feedback>Incorrect. The general solution would pass through <m>(0, 4)</m> if <m>c = 1</m>. Hover over the curve in the figure that passes through <m>(0,5)</m>.</feedback>
+        </choice>
+      </choices>
+    </task>
+
+    <task label="chkpt-visualizing-solutions-2">
+      <title>Find the initial condition</title>
+      <statement>
+        <p>
+          What is the initial condition for the particular solution
+          <me>y = 1.3e^{x^2} + 3</me>?
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement><m>\quad y(0)=4.3</m></statement>
+          <feedback>Correct! Moving <m>y(0)</m> to this point gives the particular solution above.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad y(0)=5</m></statement>
+          <feedback>Incorrect. <em>Hint: move <m>y(0)</m> around until you see the particular solution above.</em>.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad y(0)=1.3</m></statement>
+          <feedback>Incorrect. <em>Hint: move <m>y(0)</m> around until you see the particular solution above.</em>.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad y(1)=-1.7</m></statement>
+          <feedback>Incorrect. <em>Hint: move <m>y(0)</m> around until you see the particular solution above.</em>.</feedback>
+        </choice>
+      </choices>
+    </task>
+
+    <task label="chkpt-visualizing-solutions-3">
+      <title>Find the constant <m>c</m>.</title>
+      <statement>
+        <p>
+          Find the <m>c</m>-value for the particular solution that approximately satisfies <m>y(1)=1</m>.
+        </p>
+        </statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement><m>\quad c = -0.7</m></statement>
+          <feedback>Correct! Moving <m>y(0)</m> to <m>2.3</m> gives a blue curve that nearly passes through the point <m>(1,1)</m>.</feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad c = -2</m></statement>
+          <feedback>Incorrect. <em>Hint: identify the point <m>(1,1)</m> and move <m>y(0)</m> until the blue curve intersect with this point.</em></feedback>
+        </choice>
+        <choice> 
+          <statement><m>\quad c = 0.5</m></statement>
+          <feedback>Incorrect. <em>Hint: identify the point <m>(1,1)</m> and move <m>y(0)</m> until the blue curve intersect with this point.</em></feedback>
+        </choice>
+        <choice>
+          <statement><m>\quad c = -1</m></statement>
+          <feedback>Incorrect. <em>Hint: identify the point <m>(1,1)</m> and move <m>y(0)</m> until the blue curve intersect with this point.</em></feedback>
+        </choice>
+      </choices>
+    </task>
+
+    <task label="chkpt-visualizing-solutions-4">
+      <title>Role of Initial Conditions</title>
+      <statement>What role do initial conditions play in solving differential equations?</statement>
+      <choices randomize="yes">
+        <choice>
+          <statement>They determine the general form of the solution.</statement>
+          <feedback>Incorrect. Initial conditions are not used to find the general solution.</feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>They used to determine the constants in the general solution.</statement>
+          <feedback>Correct! Initial conditions are used to find specific values for constants in the general solution.</feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>They are used to find the particular solution.</statement>
+          <feedback>Correct! Initial conditions are used to find the specific solution that applies to a particular scenario.</feedback>
+        </choice>
+        <choice>
+          <statement>They are not needed if the general solution is already known.</statement>
+          <feedback>Incorrect. If provided, initial conditions are always needed to get the particular solution from the general solution.</feedback>
+        </choice>
+      </choices>
+      <answer>C</answer>
+    </task>
+  </exercise>
+
+	<exercise label="separable-des-cyu-1">
+    <title>Find the Separable Equations</title>
+    <statement>
+      <p>
+        Click on each of the separable differential equations below.
+      </p>
+    </statement>
+    <areas>
+      <tabular>
+        <row><cell><m/></cell></row>
+        <row>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = xy^2				</m></area></cell>
+          <cell/>
+          <cell><area correct="yes"><m>\dfrac{dz}{dt} = \cos^2 z			</m></area></cell>
+          <cell/>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = \ln(x)\tan(y)	</m></area></cell>
+        </row>
+        <row><cell><m/></cell></row>
+        <row>
+          <cell><area correct="no"><m>\dfrac{dy}{dx} = y - x^2	</m></area></cell>
+          <cell/>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = \pi		</m></area></cell>
+          <cell/>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = 1 - y	</m></area></cell>
+        </row>
+        <row><cell><m/></cell></row>
+        <row>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = y^2		</m></area></cell>
+          <cell/>
+          <cell><area correct="no"><m>\dfrac{dy}{dx} = x - 3y	</m></area></cell>
+          <cell/>
+          <cell><area correct="yes"><m>\dfrac{dy}{dx} = -44		</m></area></cell>
+        </row>
+        <row><cell><m/></cell></row>
+      </tabular>
+    </areas>
+    <feedback>
+      <p>
+        Remember, a differential equation is separable if you can express it as a product of functions of <m>x</m> and <m>y</m> separately. Look for equations where the variables are separated by multiplication, not addition or other operations.
+      </p>
+    </feedback>
+	</exercise>
+
+  <exercise label="chkpt-sov-method-steps-2">
+    <title>SOV Matching</title>
+    
+    <statement>
+      <p>
+        In the context of the separation of variables (SOV) method, match the expression or statement (on the left) with the most appropriate action that you might use in applying this method (on the right). 
+      </p>
+    </statement>
+
+    <feedback>
+      <p>
+        Do we want feedback?
+      </p>
+    </feedback>
+
+    <cardsort>
+      <match>
+        <premise>First-order</premise>
+        <response>Verify</response>
+      </match>
+      <match>
+        <premise><m>\dfrac{dy}{dx} = f(x)g(y)</m></premise>
+        <response>Put in separable form</response>
+      </match>
+      <match>
+        <premise><m>\dfrac{1}{g(y)}\ dy = f(x)\ dx</m> </premise>
+        <response>Separate variables</response>
+      </match>
+      <match>
+        <premise><m>\displaystyle \int \dfrac{1}{g(y)}\ dy = \int f(x)\ dx</m></premise>
+        <response>Integrate both sides</response>
+      </match>
+      <match>
+        <premise>General solution</premise>
+        <response>Solve for <m>y</m>, if possible</response>
+      </match>
+      <match>
+        <premise>Particular solution</premise>
+        <response>Apply initial condition</response>
+      </match>
+    </cardsort>
+
+  </exercise>
+
+  <exercise label="showing-separable-forms-chkpt-3">
+    <title>Steps to Show Separable</title>
+
+    <statement>
+      <p>
+        Suppose you want to show that the following differential equation is separable:
+        <me>\frac{dq}{dt} - 3qt^2 = 2q</me>
+        Match the scrambled tasks (on the left) to the order that it should be performed to confirm the equation is separable.
+      </p>
+    </statement>
+    <cardsort>
+      <match>
+        <premise>check the equation is 1st-order</premise>					
+        <response>First, we ...</response>
+      </match>
+      <match>
+        <premise>move <m>3qt^2</m> to the left side via subtraction</premise>
+        <response>Then, we ...</response>
+      </match>
+      <match>
+        <premise>factor out a common factor of <m>q</m> on the left side</premise>
+        <response>The final step is to ...</response>
+      </match>
+      <match>
+        <premise>check the equation is linear</premise>					
+        <premise>integrate both sides</premise>
+        <premise>divide both sides by <m>3q</m></premise>
+      </match>
+    </cardsort>
+  </exercise>
+
+  <exercise label="sov-method-cyu-2">
+    <title>Sort the Steps in Order</title>
+
+    <statement>
+      <p>
+        Suppose you want to use separation of variables method to determine the general solution of the differential equation
+        <men xml:id="chkpt-sov-method-examples-1-eqn">
+          \frac{dq}{dt} - 3qt^2 = 2q
+        </men>.
+      </p>
+      <p>
+        Match the scrambled tasks (on the left) to the task order (on the right) that it should be performed to use this method.
+      </p>
+    </statement>
+
+    <cardsort>
+      <match>
+        <premise>
+          <p>
+            Equation is 1st-order ✅
+          </p>
+        </premise>
+        
+        <response>
+          <p>
+            <m>\text{Task 1}</m>
+          </p>
+        </response>
+      </match>
+      <match>
+        <premise>
+          <p>
+            <m>\displaystyle \frac{dq}{dt} = q(2 + 3t^2)</m>
+          </p>
+        </premise>
+        <response>
+          <p>
+            <m>\text{Task 2}</m>
+          </p>
+        </response>
+      </match>
+      <match>
+        <premise>
+          <p>
+            <m>\displaystyle \frac{1}{q}\ dq = (2 + 3t^2)\ dt</m>
+          </p>
+        </premise>
+        <response>
+          <p>
+            <m>\text{Task 3}</m>
+          </p>
+        </response>
+      </match>
+      <match>
+        <premise>
+          <p>
+            <m>\displaystyle \int \frac{1}{q} dq = \int (2 + 3t^2) dt</m>
+          </p>
+        </premise>
+        
+        <response>
+          <p>
+            <m>\text{Task 4}</m>
+          </p>
+        </response>
+      </match>
+      <match>
+        <premise>
+          <p>
+            <line><m>\displaystyle \ln|q| = 2t^2 + t^3 + c</m></line>
+          </p>
+        </premise>
+        <response>
+          <p>
+            <m>\text{Task 5}</m>
+          </p>	
+        </response>
+      </match>
+      <match>
+        <premise>
+          <p>
+            <line><m>\displaystyle q = c e\vphantom{|}^{\large 2t^2 + t^3}</m></line>
+          </p>
+        </premise>
+        <response>
+          <p>
+            <m>\text{Task 6}</m>
+          </p>
+        </response>
+      </match>
+    </cardsort>
+  </exercise>
+
+  <exercise label="c3-warm-ups-ww-1">
+    <title>Determine the Separable Form</title>
+
+    <introduction>
+      <p>
+        Write each differential equation in the separable form
+        <me>
+          \frac{dy}{dx} = f(x)\cdot g(y)
+        </me>.
+      </p>
+      <p>
+        <em>Type your answer for <m>f(x)</m> into the left box and <m>g(y)</m> into the right box.</em>
+      </p>
+    </introduction>
+      
+    <webwork xml:id="c2-cr-ww-01-id">
+
+      <description>
+        Show a differential equation is separable.
+      </description>
+  
+      <pg-code>
+        Context()->variables->add(y => 'Real');
+        $f1 = Formula("1 + cos(x)");
+        $g1 = Formula("y");
+        $f2 = Formula("1/x^2");
+        $g2 = Formula("1 - y");
+        $f3 = Formula("e^(x)/x");
+        $g3 = Formula("(y^2 - 1)/y");
+      </pg-code>
+  
+      <statement>
+        
+        <ol>
+          <li>
+            <p>
+              <m>
+                \quad\displaystyle	\frac{dy}{dx} - y\cos(x) = y
+                \quad\implies\quad	\frac{dy}{dx} =
+              </m>
+              <var name="$f1" width="10" />
+              <var name="$g1" width="10" />
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>
+                \quad\displaystyle	x^2y + x^4\frac{dy}{dx} = x^2
+                \quad\implies\quad	\frac{dy}{dx} =
+              </m>
+              <var name="$f2" width="10" />
+              <var name="$g2" width="10" />
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>
+                \quad\displaystyle	xy\frac{dy}{dx} = e^xy^2 - e^x
+                \quad\implies\quad	\frac{dy}{dx} =
+              </m>
+              <var name="$f3" width="10" />
+              <var name="$g3" width="10" />
+            </p>
+          </li>
+        </ol>
+
+      </statement>
+      
+    </webwork>
+
+    <solution>
+      <ol>
+        <li>
+          <p>
+            Move the <m> y\cos x </m> term to the right and factor out <m>y</m>.
+            <md>
+              <mrow>	\frac{dy}{dx}	\amp =	y + y\cos(x)	</mrow>
+              <mrow>	\frac{dy}{dx}	\amp =	\ub{(1 + \cos(x))}_{f(x)}\us{g(y)}{\us{\uparrow}{\ul{y}}}	</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            Isolate the derivative and group the terms as shown below.
+            <md>
+              <mrow>	\frac{dy}{dx}	\amp =	\frac{1}{x^2} - \frac{y}{x^2} \quad\leftarrow \text{common factor: } \frac{1}{x^2}	</mrow>
+              <mrow>	\frac{dy}{dx}	\amp =	\us{f(x)}{\us{\uparrow}{\ul{\frac{1}{x^2}}}} \cdot\ub{(1 - y)}_{g(y)}				</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            We isolate the derivative and group the terms as shown below.
+            <md>
+              <mrow>	xy\frac{dy}{dx}	\amp =	e^xy^2 - e^x																									</mrow>
+              <mrow>	\frac{dy}{dx}	\amp =	\frac{e^xy^2 - e^x}{xy}	\quad\leftarrow \text{common factor: } e^x												</mrow>
+              <mrow>	\frac{dy}{dx}	\amp =	\frac{e^x \cdot (y^2 - 1)}{x \cdot y} \quad\leftarrow \left(\frac{AB}{CD} = \frac{A}{C}\cdot \frac{B}{D}\right)	</mrow>
+              <mrow>	\frac{dy}{dx}	\amp =	\us{f(x)}{\us{\uparrow}{\ul{\frac{e^x}{x}}}} \cdot	\ub{\frac{y^2 - 1}{y}}_{g(y)}								</mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+      
+    </solution>
+
+  </exercise>
+
+  <exercise label="c3-warm-ups-ordering-1">
+    <title>Reorder the Steps</title>
+    <statement>
+      <p>
+        Reorder the steps required to solve the differential equation,
+        <me>
+          \frac{dy}{dx} - y\cos(x) = y
+        </me>,
+        using the separation of variables method.
+      </p> 
+    </statement>
+    <blocks>
+      <block><p>	Check for 1st-order.									</p></block>
+      <block><p>	<m>\dfrac{dy}{dx} = y + y\cos(x) </m>					</p></block>
+      <block><p>	<m>\dfrac{dy}{dx} = (1 + \cos(x))y </m>					</p></block>
+      <block><p>	<m>\dfrac{1}{y} dy = (1 + \cos(x))dx </m>				</p></block>
+      <block><p>	<m>\displaystyle \int \frac{1}{y} dy = \int (1 + \cos(x))dx </m>	</p></block>
+      <block><p>	<m>\displaystyle \ln|y| = x + \sin(x) + C </m>					</p></block>
+      <block><p>	<m>\displaystyle y = Ce^{x + \sin(x)} </m>						</p></block>
+    </blocks>
+  </exercise>
+
+  <exercise label="c3-warm-ups-click-2">
+    <title>Step-By-Step Initial-Valued Problem</title>
+
+    <statement>
+      <p>
+        Use separation of variables to solve the initial value problem
+      </p>
+      <me>
+        \frac{du}{dy} - u^2y = u^2, \hspace{1cm} u(0) = 5
+      </me>.
+    </statement>
+
+    <areas>
+      <ol>
+        <li>
+          <p>
+            Select the variable that you are solving for: <m>\quad</m>
+            <area correct="no">		<m>\, y \,</m>	</area> <m>\quad</m>
+            <area correct="yes">	<m>\, u \,</m>	</area>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the order of the equation: <m>\quad</m>
+            <area correct="yes">	<m>\, 1 \,</m>	</area> <m>\quad</m>
+            <area correct="no">		<m>\, 2 \,</m>	</area> <m>\quad</m>
+            <area correct="no">		<m>\, 3 \,</m>	</area> <m>\quad</m>
+            <area correct="no">		<m>\, 4 \,</m>	</area>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the correct separable form:
+          </p>
+          <p>
+            <tabular>
+              <row><cell/></row>
+              <row>
+                <cell> <area correct="no"> <m>\dfrac{du}{dy} = u^2(y-1)	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\dfrac{du}{dy} = u^2y		</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="yes"><m>\dfrac{du}{dy} = u^2(1+y)	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\dfrac{du}{dy} = -y		</m></area>				</cell>
+              </row>
+              <row><cell/></row>
+            </tabular>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the next step following the correct answer to (c).
+          </p>
+          <p>
+            <tabular>
+              <row><cell/></row>
+              <row>
+                <cell> <area correct="no"> <m>\displaystyle\frac{1}{y+1}dy = u^2du	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="yes"><m>\displaystyle\frac{1}{u^2}du = (y+1)dy	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\displaystyle\frac{1}{y}dy = u^2 du		</m></area>				</cell>
+              </row>
+              <row><cell/></row>
+            </tabular>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the result after integrating correct answer to (d).
+          </p>
+          <p>
+            <tabular>
+              <row><cell/></row>
+              <row>
+                <cell> <area correct="no"> <m>\displaystyle\ln|u^2| = \frac{y^2}{2} + y + c		</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\displaystyle\frac{1}{u} = \frac{y^2}{2} + y + c	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="yes"><m>\displaystyle-\frac{1}{u} = \frac{y^2}{2} + y + c	</m></area>				</cell>
+              </row>
+              <row><cell/></row>
+            </tabular>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the correct general solution.
+          </p>
+          <p>
+            <tabular>
+              <row><cell/></row>
+              <row>
+                <cell> <area correct="yes"><m>\displaystyle u = \left(-\frac{y^2}{2} + y + c\right)^{-1}	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\displaystyle u = c + \left(-\frac{y^2}{2} + y\right)^{-1}	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\displaystyle u = ce^{\large y^2 + y}						</m></area><m>\quad</m>	</cell>
+              </row>
+              <row><cell/></row>
+            </tabular>
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the correct particular solution.
+          </p>
+          <p>
+            <tabular>
+              <row><cell/></row>
+              <row>
+                <cell> <area correct="no"> <m>\displaystyle u = \left(-\frac{y^2}{2} + y + 5\right)^{-1}			</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="yes"><m>\displaystyle u = \left(-\frac{y^2}{2} + y + \frac15\right)^{-1}	</m></area><m>\quad</m>	</cell>
+                <cell> <area correct="no"> <m>\displaystyle u = 5e^{\large y^2 + y }								</m></area>				</cell>
+              </row>
+              <row><cell/></row>
+            </tabular>
+          </p>
+        </li>
+      </ol>
+    </areas>
+  </exercise>
+
+  <exercise label="c3-warm-ups-ww-4">
+    <title>Find the General Solution</title>
+
+    <introduction>
+      <p>
+        Use separation of variables to find the general solution of the differential equation:
+        <me>\frac{dy}{dx} - y\cos(x) = y</me>
+      </p>
+    </introduction>
+      
+    <webwork xml:id="c3-step-by-step-02-ww">
+      <description>
+        Solve a separable DE using separation of variables.
+      </description>
+
+      <pg-code>
+        Context()->variables->add(y => 'Real');
+        Context()->variables->add(c => 'Real');
+        $order = 1;
+        $f = Formula("1+cos(x)");
+        $g = Formula("y");
+        $g_inv = Formula("1/y");
+        $F = Formula("x+sin(x)");
+        $G = Formula("ln|y|");
+        $y_gen = Formula("c*e^(x+sin(x))");
+      </pg-code>
+
+      <statement>
+        <p>
+          Give the order and separable form:
+        </p>
+
+        <ul>
+          <li>order: <var name="$order"  width="5" /></li>
+          <li><m>\dfrac{dy}{dx} = f(x) \cdot g(y) = \big(</m>
+            <var name="$f" width="10" /> <m>\big) \cdot \big(</m>
+            <var name="$g" width="10" /> <m>\big)</m>
+          </li>
+        </ul>
+
+        <p>
+          After separating the variables and integrating both sides, we get:
+        </p>
+
+        <ul>
+            <li><m>\displaystyle\int</m><var name="$g_inv" width="10" /><m>\displaystyle dy = \int </m><var name="$f" width="10" /><m>dx</m></li>
+        </ul>
+
+        <p>
+          After computing these integrals, solving for <m>y</m>, and combining constants we arrive at the following general solution:
+        </p>
+
+        <tabular>
+          <col halign="right"/>
+          <row>
+            <cell>
+              <m>y(x) = </m> <var name="$y_gen" width="10" />
+            </cell>
+          </row>
+        </tabular>
+
+        <p>
+          <em>Use <m>c</m> for the final combined constant.</em>
+        </p>
+      </statement>
+      
+    </webwork>
+
+    <hint>
+      <p>
+        Use the property <m>e^{A + B} = e^{A} \cdot e^{B}</m> to obtain the final combined constant.
+      </p>
+    </hint>
+
+  </exercise>
+
+  <exercise label="if-identify-equations">
+    <title>Identifying Equations for the IF Method</title>
+    <statement>
+      <p>
+        Which of the following differential equations can be solved using the integrating factor method?
+      </p>
+    </statement>
+    <areas>
+      <tabular padding="100px">
+      <row><cell><m/></cell></row>
+      <row>
+        <cell><area correct="yes"><m>y' + 2y = 3x</m></area></cell>
+        <cell/>
+        <cell><area correct="yes"><m>\dfrac{y'}{t^2} + y = 17t</m></area></cell>
+        <cell/>
+        <cell><area correct="no"><m>y'' + 2x y = 0</m></area></cell>
+      </row>
+      <row><cell><m/></cell></row>
+      <row><cell><m/></cell></row>
+      <row>
+        <cell><area correct="no"><m>y' + y^2 = 17t</m></area></cell>
+        <cell/>
+        <cell><area correct="yes"><m>\dfrac{y'}{t} + y = 17t</m></area></cell>
+        <cell/>
+        <cell><area correct="yes"><m>\cos x \, y = y' - e^x</m></area></cell>
+      </row>
+      <row><cell><m/></cell></row>
+      </tabular>
+    </areas>
+    <hint>
+      <p>
+      A first-order linear equation has <m>y</m> and <m>y'</m> only to the first power and not inside nonlinear functions.
+      </p>
+    </hint>
+    <feedback>
+      <p>
+      Four of these equations are linear and first-order—they can be solved by the integrating factor method.
+      </p>
+    </feedback>
+  </exercise>
+
+  <exercise label="whats-a-numerical-soln-chkpt-2">
+    <title>Recognizing a Numerical Solution</title>
+    <statement>
+      When you say you've found a <q>numerical solution</q> to an initial value problem, what do you actually have?
+    </statement>
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>A list of values approximating <m>y(t)</m> at specific times</statement>
+        <feedback>Correct—numerical solutions are tables of approximate values, not formulas.</feedback>
+      </choice>
+      <choice>
+        <statement>A formula expressing <m>y(t)</m> using functions like <m>\sin t</m> or <m>e^t</m></statement>
+        <feedback>No, that describes an analytic solution.</feedback>
+      </choice>
+      <choice>
+        <statement>An exact solution valid for all <m>t</m></statement>
+        <feedback>No, numerical solutions are approximations.</feedback>
+      </choice>
+      <choice>
+        <statement>A graph showing all possible solutions</statement>
+        <feedback>No, that describes a slope field, not a numerical solution.</feedback>
+      </choice>
+    </choices>
+  </exercise>
+
+  <exercise label="eulers-method-chkpt-1">
+    <title>Match Euler's Method Parts to their Meaning</title>
+    <statement>
+      <p>
+        Assume the current approximation using Euler's Method is denoted by <m>y_k</m>. In this context, match the mathematical expression with its meaning.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+      These pairings are essential when converting a piecewise function into unit step form. The form you choose depends entirely on where each piece is active.
+      </p>
+    </feedback>
+    <cardsort>
+      <match>
+        <premise><m>y_{k+1}</m></premise>
+        <response>The <m>y</m> value of the next approximation.</response>
+      </match>
+      <match>
+        <premise><m>y_{k-1}</m></premise>
+        <response>The <m>y</m> value of the previous approximation.</response>
+      </match>
+      <match>
+        <premise><m>h</m></premise>
+        <response>The distance between <m>t_k</m> and <m>t_{k+1}</m>.</response>
+      </match>
+      <match>
+        <premise><m>f(t_k, y_k)</m></premise>
+        <response>The slope of the solution at the current approximation.</response>
+      </match>
+      <match>
+        <premise><m>t_k</m></premise>
+        <response>The <m>t</m> value of the current approximation.</response>
+      </match>
+      <match>
+        <premise><m>h \cdot f(t_k, y_k)</m></premise>
+        <response>The rise (or fall) in the <m>y</m> value from the current approximation to the next approximation.</response>
+      </match>
+    </cardsort>
+  </exercise>
+
 </chapter>
