@@ -148,7 +148,7 @@
       </choices>
     </exercise>
 
-    <exercise label="APEX-PROTEUS-newton-2-v1" component="proteus">
+    <exercise label="APEX-PROTEUS-newton-2-v2" component="proteus">
       <title>Detecting a <q>Bad</q> Initial Guess</title>
       <statement>
         <p>

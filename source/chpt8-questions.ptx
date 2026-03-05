@@ -177,58 +177,6 @@
     </cardsort>
   </exercise>
 
-  <image>
-    <latex-image>
-      \begin{tikzpicture}[samples=50]
-
-        % === colors ===
-        \def\fColor{blue}			\def\fFill{\fColor!15}
-        \def\gColor{green!60!black}	\def\gFill{\gColor!15}
-
-        % === figure/domain/tick bounds ===
-        \def\tmin{-0.6}	\def\tmax{2.45}
-        \def\ymin{-1.8}		\def\ymax{7.5}
-        \def\tticks{1, 2}
-        \def\yticks{2, 4}
-
-        % === Function definitions ===
-        \newcommand{\f}[1]{e^(#1)}	\def\ftex{e^t}
-        \def\a{0}	\def\b{2}
-        \def\c{0.65}
-
-        \begin{axis}[
-          width=15cm, height=7cm, scale=0.35,
-          xlabel={$t$}, ylabel={$y$},
-          title={Analytic Solution},
-          title style={font=\small},
-          grid=none,
-          tick style={thick},
-          line width=1pt,
-          axis lines=middle,
-          xtick distance=1, ytick distance=4,
-          minor x tick num=1, minor y tick num=1,
-          xmin=\tmin, xmax=\tmax, ymin=\ymin, ymax=\ymax,
-        ]
-        
-          % Read and plot data from file
-          \addplot [domain=\a:\b, \fColor] {e^x};
-          \draw[gray, thin]	(\b, 0) -- (\b, {\f{\b}});
-          
-
-          \draw[dashed, thick]	(\c, {\f{\c}}) -- (\c, 0);
-          \draw[dashed, thick]	(\c, {\f{\c}}) -- (0, {\f{\c}});
-          \node[below, font=\small] at (\c, 0) {\c};
-          \node[left, font=\small] at (0,{\f{\c}}) {$1.916$};
-
-          % === Labels ===
-          \node[\fColor, font=\large, above] at (1.5, 5) {$\ftex$};
-
-        \end{axis}
-
-      \end{tikzpicture}
-    </latex-image>
-  </image>
-
   <exercise cols="2" label="ex-graphical-numerical-match-slope">
     <statement>
       <p>
