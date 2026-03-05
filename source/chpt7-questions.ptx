@@ -298,7 +298,7 @@
 	<!-- which highlights when the Shell Method is easier than the     -->
 	<!-- Washer Method (sin(x) about the y-axis).                     -->
 	<exercise label="APEX-PROTEUS-shell-method-8-v1" component="proteus">
-		<title>Shell Method Can Only Be Used When Washer Method Fails</title>
+		<title>Shell Method as an Alternative</title>
 		<statement correct="no">
 			<p>
 				The Shell Method can only be used when the Washer Method fails.
