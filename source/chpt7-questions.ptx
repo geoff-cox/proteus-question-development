@@ -102,4 +102,426 @@
 		</choices>
 	</exercise>
 
+	<!-- ============================================================ -->
+	<!-- Questions for sec_disk: Volume by Cross-Sectional Area;      -->
+	<!-- Disk and Washer Methods                                      -->
+	<!-- ============================================================ -->
+
+	<!-- Place after the introduction of Theorem 7.2.1 (Volume By Cross-Sectional Area) -->
+	<exercise label="APEX-PROTEUS-disk-1-v1" component="proteus">
+		<title>Cross-Sectional Volume Formula</title>
+		<statement>
+			<p>
+				A solid is oriented along the <m>x</m>-axis from <m>x=a</m> to <m>x=b</m>, and its cross-sectional area at position <m>x</m> is <m>A(x)</m>. Which integral gives the volume of the solid?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>\displaystyle\int_a^b A(x)\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The volume of a thin slice at position <m>x</m> is approximately <m>A(x)\,\Delta x</m> (area times thickness). Summing these slices and taking a limit gives the definite integral <m>\int_a^b A(x)\, dx</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle\int_a^b A(x)^2\, dx</m></p></statement>
+				<feedback>
+					<p>
+						We do not square the cross-sectional area. Each slice has volume <m>A(x)\,\Delta x</m>, not <m>A(x)^2\,\Delta x</m>. Squaring the radius (not the area) appears in the Disk Method, which is a specific case.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle\int_a^b \pi\, A(x)\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The factor of <m>\pi</m> is not needed in the general formula. It only appears when the cross section is a circle (as in the Disk Method), because the area of a circle of radius <m>R</m> is <m>\pi R^2</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle\frac{d}{dx}\big[A(x)\big]</m></p></statement>
+				<feedback>
+					<p>
+						The derivative of the area function does not give volume. Volume is found by <em>integrating</em> cross-sectional area over the length of the solid.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after Example 7.2.2 (pyramid volume) to reinforce slicing non-circular solids -->
+	<exercise label="APEX-PROTEUS-disk-2-v1" component="proteus">
+		<title>Cross Section of a Pyramid</title>
+		<statement>
+			<p>
+				A pyramid with a square base of side length <m>6</m> and height <m>3</m> is oriented with its apex at the origin and base at <m>x=3</m>. Each cross-sectional square at position <m>x</m> has side length <m>2x</m>. What is the cross-sectional area function <m>A(x)</m>?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>A(x) = 4x^2</m></p></statement>
+				<feedback>
+					<p>
+						Each cross section is a square with side length <m>2x</m>, so the area is <m>(2x)^2 = 4x^2</m>. The volume would then be <m>\int_0^3 4x^2\, dx</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>A(x) = 2x</m></p></statement>
+				<feedback>
+					<p>
+						This is the side length of the square cross section, not its area. To find the area of a square, you must square the side length: <m>(2x)^2 = 4x^2</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>A(x) = \pi x^2</m></p></statement>
+				<feedback>
+					<p>
+						This would be the area of a circular cross section with radius <m>x</m>. Since the cross sections here are <em>squares</em>, not circles, the factor <m>\pi</m> does not apply.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>A(x) = 2x^2</m></p></statement>
+				<feedback>
+					<p>
+						Be careful: the side length is <m>2x</m>, so the area is <m>(2x)^2 = 4x^2</m>, not <m>2x^2</m>. Remember to square the entire expression.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after the Disk Method (Key Idea 7.2.4) is introduced -->
+	<exercise label="APEX-PROTEUS-disk-3-v1" component="proteus">
+		<title>Solid of Revolution Definition</title>
+		<statement correct="yes">
+			<p>
+				A solid of revolution is formed by revolving a curve around an axis, producing circular (disk-shaped) cross sections.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				When a curve is revolved around an axis, every cross section perpendicular to that axis is indeed a circle (a disk). The radius of each disk is the distance from the curve to the axis of rotation.
+			</p>
+		</feedback>
+	</exercise>
+
+	<!-- Place after Key Idea 7.2.4 (Disk Method) to test the formula -->
+	<exercise label="APEX-PROTEUS-disk-4-v1" component="proteus">
+		<title>Disk Method Radius Identification</title>
+		<statement>
+			<p>
+				The curve <m>y = \sqrt{x}</m> is revolved about the <m>x</m>-axis from <m>x=0</m> to <m>x=4</m>. Using the Disk Method, what is the radius function <m>R(x)</m> and the resulting volume integral?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>R(x)=\sqrt{x}</m>, so <m>\displaystyle V = \pi\int_0^4 x\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The radius of each disk is the distance from the <m>x</m>-axis to the curve, which is <m>R(x)=\sqrt{x}</m>. Squaring gives <m>R(x)^2 = x</m>, so the volume is <m>\pi\int_0^4 x\, dx</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>R(x)=x</m>, so <m>\displaystyle V = \pi\int_0^4 x^2\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The radius is the <m>y</m>-value of the curve at each <m>x</m>, which is <m>\sqrt{x}</m>, not <m>x</m>. The function <m>y=\sqrt{x}</m> tells us the distance from the axis of rotation to the curve.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>R(x)=\sqrt{x}</m>, so <m>\displaystyle V = \pi\int_0^4 \sqrt{x}\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The radius is correct, but remember the Disk Method formula uses <m>R(x)^2</m>, not <m>R(x)</m>. So we need <m>(\sqrt{x})^2 = x</m> inside the integral.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>R(x)=x^2</m>, so <m>\displaystyle V = \pi\int_0^4 x^4\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The curve is <m>y = \sqrt{x}</m>, not <m>y = x^2</m>. The radius equals the <m>y</m>-value of the curve being revolved.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after Example 7.2.6 (revolving about the y-axis) -->
+	<exercise label="APEX-PROTEUS-disk-5-v1" component="proteus">
+		<title>Revolving About the <m>y</m>-Axis</title>
+		<statement>
+			<p>
+				When using the Disk Method to find the volume of a solid formed by revolving a curve about the <m>y</m>-axis, which of the following adjustments must be made?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement>
+					<p>
+						Express the curve as a function of <m>y</m> and integrate with respect to <m>y</m>.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						Since the axis of rotation is vertical, the radius of each disk is a horizontal distance, which must be expressed as a function of <m>y</m>. The integral then becomes <m>\pi\int_c^d R(y)^2\, dy</m> over appropriate <m>y</m>-bounds.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement>
+					<p>
+						Use the same <m>x</m>-based formula but negate the integrand.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						Negating the integrand is not correct. The key change is that the variable of integration switches from <m>x</m> to <m>y</m>, and the radius function becomes a function of <m>y</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement>
+					<p>
+						Multiply the volume formula by <m>2</m>.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						There is no factor of <m>2</m> involved. The method is the same principle—just expressed in terms of <m>y</m> instead of <m>x</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement>
+					<p>
+						No adjustment is needed; the Disk Method works only for horizontal axes of rotation.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						The Disk Method works for vertical axes of rotation too. The underlying idea (area <times/> thickness) applies regardless of orientation; you just need to set up the integral with respect to the correct variable.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after the Washer Method (Key Idea 7.2.10) is introduced -->
+	<exercise label="APEX-PROTEUS-disk-6-v1" component="proteus">
+		<title>Washer Method Concept</title>
+		<statement>
+			<p>
+				Match each term with its role in the Washer Method.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				In the Washer Method, the cross section is an annular ring (washer). The volume of each washer is <m>\pi\big(R(x)^2 - r(x)^2\big)\,\Delta x</m>, where <m>R(x)</m> is the outside radius and <m>r(x)</m> is the inside radius.
+			</p>
+		</feedback>
+		<cardsort>
+			<match>
+				<premise><m>R(x)</m></premise>
+				<response>The outside radius: distance from the axis of rotation to the farther curve</response>
+			</match>
+			<match>
+				<premise><m>r(x)</m></premise>
+				<response>The inside radius: distance from the axis of rotation to the closer curve</response>
+			</match>
+			<match>
+				<premise><m>\pi\big(R(x)^2 - r(x)^2\big)</m></premise>
+				<response>The cross-sectional area of a single washer</response>
+			</match>
+		</cardsort>
+	</exercise>
+
+	<!-- Place after Key Idea 7.2.10 to reinforce the disk–washer relationship -->
+	<exercise label="APEX-PROTEUS-disk-7-v1" component="proteus">
+		<title>Disk as Special Case of Washer</title>
+		<statement>
+			<p>
+				The Disk Method is a special case of the Washer Method. What value of the inside radius <m>r(x)</m> reduces the Washer Method formula to the Disk Method formula?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>r(x) = 0</m></p></statement>
+				<feedback>
+					<p>
+						When <m>r(x)=0</m>, the washer formula <m>\pi\int_a^b \big(R(x)^2 - r(x)^2\big)\, dx</m> becomes <m>\pi\int_a^b R(x)^2\, dx</m>, which is exactly the Disk Method formula. A washer with no hole is just a disk.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = 1</m></p></statement>
+				<feedback>
+					<p>
+						If <m>r(x)=1</m>, you would be subtracting a nonzero inner volume, leaving a hollow solid. For the disk formula to emerge, the hole must vanish entirely, meaning the inside radius must be <m>0</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = R(x)</m></p></statement>
+				<feedback>
+					<p>
+						If <m>r(x)=R(x)</m>, then <m>R(x)^2 - r(x)^2 = 0</m>, which gives a volume of <m>0</m>. The solid would have no thickness at all.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = R(x)/2</m></p></statement>
+				<feedback>
+					<p>
+						Setting <m>r(x) = R(x)/2</m> would still leave a hole in the middle. To recover the Disk Method, there should be no hole, so <m>r(x)</m> must equal <m>0</m>.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after Example 7.2.11 (washer about x-axis) -->
+	<exercise label="APEX-PROTEUS-disk-8-v1" component="proteus">
+		<title>Setting Up a Washer Integral</title>
+		<statement>
+			<p>
+				The region bounded by <m>y = x</m> and <m>y = x^2</m> (which intersect at <m>x = 0</m> and <m>x = 1</m>) is revolved about the <m>x</m>-axis. Using the Washer Method, which integral gives the volume?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x^2 - x^4\big)\, dx</m></p></statement>
+				<feedback>
+					<p>
+						On <m>[0,1]</m>, <m>y = x</m> lies above <m>y = x^2</m>, so the outside radius is <m>R(x) = x</m> and the inside radius is <m>r(x) = x^2</m>. The Washer Method gives <m>\pi\int_0^1 \big(x^2 - (x^2)^2\big)\, dx = \pi\int_0^1 (x^2 - x^4)\, dx</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x - x^2\big)^2\, dx</m></p></statement>
+				<feedback>
+					<p>
+						A common mistake: the Washer Method subtracts the <em>squares</em> of the radii, not squares <em>the difference</em> of the radii. Correct: <m>R^2 - r^2</m>, not <m>(R - r)^2</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x^4 - x^2\big)\, dx</m></p></statement>
+				<feedback>
+					<p>
+						The outside radius must be the curve <em>farther</em> from the axis. Since <m>x \geq x^2</m> on <m>[0,1]</m>, we have <m>R(x) = x</m> (outer) and <m>r(x) = x^2</m> (inner), giving <m>x^2 - x^4</m>, not the reverse.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x - x^2\big)\, dx</m></p></statement>
+				<feedback>
+					<p>
+						This integral computes the <em>area</em> between the curves (times <m>\pi</m>), not the volume. In the Washer Method, you must square the radii: <m>R(x)^2 - r(x)^2</m>.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place after Example 7.2.12 (washer about y-axis with triangular region) -->
+	<exercise label="APEX-PROTEUS-disk-9-v1" component="proteus">
+		<title>Identifying the Axis of Rotation</title>
+		<statement>
+			<p>
+				Select all statements that are true about setting up a Disk or Washer integral.
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement>
+					<p>
+						If the axis of rotation is horizontal, the radius is a function of <m>x</m> and we integrate with respect to <m>x</m>.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						A horizontal axis means cross-sectional slices are perpendicular to the <m>x</m>-axis, so both the radius and the variable of integration are in terms of <m>x</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice correct="yes">
+				<statement>
+					<p>
+						If the axis of rotation is vertical, the radius is a function of <m>y</m> and we integrate with respect to <m>y</m>.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						A vertical axis means the cross-sectional disks or washers are stacked along the <m>y</m>-axis, so the radii are expressed in terms of <m>y</m> and we integrate with respect to <m>y</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement>
+					<p>
+						The Washer Method can only be used when the axis of rotation is the <m>x</m>-axis.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						The Washer Method works for any axis of rotation. When the axis is vertical, you simply express the radii as functions of <m>y</m> and integrate with respect to <m>y</m>.
+					</p>
+				</feedback>
+			</choice>
+			<choice>
+				<statement>
+					<p>
+						We always integrate with respect to <m>x</m>, regardless of the axis of rotation.
+					</p>
+				</statement>
+				<feedback>
+					<p>
+						The variable of integration must match the orientation of the axis. A vertical axis of rotation requires integrating with respect to <m>y</m>, not <m>x</m>.
+					</p>
+				</feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Place at the end of the section to reinforce the big-picture principle -->
+	<exercise label="APEX-PROTEUS-disk-10-v1" component="proteus">
+		<title>Approximation to Exact Volume</title>
+		<statement>
+			<p>
+				Put the following steps in the correct order for finding the exact volume of a solid using cross-sectional area.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				This process mirrors how a Riemann sum becomes a definite integral: slice, approximate each slice, sum all slices, then let the number of slices approach infinity.
+			</p>
+		</feedback>
+		<cardsort>
+			<match>
+				<premise order="1">Slice the solid into <m>n</m> thin pieces perpendicular to an axis.</premise>
+				<response>Step 1</response>
+			</match>
+			<match>
+				<premise order="2">Approximate the volume of each slice as <m>A(x_i)\,\Delta x</m>.</premise>
+				<response>Step 2</response>
+			</match>
+			<match>
+				<premise order="3">Sum the approximate volumes: <m>\displaystyle\sum_{i=1}^{n} A(x_i)\,\Delta x</m>.</premise>
+				<response>Step 3</response>
+			</match>
+			<match>
+				<premise order="4">Take the limit as <m>n\to\infty</m> to obtain the definite integral <m>\displaystyle\int_a^b A(x)\, dx</m>.</premise>
+				<response>Step 4</response>
+			</match>
+		</cardsort>
+	</exercise>
+
 </chapter>
