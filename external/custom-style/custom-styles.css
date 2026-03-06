@@ -1,6 +1,6 @@
 /* Keep ONLY horizontal Parsons (hparsons_section) from going "wide" */
 
-@container ptx-main (width > 821px) {
+/* @container ptx-main (width > 821px) {
   :is(
     .timedAssessment,
     .theorem-like,
@@ -16,10 +16,16 @@
   )
   :has(.hparsons_section)
   :not(:has(.ac_section, .codelens, .parsons_section, .datafile)) {
-    /* cancel the breakout sizing applied by the wide rule */
     min-width: 0 !important;
     width: auto !important;
     max-width: 100% !important;
     margin-left: 0 !important;
   }
+} */
+
+/* Override the responsive mixin behavior just for Runestone */
+.ptx-runestone-container {
+  /* Never wider than its parent, and also respect the global hard cap */
+  --max-width: min(100%, 900px) !important;
+  max-width: var(--max-width) !important;
 }

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Shell Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-style/custom-styles.css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Test Environment">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.17';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.86a1bdf80f338ffc.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/pretext/js/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Test Environment</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-disk.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2-4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="root-1-2-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter 2 Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-implicit-diff.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="root-1-2-3.html" class="internal"><span class="codenumber">2</span> <span class="title">Chapter 4 Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-differentials.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-newton.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Newton’s Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="root-1-2-4.html" class="internal"><span class="codenumber">3</span> <span class="title">Chapter 7 Questions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-area-between-curves.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Area Between Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-disk.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Disk Method</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-shell-method.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Shell Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-5.html" class="internal"><span class="codenumber">4</span> <span class="title">Chapter 8 Questions</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="root-1-2-6.html" class="internal"><span class="codenumber">5</span> <span class="title">Chapter 9 Questions</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-shell-method"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method</span>
+</h2>
+<details id="APEX-PROTEUS-shell-method-2-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unrolling a Cylindrical Shell.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-2-1">A single cylindrical shell has radius <span class="process-math">\(r\text{,}\)</span> height <span class="process-math">\(h\text{,}\)</span> and thickness <span class="process-math">\(\Delta x\text{.}\)</span> When the shell is “cut and unrolled,” the resulting shape is approximately a rectangular solid. What is the approximate volume of that rectangular solid?<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-2-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-APEX-PROTEUS-shell-method-2-v1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_a" data-correct=""><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-1-1-1"><span class="process-math">\(2\pi r h\,\Delta x\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_a"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-1-2-1">Correct — cutting the shell and laying it flat gives a rectangle with length <span class="process-math">\(2\pi r\)</span> (the circumference), height <span class="process-math">\(h\text{,}\)</span> and depth <span class="process-math">\(\Delta x\text{,}\)</span> so <span class="process-math">\(V \approx 2\pi r h\,\Delta x\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-2-1-1"><span class="process-math">\(\pi r^2 h\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-2-2-1">This is the volume of a solid cylinder, not a thin cylindrical shell. The shell has a small thickness <span class="process-math">\(\Delta x\text{,}\)</span> which must appear in the volume expression.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-3-1-1"><span class="process-math">\(\pi r h\,\Delta x\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-3-2-1">Close, but the circumference of the shell is <span class="process-math">\(2\pi r\text{,}\)</span> not <span class="process-math">\(\pi r\text{.}\)</span> When you unroll the shell, the length of the resulting rectangle is the full circumference.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-4-1-1"><span class="process-math">\(2\pi r^2\,\Delta x\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-2-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-2-v1-3-4-2-1">This expression is missing the height <span class="process-math">\(h\text{.}\)</span> The unrolled shell is a rectangular solid whose dimensions are <span class="process-math">\(2\pi r\)</span> (length), <span class="process-math">\(h\)</span> (height), and <span class="process-math">\(\Delta x\)</span> (depth).</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 32: Unrolling a Cylindrical Shell"><a href="#APEX-PROTEUS-shell-method-2-v1" title="Copy heading and permalink for Exercise 32: Unrolling a Cylindrical Shell" aria-label="Copy heading and permalink for Exercise 32: Unrolling a Cylindrical Shell">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-3-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method Formula Components.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-APEX-PROTEUS-shell-method-3-v1">
+<span data-subcomponent="question"><div class="para" id="APEX-PROTEUS-shell-method-3-v1-2-1">Match each component in the Shell Method formula, <span class="process-math">\(V = 2\pi\displaystyle\int_a^b r(x)\,h(x)\, dx\text{,}\)</span> with its geometric meaning.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-3-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-subcomponent="feedback"><div class="para" id="APEX-PROTEUS-shell-method-3-v1-3-1">In the Shell Method, <span class="process-math">\(r(x)\)</span> is always the distance from the sample shell to the axis of rotation, and <span class="process-math">\(h(x)\)</span> is the height of the shell (determined by the bounding curves). The factor <span class="process-math">\(2\pi\)</span> comes from unrolling the shell into a rectangle of length <span class="process-math">\(2\pi r\text{.}\)</span>
+</div></span><li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-3-v1_drag1" data-category="1"><span class="process-math">\(r(x)\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-3-v1_drag1" data-category="1">Distance from the axis of rotation to the shell</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-3-v1_drag2" data-category="2"><span class="process-math">\(h(x)\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-3-v1_drag2" data-category="2">Height of the cylindrical shell</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-3-v1_drag3" data-category="3"><span class="process-math">\(2\pi\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-3-v1_drag3" data-category="3">Comes from the circumference of the shell</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-3-v1_drag4" data-category="4"><span class="process-math">\(dx\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-3-v1_drag4" data-category="4">Thickness of the cylindrical shell</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-3-v1_drag5" data-category="5"><span class="process-math">\(\pi\)</span></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 33: Shell Method Formula Components"><a href="#APEX-PROTEUS-shell-method-3-v1" title="Copy heading and permalink for Exercise 33: Shell Method Formula Components" aria-label="Copy heading and permalink for Exercise 33: Shell Method Formula Components">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-4-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radius When Revolving Around the <span class="process-math">\(y\)</span>-axis.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-APEX-PROTEUS-shell-method-4-v1">
+<div class="para" id="APEX-PROTEUS-shell-method-4-v1-2-1">When using the Shell Method to revolve a region around the <span class="process-math">\(y\)</span>-axis, the radius function is simply <span class="process-math">\(r(x) = x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-4-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-4-v1_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-4-v1_opt_t"><div class="para" id="APEX-PROTEUS-shell-method-4-v1-3-1">True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the <span class="process-math">\(y\)</span>-axis is <span class="process-math">\(x = 0\text{,}\)</span> the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(x = 0\)</span> is just <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-4-v1_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-4-v1_opt_f"><div class="para" id="APEX-PROTEUS-shell-method-4-v1-3-1">True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the <span class="process-math">\(y\)</span>-axis is <span class="process-math">\(x = 0\text{,}\)</span> the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(x = 0\)</span> is just <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 34: Radius When Revolving Around the y-axis"><a href="#APEX-PROTEUS-shell-method-4-v1" title="Copy heading and permalink for Exercise 34: Radius When Revolving Around the y-axis" aria-label="Copy heading and permalink for Exercise 34: Radius When Revolving Around the y-axis">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-5-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Setting Up a Shell Integral.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-2-1">The region bounded by <span class="process-math">\(y = \sqrt{x}\text{,}\)</span> <span class="process-math">\(y = 0\text{,}\)</span> <span class="process-math">\(x = 0\text{,}\)</span> and <span class="process-math">\(x = 4\)</span> is revolved about the <span class="process-math">\(y\)</span>-axis. Using the Shell Method, which integral gives the volume of the resulting solid?<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-5-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-APEX-PROTEUS-shell-method-5-v1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_a" data-correct=""><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-1-1-1"><span class="process-math">\(\displaystyle 2\pi\int_0^4 x\sqrt{x}\, dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_a"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-1-2-1">Correct — rotating about the <span class="process-math">\(y\)</span>-axis means <span class="process-math">\(r(x) = x\text{.}\)</span> The shell height is the vertical distance from <span class="process-math">\(y = 0\)</span> to <span class="process-math">\(y = \sqrt{x}\text{,}\)</span> so <span class="process-math">\(h(x) = \sqrt{x}\text{.}\)</span> Therefore <span class="process-math">\(V = 2\pi\int_0^4 x\cdot\sqrt{x}\, dx\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-2-1-1"><span class="process-math">\(\displaystyle 2\pi\int_0^4 \sqrt{x}\, dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-2-2-1">This is missing the radius factor <span class="process-math">\(r(x) = x\text{.}\)</span> The Shell Method integrand is <span class="process-math">\(r(x)\cdot h(x)\text{,}\)</span> not just <span class="process-math">\(h(x)\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-3-1-1"><span class="process-math">\(\displaystyle \pi\int_0^4 \left(\sqrt{x}\right)^2\, dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-3-2-1">This is the Disk Method integral (cross-sectional area <span class="process-math">\(\pi R^2\)</span>), not the Shell Method. The Shell Method uses <span class="process-math">\(2\pi\int r(x)\,h(x)\, dx\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-4-1-1"><span class="process-math">\(\displaystyle 2\pi\int_0^2 y\cdot y^2\, dy\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-5-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-5-v1-3-4-2-1">Switching to <span class="process-math">\(y\)</span> would be appropriate for the Shell Method only if the axis of rotation were horizontal. Here the axis is the <span class="process-math">\(y\)</span>-axis (vertical), so we integrate with respect to <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 35: Setting Up a Shell Integral"><a href="#APEX-PROTEUS-shell-method-5-v1" title="Copy heading and permalink for Exercise 35: Setting Up a Shell Integral" aria-label="Copy heading and permalink for Exercise 35: Setting Up a Shell Integral">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-7-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Horizontal Axis of Rotation.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-2-1">When using the Shell Method to revolve a region around a <em class="emphasis">horizontal</em> axis (such as the <span class="process-math">\(x\)</span>-axis), the radius and height functions must be written in terms of:<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-7-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-APEX-PROTEUS-shell-method-7-v1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_a" data-correct=""><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-1-1-1"><span class="process-math">\(y\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_a"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-1-2-1">Correct — when revolving around a horizontal axis with the Shell Method, the shells are horizontal. Their radius and height are measured as functions of <span class="process-math">\(y\text{,}\)</span> and the integral is <span class="process-math">\(2\pi\int r(y)\,h(y)\, dy\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-2-1-1"><span class="process-math">\(x\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-2-2-1">When the axis of rotation is horizontal, the shells stack vertically, so the natural variable is <span class="process-math">\(y\text{,}\)</span> not <span class="process-math">\(x\text{.}\)</span> (Using <span class="process-math">\(x\)</span> would correspond to the Washer Method for a horizontal axis.)</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-3-1-1">Either <span class="process-math">\(x\)</span> or <span class="process-math">\(y\text{;}\)</span> it does not matter.</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-3-2-1">The variable must match the orientation of the shells. For a horizontal axis, shells are horizontal, so <span class="process-math">\(y\)</span> is the correct variable.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-4-1-1">A parameter <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-7-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-method-7-v1-3-4-2-1">A parameter is not needed here. The Shell Method uses either <span class="process-math">\(x\)</span> or <span class="process-math">\(y\)</span> depending on the axis orientation.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 36: Horizontal Axis of Rotation"><a href="#APEX-PROTEUS-shell-method-7-v1" title="Copy heading and permalink for Exercise 36: Horizontal Axis of Rotation" aria-label="Copy heading and permalink for Exercise 36: Horizontal Axis of Rotation">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-8-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method as an Alternative.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-APEX-PROTEUS-shell-method-8-v1">
+<div class="para" id="APEX-PROTEUS-shell-method-8-v1-2-1">The Shell Method can only be used when the Washer Method fails.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-8-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-8-v1_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-8-v1_opt_t"><div class="para" id="APEX-PROTEUS-shell-method-8-v1-3-1">False — both methods can often be applied to the same problem. The Shell Method is an <em class="emphasis">alternative</em> to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-method-8-v1_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-method-8-v1_opt_f"><div class="para" id="APEX-PROTEUS-shell-method-8-v1-3-1">False — both methods can often be applied to the same problem. The Shell Method is an <em class="emphasis">alternative</em> to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.</div></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 37: Shell Method as an Alternative"><a href="#APEX-PROTEUS-shell-method-8-v1" title="Copy heading and permalink for Exercise 37: Shell Method as an Alternative" aria-label="Copy heading and permalink for Exercise 37: Shell Method as an Alternative">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-method-9-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">38</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Washer vs. Shell Method.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-APEX-PROTEUS-shell-method-9-v1">
+<span data-subcomponent="question"><div class="para" id="APEX-PROTEUS-shell-method-9-v1-2-1">Match each integral form on the left with the method and axis of rotation on the right.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-method-9-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-subcomponent="feedback"><div class="para" id="APEX-PROTEUS-shell-method-9-v1-3-1">The Washer Method always squares the radius functions (<span class="process-math">\(R^2 - r^2\)</span>) and uses <span class="process-math">\(\pi\text{,}\)</span> while the Shell Method multiplies the radius by the height and uses <span class="process-math">\(2\pi\text{.}\)</span> The variable of integration tells you whether the method slices perpendicular or parallel to the axis.</div></span><li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-9-v1_drag1" data-category="1"><span class="process-math">\(\displaystyle 2\pi\int_a^b r(x)\,h(x)\, dx\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-9-v1_drag1" data-category="1">Shell Method — vertical axis</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-9-v1_drag2" data-category="2"><span class="process-math">\(\displaystyle \pi\int_a^b \Big(R(x)^2 - r(x)^2\Big)\, dx\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-9-v1_drag2" data-category="2">Washer Method — horizontal axis</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-9-v1_drag3" data-category="3"><span class="process-math">\(\displaystyle 2\pi\int_c^d r(y)\,h(y)\, dy\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-9-v1_drag3" data-category="3">Shell Method — horizontal axis</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-method-9-v1_drag4" data-category="4"><span class="process-math">\(\displaystyle \pi\int_c^d \Big(R(y)^2 - r(y)^2\Big)\, dy\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-method-9-v1_drag4" data-category="4">Washer Method — vertical axis</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 38: Washer vs. Shell Method"><a href="#APEX-PROTEUS-shell-method-9-v1" title="Copy heading and permalink for Exercise 38: Washer vs. Shell Method" aria-label="Copy heading and permalink for Exercise 38: Washer vs. Shell Method">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-4-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">39</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method Matching (version 1).</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-APEX-PROTEUS-shell-4-v1">
+<span data-subcomponent="question"><div class="para" id="APEX-PROTEUS-shell-4-v1-2-1">Consider the region bounded by <span class="process-math">\(y = x^2\)</span> and <span class="process-math">\(y = 1\)</span> for <span class="process-math">\(0 \le x \le 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="generated/latex-image/APEX-PROTEUS-shell-4-v1-2-2-1.svg" role="img" class="contained"></div></div></div></div> <div class="para" id="APEX-PROTEUS-shell-4-v1-2-3">Match each axis of rotation with the radius–height pair it corresponds to in the Shell Method.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:32% 68%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="APEX-PROTEUS-shell-4-v1-2-4-1">
+<span class="process-math">\(\small\text{Axis of Rotation}\)</span> ⤵︎<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="APEX-PROTEUS-shell-4-v1-2-4-2">
+<span class="process-math">\(\small\text{Radius / Height}\)</span> ⤵︎<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v1-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div></span><span data-subcomponent="feedback"><div class="para" id="APEX-PROTEUS-shell-4-v1-3-1">In the Shell Method, each cylindrical shell has volume <span class="process-math">\(2\pi\,(\text{radius})(\text{height})\,\Delta x\)</span> (or <span class="process-math">\(\Delta y\)</span>). The <em class="emphasis">radius</em> is the perpendicular distance from the shell to the axis of rotation, and the <em class="emphasis">height</em> is the length of the shell parallel to the axis.</div></span><li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag1" data-category="1"><span class="process-math">\(x = 0\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag1" data-category="1"><span class="process-math">\(\text{radius} = x,\quad \text{height} = 1 - x^2\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag2" data-category="2"><span class="process-math">\(y = 0\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag2" data-category="2"><span class="process-math">\(\text{radius} = y,\quad \text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag3" data-category="3"><span class="process-math">\(x = 1\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag3" data-category="3"><span class="process-math">\(\text{radius} = 1 - x,\quad \text{height} = 1 - x^2\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag4" data-category="4"><span class="process-math">\(y = 1\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag4" data-category="4"><span class="process-math">\(\text{radius} = 1 - y,\quad \text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag5" data-category="5"><span class="process-math">\(x = -1\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag5" data-category="5"><span class="process-math">\(\text{radius} = x + 1,\quad \text{height} = 1 - x^2\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag6" data-category="6"><span class="process-math">\(y = -1\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag6" data-category="6"><span class="process-math">\(\text{radius} = y + 1,\quad \text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v1_drag7" data-category="7"><span class="process-math">\(y = 2\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v1_drag7" data-category="7"><span class="process-math">\(\text{radius} = 2 - y,\quad \text{height} = \sqrt{y}\)</span></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 39: Shell Method Matching (version 1)"><a href="#APEX-PROTEUS-shell-4-v1" title="Copy heading and permalink for Exercise 39: Shell Method Matching (version 1)" aria-label="Copy heading and permalink for Exercise 39: Shell Method Matching (version 1)">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-4-v2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method Matching (version 2).</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-APEX-PROTEUS-shell-4-v2">
+<span data-subcomponent="question"><div class="para" id="APEX-PROTEUS-shell-4-v2-2-1">Consider the region bounded by <span class="process-math">\(y = x^2\)</span> and <span class="process-math">\(y = 1\)</span> for <span class="process-math">\(0 \le x \le 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="generated/latex-image/APEX-PROTEUS-shell-4-v2-2-2-1.svg" role="img" class="contained"></div></div></div></div> <div class="para" id="APEX-PROTEUS-shell-4-v2-2-3">Match each radius–height pair with the axis of rotation it corresponds to in the Shell Method.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:32% 68%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="APEX-PROTEUS-shell-4-v2-2-4-1">
+<span class="process-math">\(\small\text{Radius / Height}\)</span> ⤵︎<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="APEX-PROTEUS-shell-4-v2-2-4-2">
+<span class="process-math">\(\small\text{Axis of Rotation}\)</span> ⤵︎<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-4-v2-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div></span><span data-subcomponent="feedback"><div class="para" id="APEX-PROTEUS-shell-4-v2-3-1">In the Shell Method, each cylindrical shell has volume <span class="process-math">\(2\pi\,(\text{radius})(\text{height})\,\Delta x\)</span> (or <span class="process-math">\(\Delta y\)</span>). The <em class="emphasis">radius</em> is the perpendicular distance from the shell to the axis of rotation, and the <em class="emphasis">height</em> is the length of the shell parallel to the axis.</div></span><li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag1" data-category="1"><span class="process-math">\(\text{radius} = x\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag2" data-category="1"><span class="process-math">\(\text{height} = 1 - x^2\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v2_drag1" data-category="1"><span class="process-math">\(x = 0\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag3" data-category="2"><span class="process-math">\(\text{radius} = y\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag4" data-category="2"><span class="process-math">\(\text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v2_drag2" data-category="2"><span class="process-math">\(y = 0\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag5" data-category="3"><span class="process-math">\(\text{radius} = 1 - x\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag6" data-category="3"><span class="process-math">\(\text{height} = 1 - x^2\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v2_drag3" data-category="3"><span class="process-math">\(x = 1\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag7" data-category="4"><span class="process-math">\(\text{radius} = 1 - y\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag8" data-category="4"><span class="process-math">\(\text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v2_drag4" data-category="4"><span class="process-math">\(y = 1\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag9" data-category="5"><span class="process-math">\(\text{radius} = 2 - y\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag10" data-category="5"><span class="process-math">\(\text{height} = \sqrt{y}\)</span></li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-shell-4-v2_drag5" data-category="5"><span class="process-math">\(y = 2\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag11" data-category="6"><span class="process-math">\(\text{radius} = 1 - x^2\)</span></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-shell-4-v2_drag12" data-category="6"><span class="process-math">\(\text{height} = x\)</span></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 40: Shell Method Matching (version 2)"><a href="#APEX-PROTEUS-shell-4-v2" title="Copy heading and permalink for Exercise 40: Shell Method Matching (version 2)" aria-label="Copy heading and permalink for Exercise 40: Shell Method Matching (version 2)">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-5-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Construct the Volume Integral (Shell Method).</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-APEX-PROTEUS-shell-5-v1">
+<div class="hp_question">
+<div class="para logical" id="APEX-PROTEUS-shell-5-v1-2-1">
+<div class="para">Suppose the region bounded by</div>
+<div class="displaymath process-math" id="APEX-PROTEUS-shell-5-v1-2-1-1">
+\begin{equation*}
+y = x\ \text{and}\ y = x^2\ \text{for}\ 0 \le x \le 1
+\end{equation*}
+</div>
+<div class="para">is revolved about the <span class="process-math">\(y\)</span>-axis.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-5-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="APEX-PROTEUS-shell-5-v1-2-2">Using the blocks below, construct the integral that gives the volume using the shell method.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-5-v1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="hparsons"></div>
+<textarea style="visibility: hidden" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3 4 5 6">
+--blocks--
+<span class="process-math">\(V = 2\pi\)</span>
+<span class="process-math">\(\int_0^1\)</span>
+<span class="process-math">\(x(\)</span>
+<span class="process-math">\(x\)</span>
+<span class="process-math">\(-\)</span>
+<span class="process-math">\(x^2\)</span>
+<span class="process-math">\()dx\)</span>
+<span class="process-math">\(V = \pi\)</span>
+<span class="process-math">\(\int_{-1}^{1}\)</span>
+<span class="process-math">\(x^4\)</span>
+</textarea>
+</div></div></div>
+<div class="autopermalink" data-description="Exercise 41: Construct the Volume Integral (Shell Method)"><a href="#APEX-PROTEUS-shell-5-v1" title="Copy heading and permalink for Exercise 41: Construct the Volume Integral (Shell Method)" aria-label="Copy heading and permalink for Exercise 41: Construct the Volume Integral (Shell Method)">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-6-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">42</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method: Choosing the Right Method.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="APEX-PROTEUS-shell-6-v1-2-1">Consider the region bounded by <span class="process-math">\(y = e^{x^2}\text{,}\)</span> <span class="process-math">\(y = 0\text{,}\)</span> <span class="process-math">\(x = 0\text{,}\)</span> and <span class="process-math">\(x = 1\text{,}\)</span> revolved about the <span class="process-math">\(y\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-6-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="APEX-PROTEUS-shell-6-v1-2-2">Setting up the volume using the <em class="emphasis">washer method</em> requires expressing the boundary curve as <span class="process-math">\(x = \sqrt{\ln y}\)</span> and integrating in <span class="process-math">\(y\text{,}\)</span> which cannot be evaluated in closed form using standard techniques. Which shell-method integral correctly gives the volume and <em class="emphasis">can</em> be evaluated using a standard substitution?<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-6-v1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-APEX-PROTEUS-shell-6-v1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-6-v1_opt_a" data-correct=""><div class="para" id="APEX-PROTEUS-shell-6-v1-3-1-1-1"><span class="process-math">\(V = 2\pi\displaystyle\int_0^1 x\,e^{x^2}\,dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-6-v1_opt_a"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-1-2-1">Correct!  Each vertical shell at position <span class="process-math">\(x\)</span> has radius <span class="process-math">\(x\)</span> and height <span class="process-math">\(e^{x^2}\text{,}\)</span> giving <span class="process-math">\(2\pi\int_0^1 x\,e^{x^2}\,dx\text{.}\)</span> The substitution <span class="process-math">\(u = x^2\)</span> transforms this into <span class="process-math">\(\pi\int_0^1 e^u\,du = \pi(e-1)\)</span> — a clean closed form that the washer method cannot easily reach.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-6-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-2-1-1"><span class="process-math">\(V = 2\pi\displaystyle\int_0^1 e^{x^2}\,dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-6-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-2-2-1">This is missing the radius factor <span class="process-math">\(x\text{.}\)</span>  In the shell method the integrand is always <span class="process-math">\((\text{radius}) \times (\text{height})\text{.}\)</span> Without the <span class="process-math">\(x\text{,}\)</span> this integral also has no known closed form, which is precisely what we are trying to avoid.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-6-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-3-1-1"><span class="process-math">\(V = 2\pi\displaystyle\int_0^1 x^2\,e^{x^2}\,dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-6-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-3-2-1">The radius of a shell centered on the <span class="process-math">\(y\)</span>-axis at position <span class="process-math">\(x\)</span> is simply <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(x^2\text{.}\)</span>  Using <span class="process-math">\(x^2\)</span> as the radius would correspond to a different, non-standard geometry.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-6-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-4-1-1"><span class="process-math">\(V = \pi\displaystyle\int_0^1 x\,e^{x^2}\,dx\)</span></div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-6-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-6-v1-3-4-2-1">The shell method formula carries a factor of <span class="process-math">\(2\pi\)</span> — the circumference of the shell — not <span class="process-math">\(\pi\text{.}\)</span>  The factor <span class="process-math">\(\pi\)</span> belongs to the disk/washer method, where it arises from the area formula <span class="process-math">\(\pi r^2\text{.}\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 42: Shell Method: Choosing the Right Method"><a href="#APEX-PROTEUS-shell-6-v1" title="Copy heading and permalink for Exercise 42: Shell Method: Choosing the Right Method" aria-label="Copy heading and permalink for Exercise 42: Shell Method: Choosing the Right Method">🔗</a></div></article></details><details id="APEX-PROTEUS-shell-8-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">43</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Shell Method: Identify the Error.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para logical" id="APEX-PROTEUS-shell-8-v1-2-1">
+<div class="para">The region bounded by <span class="process-math">\(y = x^2\)</span> and <span class="process-math">\(y = 0\)</span> for <span class="process-math">\(0 \le x \le 2\)</span> is revolved about the line <span class="process-math">\(x = 3\text{.}\)</span>  A student sets up the following integral:</div>
+<div class="displaymath process-math" id="APEX-PROTEUS-shell-8-v1-2-1-5">
+\begin{equation*}
+V = 2\pi\int_0^2 x \cdot x^2\,dx = 2\pi\int_0^2 x^3\,dx.
+\end{equation*}
+</div>
+<div class="para">Which statement best identifies the error?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-shell-8-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-APEX-PROTEUS-shell-8-v1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-8-v1_opt_a" data-correct=""><div class="para" id="APEX-PROTEUS-shell-8-v1-3-1-1-1">The radius of each shell is the distance from the shell to the axis <span class="process-math">\(x = 3\text{,}\)</span> which is <span class="process-math">\(3 - x\text{,}\)</span> not <span class="process-math">\(x\text{.}\)</span>  The correct integral is <span class="process-math">\(V = 2\pi\displaystyle\int_0^2
+(3-x)\cdot x^2\,dx\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-8-v1_opt_a"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-1-2-1">Correct!  When revolving about <span class="process-math">\(x = c\)</span> with <span class="process-math">\(c &gt; b\text{,}\)</span> the shell at position <span class="process-math">\(x\)</span> has radius <span class="process-math">\(c - x\)</span> (the horizontal distance to the axis).  Using <span class="process-math">\(x\)</span> alone assumes the axis is the <span class="process-math">\(y\)</span>-axis (<span class="process-math">\(x = 0\)</span>), which is not the case here.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-8-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-2-1-1">The limits of integration should run from <span class="process-math">\(0\)</span> to <span class="process-math">\(3\)</span> to match the position of the axis.</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-8-v1_opt_b"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-2-2-1">Incorrect.  The limits of integration always span the <span class="process-math">\(x\)</span>-extent of the region being revolved, which is <span class="process-math">\([0,2]\text{.}\)</span>  Moving the axis of rotation does not change the limits; it changes the <em class="emphasis">radius expression</em> inside the integrand.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-8-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-3-1-1">The height of each shell should be <span class="process-math">\(2 - x^2\)</span> rather than <span class="process-math">\(x^2\text{,}\)</span> because the height is measured downward from <span class="process-math">\(y = 2\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-8-v1_opt_c"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-3-2-1">Incorrect.  The height of a shell is the vertical extent of the region at a given <span class="process-math">\(x\text{,}\)</span> which is <span class="process-math">\(x^2 - 0 = x^2\text{.}\)</span>  The value <span class="process-math">\(y = 2\)</span> has no special role in this problem; the upper boundary is the parabola <span class="process-math">\(y = x^2\text{,}\)</span> not a horizontal line.</div></li>
+<li data-component="answer" id="rs-APEX-PROTEUS-shell-8-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-4-1-1">The factor <span class="process-math">\(2\pi\)</span> should be replaced by <span class="process-math">\(\pi\text{,}\)</span> because the axis of rotation is a vertical line rather than a horizontal one.</div></li>
+<li data-component="feedback" id="rs-APEX-PROTEUS-shell-8-v1_opt_d"><div class="para" id="APEX-PROTEUS-shell-8-v1-3-4-2-1">Incorrect.  The factor <span class="process-math">\(2\pi\)</span> in the shell method represents the circumference of each cylindrical shell and is always present regardless of whether the axis is horizontal or vertical.  The orientation of the axis determines the variable of integration and the radius expression, not the leading constant.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 43: Shell Method: Identify the Error"><a href="#APEX-PROTEUS-shell-8-v1" title="Copy heading and permalink for Exercise 43: Shell Method: Identify the Error" aria-label="Copy heading and permalink for Exercise 43: Shell Method: Identify the Error">🔗</a></div></article></details><div class="autopermalink" data-description="Section 3.3: Shell Method"><a href="#sec-shell-method" title="Copy heading and permalink for Section 3.3: Shell Method" aria-label="Copy heading and permalink for Section 3.3: Shell Method">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-disk.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="root-1-2-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
