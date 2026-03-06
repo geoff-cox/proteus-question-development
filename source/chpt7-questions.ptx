@@ -1026,11 +1026,11 @@
 			<blocks layout="horizontal" randomize="yes">
 				<block order="1"><m>V = 2\pi</m></block>
 				<block order="2"><m>\int_0^1</m></block>
-				<block order="3"><m>x(</m></block>
+				<block order="3"><m>x\ (</m></block>
 				<block order="4"><m>x</m></block>
 				<block order="5"><m>-</m></block>
 				<block order="6"><m>x^2</m></block>
-				<block order="7"><m>)dx</m></block>
+				<block order="7"><m>)\ dx</m></block>
 				<block correct="no"><m>V = \pi</m></block>
 				<block correct="no"><m>\int_{-1}^{1}</m></block>
 				<block correct="no"><m>x^4</m></block>
