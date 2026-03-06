@@ -340,113 +340,104 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Shell Method",
-  "body": " Shell Method         Unrolling a Cylindrical Shell   A single cylindrical shell has radius , height , and thickness . When the shell is cut and unrolled, the resulting shape is approximately a rectangular solid. What is the approximate volume of that rectangular solid?      Correct — cutting the shell and laying it flat gives a rectangle with length (the circumference), height , and depth , so .     This is the volume of a solid cylinder, not a thin cylindrical shell. The shell has a small thickness , which must appear in the volume expression.     Close, but the circumference of the shell is , not . When you unroll the shell, the length of the resulting rectangle is the full circumference.     This expression is missing the height . The unrolled shell is a rectangular solid whose dimensions are (length), (height), and (depth).        Shell Method Formula Components   Match each component in the Shell Method formula, , with its geometric meaning.    In the Shell Method, is always the distance from the sample shell to the axis of rotation, and is the height of the shell (determined by the bounding curves). The factor comes from unrolling the shell into a rectangle of length .      Distance from the axis of rotation to the shell     Height of the cylindrical shell     Comes from the circumference of the shell     Thickness of the cylindrical shell           Radius When Revolving Around the -axis   When using the Shell Method to revolve a region around the -axis, the radius function is simply .    True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the -axis is , the distance from to is just .        Setting Up a Shell Integral   The region bounded by , , , and is revolved about the -axis. Using the Shell Method, which integral gives the volume of the resulting solid?      Correct — rotating about the -axis means . The shell height is the vertical distance from to , so . Therefore .     This is missing the radius factor . The Shell Method integrand is , not just .     This is the Disk Method integral (cross-sectional area ), not the Shell Method. The Shell Method uses .     Switching to would be appropriate for the Shell Method only if the axis of rotation were horizontal. Here the axis is the -axis (vertical), so we integrate with respect to .        Horizontal Axis of Rotation   When using the Shell Method to revolve a region around a horizontal axis (such as the -axis), the radius and height functions must be written in terms of:      Correct — when revolving around a horizontal axis with the Shell Method, the shells are horizontal. Their radius and height are measured as functions of , and the integral is .     When the axis of rotation is horizontal, the shells stack vertically, so the natural variable is , not . (Using would correspond to the Washer Method for a horizontal axis.)    Either or ; it does not matter.  The variable must match the orientation of the shells. For a horizontal axis, shells are horizontal, so is the correct variable.    A parameter .  A parameter is not needed here. The Shell Method uses either or depending on the axis orientation.         Shell Method as an Alternative   The Shell Method can only be used when the Washer Method fails.    False — both methods can often be applied to the same problem. The Shell Method is an alternative to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.       Washer vs. Shell Method   Match each integral form on the left with the method and axis of rotation on the right.    The Washer Method always squares the radius functions ( ) and uses , while the Shell Method multiplies the radius by the height and uses . The variable of integration tells you whether the method slices perpendicular or parallel to the axis.      Shell Method — vertical axis     Washer Method — horizontal axis     Shell Method — horizontal axis     Washer Method — vertical axis       Shell Method Matching (version 1)   Consider the region bounded by and for .       Match each axis of rotation with the radius–height pair it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                    Shell Method Matching (version 2)   Consider the region bounded by and for .       Match each radius–height pair with the axis of rotation it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                    Construct the Volume Integral (Shell Method)   Suppose the region bounded by is revolved about the -axis.  Using the blocks below, construct the integral that gives the volume using the shell method.                  Shell Method: Choosing the Right Method   Consider the region bounded by , , , and , revolved about the -axis.  Setting up the volume using the washer method requires expressing the boundary curve as and integrating in , which cannot be evaluated in closed form using standard techniques. Which shell-method integral correctly gives the volume and can be evaluated using a standard substitution?           Correct! Each vertical shell at position has radius and height , giving . The substitution transforms this into — a clean closed form that the washer method cannot easily reach.           This is missing the radius factor . In the shell method the integrand is always . Without the , this integral also has no known closed form, which is precisely what we are trying to avoid.           The radius of a shell centered on the -axis at position is simply , not . Using as the radius would correspond to a different, non-standard geometry.           The shell method formula carries a factor of — the circumference of the shell — not . The factor belongs to the disk\/washer method, where it arises from the area formula .        Shell Method: Identify the Error   The region bounded by and for is revolved about the line . A student sets up the following integral: Which statement best identifies the error?      The radius of each shell is the distance from the shell to the axis , which is , not . The correct integral is .    Correct! When revolving about with , the shell at position has radius (the horizontal distance to the axis). Using alone assumes the axis is the -axis ( ), which is not the case here.      The limits of integration should run from to to match the position of the axis.    Incorrect. The limits of integration always span the -extent of the region being revolved, which is . Moving the axis of rotation does not change the limits; it changes the radius expression inside the integrand.      The height of each shell should be rather than , because the height is measured downward from .    Incorrect. The height of a shell is the vertical extent of the region at a given , which is . The value has no special role in this problem; the upper boundary is the parabola , not a horizontal line.      The factor should be replaced by , because the axis of rotation is a vertical line rather than a horizontal one.    Incorrect. The factor in the shell method represents the circumference of each cylindrical shell and is always present regardless of whether the axis is horizontal or vertical. The orientation of the axis determines the variable of integration and the radius expression, not the leading constant.      "
+  "body": " Shell Method         Unrolling a Cylindrical Shell   A single cylindrical shell has radius , height , and thickness . When the shell is cut and unrolled, the resulting shape is approximately a rectangular solid. What is the approximate volume of that rectangular solid?      Correct — cutting the shell and laying it flat gives a rectangle with length (the circumference), height , and depth , so .     This is the volume of a solid cylinder, not a thin cylindrical shell. The shell has a small thickness , which must appear in the volume expression.     Close, but the circumference of the shell is , not . When you unroll the shell, the length of the resulting rectangle is the full circumference.     This expression is missing the height . The unrolled shell is a rectangular solid whose dimensions are (length), (height), and (depth).        Shell Method Formula Components   Match each component in the Shell Method formula, , with its geometric meaning.    In the Shell Method, is always the distance from the sample shell to the axis of rotation, and is the height of the shell (determined by the bounding curves). The factor comes from unrolling the shell into a rectangle of length .      Distance from the axis of rotation to the shell     Height of the cylindrical shell     Comes from the circumference of the shell     Thickness of the cylindrical shell           Radius When Revolving Around the -axis   When using the Shell Method to revolve a region around the -axis, the radius function is simply .    True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the -axis is , the distance from to is just .        Setting Up a Shell Integral   The region bounded by , , , and is revolved about the -axis. Using the Shell Method, which integral gives the volume of the resulting solid?      Correct — rotating about the -axis means . The shell height is the vertical distance from to , so . Therefore .     This is missing the radius factor . The Shell Method integrand is , not just .     This is the Disk Method integral (cross-sectional area ), not the Shell Method. The Shell Method uses .     Switching to would be appropriate for the Shell Method only if the axis of rotation were horizontal. Here the axis is the -axis (vertical), so we integrate with respect to .        Horizontal Axis of Rotation   When using the Shell Method to revolve a region around a horizontal axis (such as the -axis), the radius and height functions must be written in terms of:      Correct — when revolving around a horizontal axis with the Shell Method, the shells are horizontal. Their radius and height are measured as functions of , and the integral is .     When the axis of rotation is horizontal, the shells stack vertically, so the natural variable is , not . (Using would correspond to the Washer Method for a horizontal axis.)    Either or ; it does not matter.  The variable must match the orientation of the shells. For a horizontal axis, shells are horizontal, so is the correct variable.    A parameter .  A parameter is not needed here. The Shell Method uses either or depending on the axis orientation.         Shell Method as an Alternative   The Shell Method can only be used when the Washer Method fails.    False — both methods can often be applied to the same problem. The Shell Method is an alternative to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.       Washer vs. Shell Method   Match each integral form on the left with the method and axis of rotation on the right.    The Washer Method always squares the radius functions ( ) and uses , while the Shell Method multiplies the radius by the height and uses . The variable of integration tells you whether the method slices perpendicular or parallel to the axis.      Shell Method — vertical axis     Washer Method — horizontal axis     Shell Method — horizontal axis     Washer Method — vertical axis       Shell Method Matching (version 1)   Consider the region bounded by and for .       Match each axis of rotation with the radius–height pair it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                    Shell Method Matching (version 2)   Consider the region bounded by and for .       Match each radius–height pair with the axis of rotation it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                    Construct the Volume Integral (Shell Method)   Suppose the region bounded by is revolved about the -axis.  Using the blocks below, construct the integral that gives the volume using the shell method.                  Shell Method: Identify the Error   The region bounded by and for is revolved about the line . A student sets up the following integral: Which statement best identifies the error?      The radius of each shell is the distance from the shell to the axis , which is , not . The correct integral is .    Correct! When revolving about with , the shell at position has radius (the horizontal distance to the axis). Using alone assumes the axis is the -axis ( ), which is not the case here.      The limits of integration should run from to to match the position of the axis.    Incorrect. The limits of integration always span the -extent of the region being revolved, which is . Moving the axis of rotation does not change the limits; it changes the radius expression inside the integrand.      The height of each shell should be rather than , because the height is measured downward from .    Incorrect. The height of a shell is the vertical extent of the region at a given , which is . The value has no special role in this problem; the upper boundary is the parabola , not a horizontal line.      The factor should be replaced by , because the axis of rotation is a vertical line rather than a horizontal one.    Incorrect. The factor in the shell method represents the circumference of each cylindrical shell and is always present regardless of whether the axis is horizontal or vertical. The orientation of the axis determines the variable of integration and the radius expression, not the leading constant.      "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-2-v1",
+  "id": "APEX-PROTEUS-shell-1-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-2-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-1-v1",
   "type": "Exercise",
   "number": "32",
   "title": "Unrolling a Cylindrical Shell.",
   "body": " Unrolling a Cylindrical Shell   A single cylindrical shell has radius , height , and thickness . When the shell is cut and unrolled, the resulting shape is approximately a rectangular solid. What is the approximate volume of that rectangular solid?      Correct — cutting the shell and laying it flat gives a rectangle with length (the circumference), height , and depth , so .     This is the volume of a solid cylinder, not a thin cylindrical shell. The shell has a small thickness , which must appear in the volume expression.     Close, but the circumference of the shell is , not . When you unroll the shell, the length of the resulting rectangle is the full circumference.     This expression is missing the height . The unrolled shell is a rectangular solid whose dimensions are (length), (height), and (depth).    "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-3-v1",
+  "id": "APEX-PROTEUS-shell-2-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-3-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-2-v1",
   "type": "Exercise",
   "number": "33",
   "title": "Shell Method Formula Components.",
   "body": " Shell Method Formula Components   Match each component in the Shell Method formula, , with its geometric meaning.    In the Shell Method, is always the distance from the sample shell to the axis of rotation, and is the height of the shell (determined by the bounding curves). The factor comes from unrolling the shell into a rectangle of length .      Distance from the axis of rotation to the shell     Height of the cylindrical shell     Comes from the circumference of the shell     Thickness of the cylindrical shell       "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-4-v1",
+  "id": "APEX-PROTEUS-shell-3-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-4-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-3-v1",
   "type": "Exercise",
   "number": "34",
   "title": "Radius When Revolving Around the <span class=\"process-math\">\\(y\\)<\/span>-axis.",
   "body": " Radius When Revolving Around the -axis   When using the Shell Method to revolve a region around the -axis, the radius function is simply .    True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the -axis is , the distance from to is just .   "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-5-v1",
+  "id": "APEX-PROTEUS-shell-4-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-5-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-4-v1",
   "type": "Exercise",
   "number": "35",
   "title": "Setting Up a Shell Integral.",
   "body": " Setting Up a Shell Integral   The region bounded by , , , and is revolved about the -axis. Using the Shell Method, which integral gives the volume of the resulting solid?      Correct — rotating about the -axis means . The shell height is the vertical distance from to , so . Therefore .     This is missing the radius factor . The Shell Method integrand is , not just .     This is the Disk Method integral (cross-sectional area ), not the Shell Method. The Shell Method uses .     Switching to would be appropriate for the Shell Method only if the axis of rotation were horizontal. Here the axis is the -axis (vertical), so we integrate with respect to .    "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-7-v1",
+  "id": "APEX-PROTEUS-shell-5-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-7-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-5-v1",
   "type": "Exercise",
   "number": "36",
   "title": "Horizontal Axis of Rotation.",
   "body": " Horizontal Axis of Rotation   When using the Shell Method to revolve a region around a horizontal axis (such as the -axis), the radius and height functions must be written in terms of:      Correct — when revolving around a horizontal axis with the Shell Method, the shells are horizontal. Their radius and height are measured as functions of , and the integral is .     When the axis of rotation is horizontal, the shells stack vertically, so the natural variable is , not . (Using would correspond to the Washer Method for a horizontal axis.)    Either or ; it does not matter.  The variable must match the orientation of the shells. For a horizontal axis, shells are horizontal, so is the correct variable.    A parameter .  A parameter is not needed here. The Shell Method uses either or depending on the axis orientation.    "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-8-v1",
+  "id": "APEX-PROTEUS-shell-6-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-8-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-6-v1",
   "type": "Exercise",
   "number": "37",
   "title": "Shell Method as an Alternative.",
   "body": " Shell Method as an Alternative   The Shell Method can only be used when the Washer Method fails.    False — both methods can often be applied to the same problem. The Shell Method is an alternative to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.   "
 },
 {
-  "id": "APEX-PROTEUS-shell-method-9-v1",
+  "id": "APEX-PROTEUS-shell-7-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-method-9-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-7-v1",
   "type": "Exercise",
   "number": "38",
   "title": "Washer vs. Shell Method.",
   "body": " Washer vs. Shell Method   Match each integral form on the left with the method and axis of rotation on the right.    The Washer Method always squares the radius functions ( ) and uses , while the Shell Method multiplies the radius by the height and uses . The variable of integration tells you whether the method slices perpendicular or parallel to the axis.      Shell Method — vertical axis     Washer Method — horizontal axis     Shell Method — horizontal axis     Washer Method — vertical axis    "
 },
 {
-  "id": "APEX-PROTEUS-shell-4-v1",
+  "id": "APEX-PROTEUS-shell-8-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-4-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-8-v1",
   "type": "Exercise",
   "number": "39",
   "title": "Shell Method Matching (version 1).",
   "body": " Shell Method Matching (version 1)   Consider the region bounded by and for .       Match each axis of rotation with the radius–height pair it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                 "
 },
 {
-  "id": "APEX-PROTEUS-shell-4-v2",
+  "id": "APEX-PROTEUS-shell-9-v2",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-4-v2",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-9-v2",
   "type": "Exercise",
   "number": "40",
   "title": "Shell Method Matching (version 2).",
   "body": " Shell Method Matching (version 2)   Consider the region bounded by and for .       Match each radius–height pair with the axis of rotation it corresponds to in the Shell Method.   ⤵︎  ⤵︎     In the Shell Method, each cylindrical shell has volume (or ). The radius is the perpendicular distance from the shell to the axis of rotation, and the height is the length of the shell parallel to the axis.                                  "
 },
 {
-  "id": "APEX-PROTEUS-shell-5-v1",
+  "id": "APEX-PROTEUS-shell-10-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-5-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-10-v1",
   "type": "Exercise",
   "number": "41",
   "title": "Construct the Volume Integral (Shell Method).",
   "body": " Construct the Volume Integral (Shell Method)   Suppose the region bounded by is revolved about the -axis.  Using the blocks below, construct the integral that gives the volume using the shell method.               "
 },
 {
-  "id": "APEX-PROTEUS-shell-6-v1",
+  "id": "APEX-PROTEUS-shell-11-v1",
   "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-6-v1",
+  "url": "sec-shell-method.html#APEX-PROTEUS-shell-11-v1",
   "type": "Exercise",
   "number": "42",
-  "title": "Shell Method: Choosing the Right Method.",
-  "body": " Shell Method: Choosing the Right Method   Consider the region bounded by , , , and , revolved about the -axis.  Setting up the volume using the washer method requires expressing the boundary curve as and integrating in , which cannot be evaluated in closed form using standard techniques. Which shell-method integral correctly gives the volume and can be evaluated using a standard substitution?           Correct! Each vertical shell at position has radius and height , giving . The substitution transforms this into — a clean closed form that the washer method cannot easily reach.           This is missing the radius factor . In the shell method the integrand is always . Without the , this integral also has no known closed form, which is precisely what we are trying to avoid.           The radius of a shell centered on the -axis at position is simply , not . Using as the radius would correspond to a different, non-standard geometry.           The shell method formula carries a factor of — the circumference of the shell — not . The factor belongs to the disk\/washer method, where it arises from the area formula .     "
-},
-{
-  "id": "APEX-PROTEUS-shell-8-v1",
-  "level": "2",
-  "url": "sec-shell-method.html#APEX-PROTEUS-shell-8-v1",
-  "type": "Exercise",
-  "number": "43",
   "title": "Shell Method: Identify the Error.",
   "body": " Shell Method: Identify the Error   The region bounded by and for is revolved about the line . A student sets up the following integral: Which statement best identifies the error?      The radius of each shell is the distance from the shell to the axis , which is , not . The correct integral is .    Correct! When revolving about with , the shell at position has radius (the horizontal distance to the axis). Using alone assumes the axis is the -axis ( ), which is not the case here.      The limits of integration should run from to to match the position of the axis.    Incorrect. The limits of integration always span the -extent of the region being revolved, which is . Moving the axis of rotation does not change the limits; it changes the radius expression inside the integrand.      The height of each shell should be rather than , because the height is measured downward from .    Incorrect. The height of a shell is the vertical extent of the region at a given , which is . The value has no special role in this problem; the upper boundary is the parabola , not a horizontal line.      The factor should be replaced by , because the axis of rotation is a vertical line rather than a horizontal one.    Incorrect. The factor in the shell method represents the circumference of each cylindrical shell and is always present regardless of whether the axis is horizontal or vertical. The orientation of the axis determines the variable of integration and the radius expression, not the leading constant.     "
 },
@@ -464,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#chkpt-ivp-solution",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "Initial Value Problem Solution.",
   "body": " Initial Value Problem Solution   Which of the following is a solution to the initial value problem ?           Correct! This function satisfies the differential equation since and the initial condition, since .           This does not satisfy the initial condition since .           This satisfies the initial condition since , but it does not satisfy the differential equation since .     "
 },
@@ -473,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#chkpt-matching-diffeq-solutions",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "Match Differential Equations with Solutions.",
   "body": " Match Differential Equations with Solutions   Match each initial-valued differential equation with its solution.         To verify a solution, substitute it into the differential equation and check that the initial conditions are satisfied.                                 "
 },
@@ -482,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#root-1-2-5-4",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "Interactive Questions.",
   "body": " Interactive Questions   Consider the differential equation: which has the general solution: Since the constant can take any value, there are many possible solutions as seen by the green curves in the figure below. Notice, each green curve can be identified by where it crosses the -axis (e.g., ). This point is called the initial condition and it leads to both and the particular solution in blue.      Adjust the initial condition in this interactive figure to answer the following.    Find the particular solution   Find the particular solution that satisfies .      Incorrect. The value of must make the solution pass through . Hover over the curve in the figure that passes through .     Incorrect. Remember that at , the exponential term equals 1, so . What value of gives ? Hover over the curve in the figure that passes through .     Correct! The value ensures that , so this solution passes through .     Incorrect. The general solution would pass through if . Hover over the curve in the figure that passes through .      Find the initial condition   What is the initial condition for the particular solution ?      Correct! Moving to this point gives the particular solution above.     Incorrect. Hint: move around until you see the particular solution above. .     Incorrect. Hint: move around until you see the particular solution above. .     Incorrect. Hint: move around until you see the particular solution above. .      Find the constant .   Find the -value for the particular solution that approximately satisfies .      Correct! Moving to gives a blue curve that nearly passes through the point .     Incorrect. Hint: identify the point and move until the blue curve intersect with this point.     Incorrect. Hint: identify the point and move until the blue curve intersect with this point.     Incorrect. Hint: identify the point and move until the blue curve intersect with this point.      Role of Initial Conditions  What role do initial conditions play in solving differential equations?    They determine the general form of the solution.  Incorrect. Initial conditions are not used to find the general solution.    They used to determine the constants in the general solution.  Correct! Initial conditions are used to find specific values for constants in the general solution.    They are used to find the particular solution.  Correct! Initial conditions are used to find the specific solution that applies to a particular scenario.    They are not needed if the general solution is already known.  Incorrect. If provided, initial conditions are always needed to get the particular solution from the general solution.    C   "
 },
@@ -491,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#separable-des-cyu-1",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "Find the Separable Equations.",
   "body": " Find the Separable Equations   Click on each of the separable differential equations below.                                 Remember, a differential equation is separable if you can express it as a product of functions of and separately. Look for equations where the variables are separated by multiplication, not addition or other operations.   "
 },
@@ -500,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#chkpt-sov-method-steps-2",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "SOV Matching.",
   "body": " SOV Matching   In the context of the separation of variables (SOV) method, match the expression or statement (on the left) with the most appropriate action that you might use in applying this method (on the right).    Do we want feedback?     First-order  Verify     Put in separable form      Separate variables     Integrate both sides    General solution  Solve for , if possible    Particular solution  Apply initial condition    "
 },
@@ -509,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#showing-separable-forms-chkpt-3",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "Steps to Show Separable.",
   "body": " Steps to Show Separable   Suppose you want to show that the following differential equation is separable: Match the scrambled tasks (on the left) to the order that it should be performed to confirm the equation is separable.     check the equation is 1st-order  First, we ...    move to the left side via subtraction  Then, we ...    factor out a common factor of on the left side  The final step is to ...    check the equation is linear  integrate both sides  divide both sides by    "
 },
@@ -518,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#sov-method-cyu-2",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "Sort the Steps in Order.",
   "body": " Sort the Steps in Order   Suppose you want to use separation of variables method to determine the general solution of the differential equation .  Match the scrambled tasks (on the left) to the task order (on the right) that it should be performed to use this method.      Equation is 1st-order ✅                                                                      "
 },
@@ -527,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#c3-warm-ups-ww-1",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "Determine the Separable Form.",
   "body": " Determine the Separable Form   Write each differential equation in the separable form .   Type your answer for into the left box and into the right box.                                                             Move the term to the right and factor out .     Isolate the derivative and group the terms as shown below.     We isolate the derivative and group the terms as shown below. .     "
 },
@@ -536,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#c3-warm-ups-ordering-1",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "Reorder the Steps.",
   "body": " Reorder the Steps   Reorder the steps required to solve the differential equation, , using the separation of variables method.    Check for 1st-order.                     "
 },
@@ -545,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#c3-warm-ups-click-2",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "Step-By-Step Initial-Valued Problem.",
   "body": " Step-By-Step Initial-Valued Problem   Use separation of variables to solve the initial value problem  .     Select the variable that you are solving for:            Select the order of the equation:                    Select the correct separable form:                           Select the next step following the correct answer to (c).                       Select the result after integrating correct answer to (d).                       Select the correct general solution.                       Select the correct particular solution.                        "
 },
@@ -554,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#c3-warm-ups-ww-4",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "Find the General Solution.",
   "body": " Find the General Solution   Use separation of variables to find the general solution of the differential equation:      Give the order and separable form:    order:           After separating the variables and integrating both sides, we get:       After computing these integrals, solving for and combining constants we arrive at the following general solution:          Use for the final combined constant.                                      Use the property to obtain the final combined constant.   "
 },
@@ -563,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#if-identify-equations",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "Identifying Equations for the IF Method.",
   "body": " Identifying Equations for the IF Method   Which of the following differential equations can be solved using the integrating factor method?                          A first-order linear equation has and only to the first power and not inside nonlinear functions.    Four of these equations are linear and first-order—they can be solved by the integrating factor method.   "
 },
@@ -572,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#whats-a-numerical-soln-chkpt-2",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "Recognizing a Numerical Solution.",
   "body": " Recognizing a Numerical Solution  When you say you've found a numerical solution to an initial value problem, what do you actually have?    A list of values approximating at specific times  Correct—numerical solutions are tables of approximate values, not formulas.    A formula expressing using functions like or  No, that describes an analytic solution.    An exact solution valid for all  No, numerical solutions are approximations.    A graph showing all possible solutions  No, that describes a slope field, not a numerical solution.    "
 },
@@ -581,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-5.html#eulers-method-chkpt-1",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "Match Euler’s Method Parts to their Meaning.",
   "body": " Match Euler's Method Parts to their Meaning   Assume the current approximation using Euler's Method is denoted by . In this context, match the mathematical expression with its meaning.    These pairings are essential when converting a piecewise function into unit step form. The form you choose depends entirely on where each piece is active.      The value of the next approximation.     The value of the previous approximation.     The distance between and .     The slope of the solution at the current approximation.     The value of the current approximation.     The rise (or fall) in the value from the current approximation to the next approximation.    "
 },
@@ -599,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-02",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "Range of a sequence.",
   "body": " Range of a sequence   Select all statements that correctly describe the of a sequence .      It is the set of all distinct values taken on by .    The range collects values the sequence hits, ignoring how many times a value repeats.      It is the ordered list .    The ordered list is the list of terms. The range is a set, so it ignores order and repetition.      If repeats values, those repeated values appear only once in the range.    Repetition does not create new elements of the range.      The range must be infinite because the sequence has infinitely many terms.    A sequence can take only finitely many distinct values (for example, alternating between two numbers).      The range can be finite even though the domain is infinite.    What matters is how many distinct outputs occur, not how many inputs there are.      Changing the order of the terms changes the range.    The range is a set of values, so order does not matter; reordering terms does not change which values occur.     "
 },
@@ -608,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-07",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "Using the function–sequence limit link.",
   "body": " Using the function–sequence limit link   Suppose you find a function with for all , but the limit does not exist. What can you conclude about ?      The sequence limit does not exist.    A non-existent limit for over the reals does not force the integer-input subsequence to behave the same way.      No definite conclusion: the sequence limit may exist or may not exist.    It is possible for to oscillate on real inputs while behaves more simply on integer inputs (for example, a cosine function can do this).      The sequence must diverge to .    Diverging to is a specific type of divergence; “no limit for ” does not imply unbounded growth of .      The sequence must converge, but you cannot find the value.    The theorem only gives implications in one direction: a limit for implies a limit for , not the other way around.     "
 },
@@ -617,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-08",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "Which idea fits the sequence?",
   "body": " Which idea fits the sequence?   Match each sequence with the most appropriate conclusion or tool suggested by the narrative.    Different sequences call for different “first looks”: extending to a familiar function, checking for oscillation, using absolute values, or recognizing unbounded growth.      Extend to a rational function and use a limit at infinity to find the sequence limit.     Recognize that every term equals , so the sequence converges to .     Use oscillation to argue the terms get close to both and infinitely often, so no limit exists.     Use and conclude (Absolute Value Theorem idea).     Show that for every , terms eventually exceed , so the sequence diverges to .    "
 },
@@ -626,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-10",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "Convergent vs. bounded.",
   "body": " Convergent vs. bounded   Which statement is always true?      Every bounded sequence converges.    A sequence can stay within bounds and still fail to settle to one value (oscillation is a common reason).      Every convergent sequence is bounded.    If the terms get arbitrarily close to a finite limit, then all but finitely many terms lie in a small interval around that limit, and the remaining finitely many terms can also be bounded.      Every divergent sequence is unbounded.    Divergence can happen even when the terms remain between two numbers (for instance, by oscillating without approaching a single value).      If a sequence is unbounded, then it must diverge to .    “Unbounded” allows growth toward , toward , or even behavior that escapes in both directions.     "
 },
@@ -635,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-cardsort-01",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "Sequence vocabulary.",
   "body": " Sequence vocabulary   Match each term or notation to its meaning.    A sequence is a function on . The words “term,” “domain,” and “range” describe inputs, outputs, and how we talk about them.     Domain of a sequence  The set of inputs, namely the natural numbers .    Range of a sequence  The set of all distinct values that occur among .    Term  The value of the sequence at , i.e. .    Notation  The entire sequence (the list of terms produced by ).    Factorial  The product , with .    "
 },
@@ -644,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-cardsort-03",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "Limit language: informal to formal.",
   "body": " Limit language: informal to formal   Match each informal description to the precise statement or term it corresponds to.    Convergence is about what happens after some index . Divergence to is about eventually exceeding any threshold .      a distance away from  Given any    somewhere in the sequence  there exists an    the rest of the terms are within this distance of  such that for all    "
 },
@@ -653,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-sequences-hp-01",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "Bounded inequality.",
   "body": " Bounded inequality   Arrange the blocks to form the inequality that expresses “ is bounded” using a lower bound and an upper bound .          "
 },
@@ -662,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-limit-concept",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "Understanding Limits of Sequences.",
   "body": " Understanding Limits of Sequences   Which of the following best describes what it means for a sequence to have limit ?      Every term of the sequence equals .    This is too restrictive. A sequence can converge to even if no term actually equals , as long as the terms get arbitrarily close to .      The terms of the sequence get closer to , but never reach it.    This is close, but not quite right. The terms can actually equal sometimes—the key is that they eventually stay arbitrarily close to .      For any , all terms past some point will be closer to than .    Excellent! This captures the essence of the - definition:    Given any distance between and    there exists an some point    such that are closer to than    for all for all terms past some point         The average of all terms in the sequence equals .    This describes a different concept (Cesàro summation). Limits are about the eventual behavior of terms, not their average.     "
 },
@@ -671,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-function-limit",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "Connecting Function and Sequence Limits.",
   "body": " Connecting Function and Sequence Limits   Consider the function . If we know that , what can we conclude about the sequence ?      We cannot conclude anything about .    Actually, we can! Since for all positive integers , Theorem 8.1.2 allows us to draw a conclusion.       might equal 3, but we need more information.    We actually have enough information. Check Theorem 8.1.2 about the relationship between function limits and sequence limits.           Correct! By Theorem 8.1.2, if and , then . This theorem is extremely useful for evaluating sequence limits!      The sequence diverges.    No—since the corresponding function limit exists and equals 3, the sequence converges to 3 by Theorem 8.1.2.     "
 },
@@ -680,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-converge-properties",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "Convergence and Divergence Properties.",
   "body": " Convergence and Divergence Properties   Which of the following statements are TRUE?      If does not exist, the sequence might still converge.    Correct! The example oscillates as a function, but converges to 1.      A sequence that oscillates between two values must diverge.    This is false. While the sequence from Example 8.1.4 does oscillate and diverge, a sequence could oscillate between values that get closer together and still converge (like converging to 0).      If , then .    Correct! This is the Absolute Value Theorem (Theorem 8.1.4). If the absolute values approach 0, then the terms themselves must approach 0.      Every convergent sequence must be monotonic.    This is false. The sequence converges to 0 but is not monotonic—it alternates between positive and negative values.      We can use L'Hôpital's Rule to evaluate some sequence limits.    Correct! When we can write for some function , we can use L'Hôpital's Rule on and then apply Theorem 8.1.2.     "
 },
@@ -689,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-bounded-matching",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "Identifying Bounded Sequences.",
   "body": " Identifying Bounded Sequences   Match each sequence to its boundedness property.    Remember: bounded means both bounded above and below; bounded above means there's a ceiling but possibly no floor; bounded below means there's a floor but possibly no ceiling.       Bounded     Bounded below only     Bounded above only     Unbounded    "
 },
@@ -698,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-bounded-converse",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "Bounded Sequences and Convergence.",
   "body": " Bounded Sequences and Convergence   True or False: If a sequence is bounded, then it must converge.    False! Theorem 8.1.8 states that convergent sequences are bounded, but the converse is not true. A counterexample is , which is bounded (all terms are either 1 or -1) but diverges because it oscillates. To guarantee convergence, a bounded sequence must also be monotonic (Theorem 8.1.10).   "
 },
@@ -707,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-monotonic-identify",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "Identifying Monotonic Behavior.",
   "body": " Identifying Monotonic Behavior   Click on all sequences below that are monotonically increasing.             A sequence is monotonically increasing if for all . Check this by computing : if it's always non-negative, the sequence is increasing. Note that alternates in sign, increases then decreases (see Example 8.1.7c), and is decreasing since the term grows.   "
 },
@@ -716,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "root-1-2-6.html#chkpt-seq-monotonic-converge",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "Applying the Monotonic Convergence Theorem.",
   "body": " Applying the Monotonic Convergence Theorem   Consider the sequence where and for all . Suppose we can show that:  (i) for all , and  (ii) for all .  What can we conclude?      The sequence might converge or might diverge—we need more information.    We actually have enough information! We know the sequence is both monotonic (increasing) and bounded (above by 3, below by 2).      The sequence must converge to some limit where .    Excellent! By Theorem 8.1.10, a monotonically increasing sequence that is bounded above must converge. Since all terms satisfy , the limit must satisfy . (In fact, by taking limits in the recursion relation, we can show !)      The sequence must converge to 3.    While the theorem guarantees convergence, it doesn't tell us the exact value of the limit. We know the limit is at most 3, but it could be less.      The sequence must diverge to infinity.    No—the sequence is bounded above by 3, so it cannot diverge to infinity. Check Theorem 8.1.10 about bounded monotonic sequences.     "
 }
