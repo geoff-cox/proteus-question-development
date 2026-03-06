@@ -446,7 +446,7 @@
 			</blocks>
 		</exercise>
 
-		<!-- WASHER Q1: "Identify the Error" MCQ
+		<!-- "Identify the Error" MCQ
 				Skill tested: correctly applying an axis-of-rotation shift.
 				A student forgets that radii are measured from y = -1, not y = 0.
 				Place after axis-shift examples are introduced. -->
@@ -542,7 +542,7 @@
 		</exercise>
 
 
-		<!-- WASHER Q2: "Work Backwards" MCQ
+		<!-- "Work Backwards" MCQ
 				Skill tested: reading R and r at a specific x-value and deducing
 				the axis of rotation. Reverses the usual direction of reasoning.
 				Place after several axis-shift examples. -->
@@ -574,7 +574,7 @@
 		</exercise>
 
 
-		<!-- WASHER Q3: "Select All Correct" multi-select
+		<!-- "Select All Correct" multi-select
 				Skill tested: recognizing equivalent volume expressions for the
 				same solid — the washer integral in x and the shell integral in y
 				both produce the same number.
@@ -684,9 +684,9 @@
 		<!-- Placement: throughout the narrative of sec_shell_method.ptx   -->
 		<!-- ============================================================ -->
 
-		<!-- Q2: Place after the shell volume derivation (lines 291–325)  -->
+		<!-- Place after the shell volume derivation (lines 291–325)  -->
 		<!-- where V ≈ 2π r h Δx is established from unrolling the shell. -->
-		<exercise label="APEX-PROTEUS-shell-method-2-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-1-v1" component="proteus">
 			<title>Unrolling a Cylindrical Shell</title>
 			<statement>
 				<p>
@@ -713,9 +713,9 @@
 			</choices>
 		</exercise>
 
-		<!-- Q3: Place right after the Shell Method formula (Key Idea,     -->
+		<!-- Place right after the Shell Method formula (Key Idea,     -->
 		<!-- lines 428–441) and the two special cases (lines 443–462).     -->
-		<exercise label="APEX-PROTEUS-shell-method-3-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-2-v1" component="proteus">
 			<title>Shell Method Formula Components</title>
 			<statement>
 				<p>
@@ -750,9 +750,9 @@
 			</cardsort>
 		</exercise>
 
-		<!-- Q4: Place after the special-case list (lines 443–462) where  -->
+		<!-- Place after the special-case list (lines 443–462) where  -->
 		<!-- r(x) = x when revolving around the y-axis is stated.         -->
-		<exercise label="APEX-PROTEUS-shell-method-4-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-3-v1" component="proteus">
 			<title>Radius When Revolving Around the <m>y</m>-axis</title>
 			<statement correct="yes">
 				<p>
@@ -766,10 +766,10 @@
 			</feedback>
 		</exercise>
 
-		<!-- Q5: Place after Example 7.3.1 (ex_shell1, lines 468–559)    -->
+		<!-- Place after Example 7.3.1 (ex_shell1, lines 468–559)    -->
 		<!-- which sets up and evaluates a shell integral around the       -->
 		<!-- y-axis for y = 1/(1+x^2).                                    -->
-		<exercise label="APEX-PROTEUS-shell-method-5-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-4-v1" component="proteus">
 			<title>Setting Up a Shell Integral</title>
 			<statement>
 				<p>
@@ -796,9 +796,9 @@
 			</choices>
 		</exercise>
 
-		<!-- Q7: Place after the paragraph (lines 854–858) that introduces -->
+		<!-- Place after the paragraph (lines 854–858) that introduces -->
 		<!-- revolving around a horizontal axis and switching to y.         -->
-		<exercise label="APEX-PROTEUS-shell-method-7-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-5-v1" component="proteus">
 			<title>Horizontal Axis of Rotation</title>
 			<statement>
 				<p>
@@ -825,10 +825,10 @@
 			</choices>
 		</exercise>
 
-		<!-- Q8: Place after Example 7.3.4 (ex_shell4, lines 1157–1437)  -->
+		<!-- Place after Example 7.3.4 (ex_shell4, lines 1157–1437)  -->
 		<!-- which highlights when the Shell Method is easier than the     -->
 		<!-- Washer Method (sin(x) about the y-axis).                     -->
-		<exercise label="APEX-PROTEUS-shell-method-8-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-6-v1" component="proteus">
 			<title>Shell Method as an Alternative</title>
 			<statement correct="no">
 				<p>
@@ -842,9 +842,9 @@
 			</feedback>
 		</exercise>
 
-		<!-- Q9: Place after the Washer/Shell summary table (Key Idea,    -->
+		<!-- Place after the Washer/Shell summary table (Key Idea,    -->
 		<!-- lines 1443–1479) that compares the two methods.               -->
-		<exercise label="APEX-PROTEUS-shell-method-9-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-7-v1" component="proteus">
 			<title>Washer vs. Shell Method</title>
 			<statement>
 				<p>
@@ -877,7 +877,7 @@
 		</exercise>
 
 		<!-- Place after the Shell Method (Key Idea 7.3.x) is introduced -->
-		<exercise label="APEX-PROTEUS-shell-4-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-8-v1" component="proteus">
 			<title>Shell Method Matching (version 1)</title>
 			<statement>
 				<p>
@@ -943,7 +943,7 @@
 		</exercise>
 
 		<!-- Place after the Shell Method (Key Idea 7.3.x) is introduced -->
-		<exercise label="APEX-PROTEUS-shell-4-v2" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-9-v2" component="proteus">
 			<title>Shell Method Matching (version 2)</title>
 			<statement>
 				<p>
@@ -1009,7 +1009,7 @@
 			</cardsort>
 		</exercise>
 
-		<exercise label="APEX-PROTEUS-shell-5-v1" language="math">
+		<exercise label="APEX-PROTEUS-shell-10-v1" language="math">
 			<title>Construct the Volume Integral (Shell Method)</title>
 
 			<statement>
@@ -1037,11 +1037,11 @@
 			</blocks>
 		</exercise>
 
-		<!-- SHELL Q3: "Identify the Error" MCQ
+		<!-- "Identify the Error" MCQ
 				Skill tested: correctly computing the radius when the axis of
 				rotation is a vertical line other than x = 0.
 				Place after off-axis shell examples are introduced. -->
-		<exercise label="APEX-PROTEUS-shell-8-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-shell-11-v1" component="proteus">
 			<title>Shell Method: Identify the Error</title>
 			<statement>
 				<p>
