@@ -60,7 +60,7 @@
     </choices>
   </exercise>
 
-  <exercise label="chkpt-slope-field-matching">
+  <!-- <exercise label="chkpt-slope-field-matching">
     <title>Slope Field Identification</title>
     <statement>
       <p>
@@ -120,7 +120,7 @@
       </feedback>
       </choice>
     </choices>
-  </exercise>
+  </exercise> -->
 
   <exercise label="chkpt-matching-diffeq-solutions">
     <title>Match Differential Equations with Solutions</title>
@@ -177,7 +177,7 @@
     </cardsort>
   </exercise>
 
-  <exercise cols="2" label="ex-graphical-numerical-match-slope">
+  <!-- <exercise cols="2" label="ex-graphical-numerical-match-slope">
     <statement>
       <p>
         Match each slope field below with the appropriate differential equation.
@@ -356,7 +356,7 @@
       
     </cardsort>
 
-  </exercise>
+  </exercise> -->
 
   <exercise>
     <title>Interactive Questions</title>

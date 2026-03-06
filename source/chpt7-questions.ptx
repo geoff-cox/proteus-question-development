@@ -1,4 +1,4 @@
-<chapter>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title>Chapter 7 Questions</title>
 
 	<section xml:id="sec-area-between-curves">
@@ -158,67 +158,8 @@
 			</choices>
 		</exercise>
 
-		<!-- Place after Example 7.2.2 (pyramid volume) to reinforce slicing non-circular solids -->
-		<exercise label="APEX-PROTEUS-disk-2-v1" component="proteus">
-			<title>Cross Section of a Pyramid</title>
-			<statement>
-				<p>
-					A pyramid with a square base of side length <m>6</m> and height <m>3</m> is oriented with its apex at the origin and base at <m>x=3</m>. Each cross-sectional square at position <m>x</m> has side length <m>2x</m>. What is the cross-sectional area function <m>A(x)</m>?
-				</p>
-			</statement>
-			<choices randomize="yes">
-				<choice correct="yes">
-					<statement><p><m>A(x) = 4x^2</m></p></statement>
-					<feedback>
-						<p>
-							Each cross section is a square with side length <m>2x</m>, so the area is <m>(2x)^2 = 4x^2</m>. The volume would then be <m>\int_0^3 4x^2\, dx</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>A(x) = 2x</m></p></statement>
-					<feedback>
-						<p>
-							This is the side length of the square cross section, not its area. To find the area of a square, you must square the side length: <m>(2x)^2 = 4x^2</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>A(x) = \pi x^2</m></p></statement>
-					<feedback>
-						<p>
-							This would be the area of a circular cross section with radius <m>x</m>. Since the cross sections here are <em>squares</em>, not circles, the factor <m>\pi</m> does not apply.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>A(x) = 2x^2</m></p></statement>
-					<feedback>
-						<p>
-							Be careful: the side length is <m>2x</m>, so the area is <m>(2x)^2 = 4x^2</m>, not <m>2x^2</m>. Remember to square the entire expression.
-						</p>
-					</feedback>
-				</choice>
-			</choices>
-		</exercise>
-
-		<!-- Place after the Disk Method (Key Idea 7.2.4) is introduced -->
-		<exercise label="APEX-PROTEUS-disk-3-v1" component="proteus">
-			<title>Solid of Revolution Definition</title>
-			<statement correct="yes">
-				<p>
-					A solid of revolution is formed by revolving a curve around an axis, producing circular (disk-shaped) cross sections.
-				</p>
-			</statement>
-			<feedback>
-				<p>
-					When a curve is revolved around an axis, every cross section perpendicular to that axis is indeed a circle (a disk). The radius of each disk is the distance from the curve to the axis of rotation.
-				</p>
-			</feedback>
-		</exercise>
-
 		<!-- Place after Key Idea 7.2.4 (Disk Method) to test the formula -->
-		<exercise label="APEX-PROTEUS-disk-4-v1" component="proteus">
+		<exercise label="APEX-PROTEUS-disk-2-v1" component="proteus">
 			<title>Disk Method Radius Identification</title>
 			<statement>
 				<p>
@@ -261,73 +202,130 @@
 			</choices>
 		</exercise>
 
-		<!-- Place after Example 7.2.6 (revolving about the y-axis) -->
-		<exercise label="APEX-PROTEUS-disk-5-v1" component="proteus">
-			<title>Revolving About the <m>y</m>-Axis</title>
+		<!-- Place after Example 7.2.2 (pyramid volume) to reinforce slicing non-circular solids -->
+		<exercise label="APEX-PROTEUS-disk-3-v1" component="proteus">
+			<title>Disk Method vs. Washer Method</title>
+
 			<statement>
 				<p>
-					When using the Disk Method to find the volume of a solid formed by revolving a curve about the <m>y</m>-axis, which of the following adjustments must be made?
+					A student is setting up a volume integral for a solid of revolution.
+					Which condition determines whether the <em>disk method</em> should be
+					used instead of the <em>washer method</em>?
 				</p>
 			</statement>
+
 			<choices randomize="yes">
+
+				<!-- ═══ CORRECT ═══ -->
 				<choice correct="yes">
 					<statement>
 						<p>
-							Express the curve as a function of <m>y</m> and integrate with respect to <m>y</m>.
+							When one boundary of the region being rotated lies <em>on</em> the axis
+							of rotation.
 						</p>
 					</statement>
 					<feedback>
 						<p>
-							Since the axis of rotation is vertical, the radius of each disk is a horizontal distance, which must be expressed as a function of <m>y</m>. The integral then becomes <m>\pi\int_c^d R(y)^2\, dy</m> over appropriate <m>y</m>-bounds.
+							Correct! When one edge of the region coincides with the axis of
+							rotation, the inner radius is zero, the cross-sectional "washer"
+							collapses to a solid disk, and the volume formula simplifies to
+							<m>V = \pi \int_a^b [f(x)]^2 \, dx</m>.  As soon as a gap opens
+							between the region and the axis, both an outer radius <m>R</m> and
+							an inner radius <m>r</m> are present and the washer formula
+							<m>V = \pi \int_a^b \bigl([R(x)]^2 - [r(x)]^2\bigr) dx</m> is
+							required.
 						</p>
 					</feedback>
 				</choice>
+
 				<choice>
 					<statement>
 						<p>
-							Use the same <m>x</m>-based formula but negate the integrand.
+							When the region is rotated about a <em>horizontal</em> axis.
 						</p>
 					</statement>
 					<feedback>
 						<p>
-							Negating the integrand is not correct. The key change is that the variable of integration switches from <m>x</m> to <m>y</m>, and the radius function becomes a function of <m>y</m>.
+							Not quite. Both the disk method and the washer method work for
+							rotation about <em>either</em> a horizontal or a vertical axis.
+							The orientation of the axis determines whether you integrate with
+							respect to <m>x</m> or <m>y</m>, but it does not determine which
+							method to use.  The deciding factor is whether a gap exists between
+							the region and the axis.
 						</p>
 					</feedback>
 				</choice>
+
 				<choice>
 					<statement>
 						<p>
-							Multiply the volume formula by <m>2</m>.
+							When the region is bounded by a <em>single</em> function.
 						</p>
 					</statement>
 					<feedback>
 						<p>
-							There is no factor of <m>2</m> involved. The method is the same principle—just expressed in terms of <m>y</m> instead of <m>x</m>.
+							This is a common mix-up.  In both methods the region is typically
+							bounded by two curves (or a curve and a boundary line).  What
+							distinguishes the methods is not the <em>number</em> of bounding
+							functions, but whether one of those boundaries is the axis of
+							rotation itself.  If it is, the inner radius vanishes and you use
+							the disk method; if neither boundary coincides with the axis, you
+							need the washer method.
 						</p>
 					</feedback>
 				</choice>
+
 				<choice>
 					<statement>
 						<p>
-							No adjustment is needed; the Disk Method works only for horizontal axes of rotation.
+							When the boundaries of the region are given by <em>functions of <m>x</m></em>.
 						</p>
 					</statement>
 					<feedback>
 						<p>
-							The Disk Method works for vertical axes of rotation too. The underlying idea (area <times/> thickness) applies regardless of orientation; you just need to set up the integral with respect to the correct variable.
+							The method does not depend on whether the boundaries are functions of
+							<m>x</m> or <m>y</m>.  Both methods can be applied in either case; the key is whether one of those boundaries coincides with the axis of rotation.
 						</p>
 					</feedback>
 				</choice>
+
+				<choice>
+					<statement>
+						<p>
+							When the boundaries of a region intersect at <em>one</em> point.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							The number of intersection points does not determine which method to use.  Even if the boundaries intersect at only one point, they may still both lie above the axis of rotation, creating a gap that requires the washer method.  Conversely, if they intersect at one point but one boundary coincides with the axis, the disk method applies.
+						</p>
+					</feedback>
+				</choice>
+
 			</choices>
 		</exercise>
 
 		<!-- Place after the Washer Method (Key Idea 7.2.10) is introduced -->
-		<exercise label="APEX-PROTEUS-disk-6-v1" component="proteus">
-			<title>Washer Method Concept</title>
+		<exercise label="APEX-PROTEUS-disk-4-v1" component="proteus">
+			<title>Washer Method Matching (version 1)</title>
 			<statement>
 				<p>
-					Match each term with its role in the Washer Method.
+					Consider the region bounded by <m>y = x^2</m> and <m>y = 1</m> for <m>0 \le x \le 1</m>.
 				</p>
+				<sidebyside width="50%">
+					<image>
+						<latex-image>
+							<xi:include href="tikz-figs/tikz-washer-x.tex" parse="text" />
+						</latex-image>
+					</image>
+				</sidebyside>
+				<p>
+					Match each inner and outer radius pair with the axis of rotation that they correspond to in the Washer Method.
+				</p>
+				<sidebyside>
+					<p><m>\small\text{Inner/Outer Radii}</m> ⤵︎</p>
+					<p><m>\small\text{Axis of Rotation}</m> ⤵︎</p>
+				</sidebyside>
 			</statement>
 			<feedback>
 				<p>
@@ -336,199 +334,345 @@
 			</feedback>
 			<cardsort>
 				<match>
-					<premise><m>R(x)</m></premise>
-					<response>The outside radius: distance from the axis of rotation to the farther curve</response>
+					<premise><m>r(x) = x^2,\quad R(x) = 1</m></premise>
+					<response><m>y = 0</m></response>
 				</match>
 				<match>
-					<premise><m>r(x)</m></premise>
-					<response>The inside radius: distance from the axis of rotation to the closer curve</response>
+					<premise><m>r(y) = 0,\quad R(y) = \sqrt{y}</m></premise>
+					<response><m>x = 0</m></response>
 				</match>
 				<match>
-					<premise><m>\pi\big(R(x)^2 - r(x)^2\big)</m></premise>
-					<response>The cross-sectional area of a single washer</response>
+					<premise><m>r(x) = x^2 + 1,\quad R(x) = 2</m></premise>
+					<response><m>y = -1</m></response>
+				</match>
+				<match>
+					<premise><m>r(y) = 1,\quad R(y) = 1 + \sqrt{y}</m></premise>
+					<response><m>x = -1</m></response>
+				</match>
+				<match>
+					<premise><m>r(x) = 0,\quad R(x) = 1 - x^2</m></premise>
+					<response><m>y = 1</m></response>
+				</match>
+				<match>
+					<premise><m>r(y) = 1 - \sqrt{y},\quad R(y) = 1</m></premise>
+					<response><m>x = 1</m></response>
+				</match>
+				<match>
+					<premise><m>r(x) = 1,\quad R(x) = 2 - x^2</m></premise>
+					<response><m>y = 2</m></response>
 				</match>
 			</cardsort>
 		</exercise>
 
-		<!-- Place after Key Idea 7.2.10 to reinforce the disk–washer relationship -->
-		<exercise label="APEX-PROTEUS-disk-7-v1" component="proteus">
-			<title>Disk as Special Case of Washer</title>
+		<!-- Place after the Washer Method (Key Idea 7.2.10) is introduced -->
+		<exercise label="APEX-PROTEUS-disk-4-v2" component="proteus">
+			<title>Washer Method Matching (version 2)</title>
 			<statement>
 				<p>
-					The Disk Method is a special case of the Washer Method. What value of the inside radius <m>r(x)</m> reduces the Washer Method formula to the Disk Method formula?
+					Consider the region bounded by <m>y = x^2</m> and <m>y = 1</m> for <m>0 \le x \le 1</m>.
 				</p>
-			</statement>
-			<choices randomize="yes">
-				<choice correct="yes">
-					<statement><p><m>r(x) = 0</m></p></statement>
-					<feedback>
-						<p>
-							When <m>r(x)=0</m>, the washer formula <m>\pi\int_a^b \big(R(x)^2 - r(x)^2\big)\, dx</m> becomes <m>\pi\int_a^b R(x)^2\, dx</m>, which is exactly the Disk Method formula. A washer with no hole is just a disk.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = 1</m></p></statement>
-					<feedback>
-						<p>
-							If <m>r(x)=1</m>, you would be subtracting a nonzero inner volume, leaving a hollow solid. For the disk formula to emerge, the hole must vanish entirely, meaning the inside radius must be <m>0</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = R(x)</m></p></statement>
-					<feedback>
-						<p>
-							If <m>r(x)=R(x)</m>, then <m>R(x)^2 - r(x)^2 = 0</m>, which gives a volume of <m>0</m>. The solid would have no thickness at all.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = R(x)/2</m></p></statement>
-					<feedback>
-						<p>
-							Setting <m>r(x) = R(x)/2</m> would still leave a hole in the middle. To recover the Disk Method, there should be no hole, so <m>r(x)</m> must equal <m>0</m>.
-						</p>
-					</feedback>
-				</choice>
-			</choices>
-		</exercise>
-
-		<!-- Place after Example 7.2.11 (washer about x-axis) -->
-		<exercise label="APEX-PROTEUS-disk-8-v1" component="proteus">
-			<title>Setting Up a Washer Integral</title>
-			<statement>
+				<sidebyside width="50%">
+					<image>
+						<latex-image>
+							<xi:include href="tikz-figs/tikz-washer-x.tex" parse="text" />
+						</latex-image>
+					</image>
+				</sidebyside>
 				<p>
-					The region bounded by <m>y = x</m> and <m>y = x^2</m> (which intersect at <m>x = 0</m> and <m>x = 1</m>) is revolved about the <m>x</m>-axis. Using the Washer Method, which integral gives the volume?
+					Match each inner and outer radius pair with the axis of rotation that they correspond to in the Washer Method.
 				</p>
-			</statement>
-			<choices randomize="yes">
-				<choice correct="yes">
-					<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x^2 - x^4\big)\, dx</m></p></statement>
-					<feedback>
-						<p>
-							On <m>[0,1]</m>, <m>y = x</m> lies above <m>y = x^2</m>, so the outside radius is <m>R(x) = x</m> and the inside radius is <m>r(x) = x^2</m>. The Washer Method gives <m>\pi\int_0^1 \big(x^2 - (x^2)^2\big)\, dx = \pi\int_0^1 (x^2 - x^4)\, dx</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x - x^2\big)^2\, dx</m></p></statement>
-					<feedback>
-						<p>
-							A common mistake: the Washer Method subtracts the <em>squares</em> of the radii, not squares <em>the difference</em> of the radii. Correct: <m>R^2 - r^2</m>, not <m>(R - r)^2</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x^4 - x^2\big)\, dx</m></p></statement>
-					<feedback>
-						<p>
-							The outside radius must be the curve <em>farther</em> from the axis. Since <m>x \geq x^2</m> on <m>[0,1]</m>, we have <m>R(x) = x</m> (outer) and <m>r(x) = x^2</m> (inner), giving <m>x^2 - x^4</m>, not the reverse.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement><p><m>\displaystyle V = \pi\int_0^1 \big(x - x^2\big)\, dx</m></p></statement>
-					<feedback>
-						<p>
-							This integral computes the <em>area</em> between the curves (times <m>\pi</m>), not the volume. In the Washer Method, you must square the radii: <m>R(x)^2 - r(x)^2</m>.
-						</p>
-					</feedback>
-				</choice>
-			</choices>
-		</exercise>
-
-		<!-- Place after Example 7.2.12 (washer about y-axis with triangular region) -->
-		<exercise label="APEX-PROTEUS-disk-9-v1" component="proteus">
-			<title>Identifying the Axis of Rotation</title>
-			<statement>
-				<p>
-					Select all statements that are true about setting up a Disk or Washer integral.
-				</p>
-			</statement>
-			<choices randomize="yes">
-				<choice correct="yes">
-					<statement>
-						<p>
-							If the axis of rotation is horizontal, the radius is a function of <m>x</m> and we integrate with respect to <m>x</m>.
-						</p>
-					</statement>
-					<feedback>
-						<p>
-							A horizontal axis means cross-sectional slices are perpendicular to the <m>x</m>-axis, so both the radius and the variable of integration are in terms of <m>x</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice correct="yes">
-					<statement>
-						<p>
-							If the axis of rotation is vertical, the radius is a function of <m>y</m> and we integrate with respect to <m>y</m>.
-						</p>
-					</statement>
-					<feedback>
-						<p>
-							A vertical axis means the cross-sectional disks or washers are stacked along the <m>y</m>-axis, so the radii are expressed in terms of <m>y</m> and we integrate with respect to <m>y</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement>
-						<p>
-							The Washer Method can only be used when the axis of rotation is the <m>x</m>-axis.
-						</p>
-					</statement>
-					<feedback>
-						<p>
-							The Washer Method works for any axis of rotation. When the axis is vertical, you simply express the radii as functions of <m>y</m> and integrate with respect to <m>y</m>.
-						</p>
-					</feedback>
-				</choice>
-				<choice>
-					<statement>
-						<p>
-							We always integrate with respect to <m>x</m>, regardless of the axis of rotation.
-						</p>
-					</statement>
-					<feedback>
-						<p>
-							The variable of integration must match the orientation of the axis. A vertical axis of rotation requires integrating with respect to <m>y</m>, not <m>x</m>.
-						</p>
-					</feedback>
-				</choice>
-			</choices>
-		</exercise>
-
-		<!-- Place at the end of the section to reinforce the big-picture principle -->
-		<exercise label="APEX-PROTEUS-disk-10-v1" component="proteus">
-			<title>Approximation to Exact Volume</title>
-			<statement>
-				<p>
-					Put the following steps in the correct order for finding the exact volume of a solid using cross-sectional area.
-				</p>
+				<sidebyside widths="32% 68%">
+					<p><m>\small\text{Inner/Outer Radii}</m> ⤵︎</p>
+					<p><m>\small\text{Axis of Rotation}</m> ⤵︎</p>
+				</sidebyside>
 			</statement>
 			<feedback>
 				<p>
-					This process mirrors how a Riemann sum becomes a definite integral: slice, approximate each slice, sum all slices, then let the number of slices approach infinity.
+					In the Washer Method, the cross section is an annular ring (washer). The volume of each washer is <m>\pi\big(R(x)^2 - r(x)^2\big)\,\Delta x</m>, where <m>R(x)</m> is the outside radius and <m>r(x)</m> is the inside radius.
 				</p>
 			</feedback>
 			<cardsort>
 				<match>
-					<premise order="1">Slice the solid into <m>n</m> thin pieces perpendicular to an axis.</premise>
-					<response>Step 1</response>
+					<premise><m>r(x) = x^2</m></premise>
+					<premise><m>R(x) = 1</m></premise>
+					<response><m>y = 0</m></response>
 				</match>
 				<match>
-					<premise order="2">Approximate the volume of each slice as <m>A(x_i)\,\Delta x</m>.</premise>
-					<response>Step 2</response>
+					<premise><m>r(y) = 0</m></premise>
+					<premise><m>R(y) = \sqrt{y}</m></premise>
+					<response><m>x = 0</m></response>
 				</match>
 				<match>
-					<premise order="3">Sum the approximate volumes: <m>\displaystyle\sum_{i=1}^{n} A(x_i)\,\Delta x</m>.</premise>
-					<response>Step 3</response>
+					<premise><m>r(y) = 1 - \sqrt{y}</m></premise>
+					<premise><m>R(y) = 1</m></premise>
+					<response><m>x = 1</m></response>
 				</match>
 				<match>
-					<premise order="4">Take the limit as <m>n\to\infty</m> to obtain the definite integral <m>\displaystyle\int_a^b A(x)\, dx</m>.</premise>
-					<response>Step 4</response>
+						<premise><m>r(x) = 1</m></premise>
+						<premise><m>R(x) = 2 - x^2</m></premise>
+						<response><m>y = 2</m></response>
+				</match>
+				<match>
+					<premise><m>r(y) = 1</m></premise>
+					<premise><m>r(x) = 0</m></premise>
 				</match>
 			</cardsort>
+		</exercise>
+
+		<exercise label="APEX-PROTEUS-disk-5-v1" language="math">
+			<title>Construct the Volume Integral</title>
+
+			<statement>
+				<p>
+					Suppose the region bounded by 
+					<me>y = x\ \text{and}\ y = x^2\ \text{for}\ 0 \le x \le 1</me>
+					is revolved about the <m>x</m>-axis. 
+				</p>
+				<p>	
+					Using the blocks below, construct integral that gives the volume using the washer method?
+				</p>
+			</statement>
+			<blocks layout="horizontal" randomize="yes">
+				<block order="1"><m>V = \pi</m></block>
+				<block order="2"><m>\int_0^1\big(</m></block>
+				<block order="3"><m>x^2</m></block>
+				<block order="4"><m>-</m></block>
+				<block order="5"><m>x^4</m></block>
+				<block order="6"><m>\big)\ dx</m></block>
+				<block correct="no"><m>V = 2\pi</m></block>
+				<block correct="no"><m>+</m></block>
+				<block correct="no"><m>\int_{-1}^{1}\big(</m></block>
+				<block correct="no"><m>x</m></block>
+			</blocks>
+		</exercise>
+
+		<!-- WASHER Q1: "Identify the Error" MCQ
+				Skill tested: correctly applying an axis-of-rotation shift.
+				A student forgets that radii are measured from y = -1, not y = 0.
+				Place after axis-shift examples are introduced. -->
+		<exercise label="APEX-PROTEUS-disk-6-v1" component="proteus">
+			<title>Washer Method: Identify the Error</title>
+			<statement>
+				<p>
+					The region bounded by <m>y = \sqrt{x}</m> and <m>y = x</m>
+					for <m>0 \le x \le 1</m> is revolved about the line
+					<m>y = -1</m>.
+					A student sets up the following volume integral using the
+					washer method:
+					<me>V = \pi\int_0^1\Bigl[(\sqrt{x})^2 - x^2\Bigr]\,dx
+							= \pi\int_0^1\bigl(x - x^2\bigr)\,dx.</me>
+					Which statement best identifies the error in the student's work?
+				</p>
+			</statement>
+			<choices randomize="yes">
+				<choice correct="yes">
+					<statement>
+						<p>
+							The radii were measured from <m>y = 0</m> instead of
+							from the axis <m>y = -1</m>.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Correct!  Because the axis <m>y=-1</m> lies
+							<em>below</em> the region, each radius must be
+							increased by <m>1</m> to account for the gap between
+							the axis and the nearest boundary.  In general, when
+							the axis is <m>y = c</m>, the radii are
+							<m>R(x) = f(x) - c</m> and <m>r(x) = g(x) - c</m>.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The limits of integration should run from <m>-1</m>
+							to <m>1</m> to reflect the position of the axis.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  The limits of integration are determined by
+							the <em>x</em>-extent of the region being rotated,
+							which is still <m>[0,1]</m>.  Shifting the axis of
+							rotation never changes the limits; it changes the
+							radius expressions instead.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The outer and inner radii are swapped; it should be
+							<m>R(x) = x</m> and <m>r(x) = \sqrt{x}</m> since
+							<m>y = x \ge y = \sqrt{x}</m> on <m>[0,1]</m>.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  On <m>[0,1]</m> we have
+							<m>\sqrt{x} \ge x</m> (check: at <m>x = \tfrac{1}{4}</m>,
+							<m>\sqrt{x} = \tfrac{1}{2} > \tfrac{1}{4} = x</m>),
+							so <m>y = \sqrt{x}</m> is indeed the outer boundary.
+							The student has the orientation right but is measuring
+							radii from the wrong baseline.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The formula should use <m>2\pi</m> instead of
+							<m>\pi</m> because the solid is generated by a full
+							<m>360°</m> rotation.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  The washer-method formula is
+							<m>V = \pi\int(R^2-r^2)\,dx</m>; the factor of
+							<m>\pi</m> (not <m>2\pi</m>) already accounts for a
+							full revolution.  The factor <m>2\pi</m> appears in
+							the <em>shell</em> method, where it represents the
+							circumference of a cylindrical shell.
+						</p>
+					</feedback>
+				</choice>
+			</choices>
+		</exercise>
+
+
+		<!-- WASHER Q2: "Work Backwards" MCQ
+				Skill tested: reading R and r at a specific x-value and deducing
+				the axis of rotation. Reverses the usual direction of reasoning.
+				Place after several axis-shift examples. -->
+		<exercise label="APEX-PROTEUS-disk-7-v1" component="proteus">
+			<title>Washer Method: Deduce the Axis of Rotation</title>
+			<statement>
+				<p>
+					Consider the region bounded by <m>y = 2x+1</m> and
+					<m>y = x+1</m> for <m>0 \le x \le 2</m>.  This region is
+					revolved about a horizontal axis <m>y = c</m> using the
+					washer method.
+				</p>
+				<p>
+					At <m>x = 1</m>, the resulting washer has outer radius
+					<m>R = 4</m> and inner radius <m>r = 3</m>.
+					What is the axis of rotation?
+				</p>
+				<p><m>y=</m> <fillin mode="number" answer="-1"/></p>	
+			</statement>
+
+			<evaluation>
+				<evaluate>
+					<test>
+						<numcmp use-answer="yes"/>
+					</test>
+				</evaluate>
+			</evaluation>
+
+		</exercise>
+
+
+		<!-- WASHER Q3: "Select All Correct" multi-select
+				Skill tested: recognizing equivalent volume expressions for the
+				same solid — the washer integral in x and the shell integral in y
+				both produce the same number.
+				Place after both washer and shell methods have been introduced. -->
+		<exercise label="APEX-PROTEUS-disk-8-v1" component="proteus">
+			<title>Washer Method: Select All Correct Volume Integrals</title>
+			<statement>
+				<p>
+					The region bounded by <m>y = x^2</m> and <m>y = 1</m> for
+					<m>0 \le x \le 1</m> is revolved about the <m>x</m>-axis.
+					<em>Select every integral below that correctly computes
+					the volume of the resulting solid.</em>
+				</p>
+			</statement>
+			<choices randomize="yes">
+				<choice correct="yes">
+					<statement>
+						<p>
+							<m>V = \pi\displaystyle\int_0^1\bigl(1 - x^4\bigr)\,dx</m>
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Correct.  Using the washer method with vertical slices:
+							the outer radius is <m>R(x) = 1</m> and the inner
+							radius is <m>r(x) = x^2</m>, so
+							<m>R^2 - r^2 = 1 - x^4</m>.
+						</p>
+					</feedback>
+				</choice>
+				<choice correct="yes">
+					<statement>
+						<p>
+							<m>V = 2\pi\displaystyle\int_0^1 y\sqrt{y}\,dy</m>
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Correct.  Using the shell method with horizontal
+							shells (integrating in <m>y</m>): the shell at height
+							<m>y</m> has radius <m>y</m> (distance to the
+							<m>x</m>-axis) and length <m>\sqrt{y}</m>
+							(from <m>x=0</m> to <m>x=\sqrt{y}</m>), giving
+							<m>2\pi\int_0^1 y^{3/2}\,dy = \tfrac{4\pi}{5}</m>,
+							which equals the washer-method result.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							<m>V = \pi\displaystyle\int_0^1\bigl(1-x^2\bigr)^2\,dx</m>
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  This computes <m>\pi\int(R - r)^2\,dx</m>,
+							which is <em>not</em> the washer formula.  The correct
+							integrand is <m>R^2 - r^2</m>, not
+							<m>(R - r)^2</m>.  These are equal only when one
+							radius is zero.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							<m>V = \pi\displaystyle\int_0^1 x^4\,dx</m>
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  This integral gives the volume of the
+							inner solid alone (the region below <m>y = x^2</m>
+							only).  The volume of the full washer-shaped solid
+							requires subtracting the inner volume from the outer,
+							i.e., <m>\pi\int_0^1(1 - x^4)\,dx</m>.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							<m>V = 2\pi\displaystyle\int_0^1\sqrt{y}\,dy</m>
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  This is missing the radius factor
+							<m>y</m> inside the integral.  In the shell method,
+							both the radius <em>and</em> the height of each shell
+							must appear: the integrand should be
+							<m>y \cdot \sqrt{y} = y^{3/2}</m>, not
+							just <m>\sqrt{y}</m>.
+						</p>
+					</feedback>
+				</choice>
+			</choices>
 		</exercise>
 
 	</section>
@@ -539,23 +683,6 @@
 		<!-- Shell Method Reading Checkpoint Questions                     -->
 		<!-- Placement: throughout the narrative of sec_shell_method.ptx   -->
 		<!-- ============================================================ -->
-
-		<!-- Q1: Place after the opening two paragraphs (lines 4–17) that -->
-		<!-- introduce the Shell Method as an alternative to the Disk/     -->
-		<!-- Washer Methods by slicing parallel to the axis of rotation.   -->
-		<exercise label="APEX-PROTEUS-shell-method-1-v1" component="proteus">
-			<title>Slicing Direction</title>
-			<statement correct="no">
-				<p>
-					In the Shell Method, the solid is sliced perpendicular to the axis of rotation, just like in the Disk/Washer Method.
-				</p>
-			</statement>
-			<feedback>
-				<p>
-					False — the Disk/Washer Method slices perpendicular to the axis of rotation (creating cross-sectional disks or washers), but the Shell Method slices <em>parallel</em> to the axis of rotation, producing thin cylindrical shells instead.
-				</p>
-			</feedback>
-		</exercise>
 
 		<!-- Q2: Place after the shell volume derivation (lines 291–325)  -->
 		<!-- where V ≈ 2π r h Δx is established from unrolling the shell. -->
@@ -669,35 +796,6 @@
 			</choices>
 		</exercise>
 
-		<!-- Q6: Place after Example 7.3.2 (ex_shell2, lines 567–852)    -->
-		<!-- which revolves a triangle about x = 3, showing r(x) = 3−x.  -->
-		<exercise label="APEX-PROTEUS-shell-method-6-v1" component="proteus">
-			<title>Radius for a Non-Standard Vertical Axis</title>
-			<statement>
-				<p>
-					A region is revolved about the vertical line <m>x = 5</m>. If a sample shell is located at position <m>x</m> (with <m>x \lt 5</m>), what is the radius function <m>r(x)</m>?
-				</p>
-			</statement>
-			<choices randomize="yes">
-				<choice correct="yes">
-					<statement><p><m>r(x) = 5 - x</m></p></statement>
-					<feedback><p>Correct — the radius is the distance from the shell to the axis of rotation. Since the axis is at <m>x = 5</m> and the shell is at <m>x</m>, that distance is <m>5 - x</m>.</p></feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = x</m></p></statement>
-					<feedback><p>This would be the radius only when revolving about the <m>y</m>-axis (<m>x = 0</m>). For any other vertical line, the radius is the distance from <m>x</m> to that line.</p></feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = x - 5</m></p></statement>
-					<feedback><p>Since <m>x \lt 5</m>, this expression would be negative. Distance (and therefore the radius) must be positive: <m>r(x) = 5 - x</m>.</p></feedback>
-				</choice>
-				<choice>
-					<statement><p><m>r(x) = x + 5</m></p></statement>
-					<feedback><p>Adding <m>x</m> and <m>5</m> does not give a distance between them. The radius is the <em>difference</em> <m>|x - 5| = 5 - x</m> when <m>x \lt 5</m>.</p></feedback>
-				</choice>
-			</choices>
-		</exercise>
-
 		<!-- Q7: Place after the paragraph (lines 854–858) that introduces -->
 		<!-- revolving around a horizontal axis and switching to y.         -->
 		<exercise label="APEX-PROTEUS-shell-method-7-v1" component="proteus">
@@ -778,16 +876,261 @@
 			</cardsort>
 		</exercise>
 
-		<!-- Q10: Place after the closing paragraphs (lines 1481–1498)   -->
-		<!-- that emphasize the "approximate → limit → exact" philosophy. -->
-		<exercise label="APEX-PROTEUS-shell-method-10-v1" component="proteus">
-			<title>From Shells to Integral</title>
+		<!-- Place after the Shell Method (Key Idea 7.3.x) is introduced -->
+		<exercise label="APEX-PROTEUS-shell-4-v1" component="proteus">
+			<title>Shell Method Matching (version 1)</title>
 			<statement>
 				<p>
-					Describe, in your own words, how the Shell Method uses the idea of <q>approximate, then refine</q> to arrive at an exact volume. In particular, what role does the Riemann Sum play?
+					Consider the region bounded by <m>y = x^2</m> and <m>y = 1</m>
+					for <m>0 \le x \le 1</m>.
+				</p>
+				<sidebyside width="50%">
+					<image>
+						<latex-image>
+							<xi:include href="tikz-figs/tikz-washer-x.tex" parse="text" />
+						</latex-image>
+					</image>
+				</sidebyside>
+				<p>
+					Match each axis of rotation with the radius–height pair 
+					it corresponds to in the Shell Method.
+				</p>
+				<sidebyside widths="32% 68%">
+					<p><m>\small\text{Axis of Rotation}</m> ⤵︎</p>
+					<p><m>\small\text{Radius / Height}</m> ⤵︎</p>
+				</sidebyside>
+			</statement>
+			<feedback>
+				<p>
+					In the Shell Method, each cylindrical shell has volume
+					<m>2\pi\,(\text{radius})(\text{height})\,\Delta x</m>
+					(or <m>\Delta y</m>). The <em>radius</em> is the
+					perpendicular distance from the shell to the axis of rotation,
+					and the <em>height</em> is the length of the shell parallel
+					to the axis.
+				</p>
+			</feedback>
+			<cardsort>
+				<match>
+					<premise><m>x = 0</m></premise>
+					<response><m>\text{radius} = x,\quad \text{height} = 1 - x^2</m></response>
+				</match>
+				<match>
+					<premise><m>y = 0</m></premise>
+					<response><m>\text{radius} = y,\quad \text{height} = \sqrt{y}</m></response>
+				</match>
+				<match>
+					<premise><m>x = 1</m></premise>
+					<response><m>\text{radius} = 1 - x,\quad \text{height} = 1 - x^2</m></response>
+				</match>
+				<match>
+					<premise><m>y = 1</m></premise>
+					<response><m>\text{radius} = 1 - y,\quad \text{height} = \sqrt{y}</m></response>
+				</match>
+				<match>
+					<premise><m>x = -1</m></premise>
+					<response><m>\text{radius} = x + 1,\quad \text{height} = 1 - x^2</m></response>
+				</match>
+				<match>
+					<premise><m>y = -1</m></premise>
+					<response><m>\text{radius} = y + 1,\quad \text{height} = \sqrt{y}</m></response>
+				</match>
+				<match>
+					<premise><m>y = 2</m></premise>
+					<response><m>\text{radius} = 2 - y,\quad \text{height} = \sqrt{y}</m></response>
+				</match>
+			</cardsort>
+		</exercise>
+
+		<!-- Place after the Shell Method (Key Idea 7.3.x) is introduced -->
+		<exercise label="APEX-PROTEUS-shell-4-v2" component="proteus">
+			<title>Shell Method Matching (version 2)</title>
+			<statement>
+				<p>
+					Consider the region bounded by <m>y = x^2</m> and <m>y = 1</m>
+					for <m>0 \le x \le 1</m>.
+				</p>
+				<sidebyside width="50%">
+					<image>
+						<latex-image>
+							<xi:include href="tikz-figs/tikz-washer-x.tex" parse="text" />
+						</latex-image>
+					</image>
+				</sidebyside>
+				<p>
+					Match each radius–height pair with the axis of rotation
+					it corresponds to in the Shell Method.
+				</p>
+				<sidebyside widths="32% 68%">
+					<p><m>\small\text{Radius / Height}</m> ⤵︎</p>
+					<p><m>\small\text{Axis of Rotation}</m> ⤵︎</p>
+				</sidebyside>
+			</statement>
+			<feedback>
+				<p>
+					In the Shell Method, each cylindrical shell has volume
+					<m>2\pi\,(\text{radius})(\text{height})\,\Delta x</m>
+					(or <m>\Delta y</m>). The <em>radius</em> is the
+					perpendicular distance from the shell to the axis of rotation,
+					and the <em>height</em> is the length of the shell parallel
+					to the axis.
+				</p>
+			</feedback>
+			<cardsort>
+				<match>
+					<premise><m>\text{radius} = x</m></premise>
+					<premise><m>\text{height} = 1 - x^2</m></premise>
+					<response><m>x = 0</m></response>
+				</match>
+				<match>
+					<premise><m>\text{radius} = y</m></premise>
+					<premise><m>\text{height} = \sqrt{y}</m></premise>
+					<response><m>y = 0</m></response>
+				</match>
+				<match>
+					<premise><m>\text{radius} = 1 - x</m></premise>
+					<premise><m>\text{height} = 1 - x^2</m></premise>
+					<response><m>x = 1</m></response>
+				</match>
+				<match>
+					<premise><m>\text{radius} = 1 - y</m></premise>
+					<premise><m>\text{height} = \sqrt{y}</m></premise>
+					<response><m>y = 1</m></response>
+				</match>
+				<match>
+					<premise><m>\text{radius} = 2 - y</m></premise>
+					<premise><m>\text{height} = \sqrt{y}</m></premise>
+					<response><m>y = 2</m></response>
+				</match>
+				<match>
+					<premise><m>\text{radius} = 1 - x^2</m></premise>
+					<premise><m>\text{height} = x</m></premise>
+				</match>
+			</cardsort>
+		</exercise>
+
+		<exercise label="APEX-PROTEUS-shell-5-v1" language="math">
+			<title>Construct the Volume Integral (Shell Method)</title>
+
+			<statement>
+				<p>
+					Suppose the region bounded by
+					<me>y = x\ \text{and}\ y = x^2\ \text{for}\ 0 \le x \le 1</me>
+					is revolved about the <m>y</m>-axis.
+				</p>
+				<p>
+					Using the blocks below, construct the integral that gives the
+					volume using the shell method.
 				</p>
 			</statement>
-			<response/>
+			<blocks layout="horizontal" randomize="yes">
+				<block order="1"><m>V = 2\pi</m></block>
+				<block order="2"><m>\int_0^1</m></block>
+				<block order="3"><m>x(</m></block>
+				<block order="4"><m>x</m></block>
+				<block order="5"><m>-</m></block>
+				<block order="6"><m>x^2</m></block>
+				<block order="7"><m>)dx</m></block>
+				<block correct="no"><m>V = \pi</m></block>
+				<block correct="no"><m>\int_{-1}^{1}</m></block>
+				<block correct="no"><m>x^4</m></block>
+			</blocks>
+		</exercise>
+
+		<!-- SHELL Q3: "Identify the Error" MCQ
+				Skill tested: correctly computing the radius when the axis of
+				rotation is a vertical line other than x = 0.
+				Place after off-axis shell examples are introduced. -->
+		<exercise label="APEX-PROTEUS-shell-8-v1" component="proteus">
+			<title>Shell Method: Identify the Error</title>
+			<statement>
+				<p>
+					The region bounded by <m>y = x^2</m> and <m>y = 0</m> for
+					<m>0 \le x \le 2</m> is revolved about the line
+					<m>x = 3</m>.  A student sets up the following integral:
+					<me>V = 2\pi\int_0^2 x \cdot x^2\,dx = 2\pi\int_0^2 x^3\,dx.</me>
+					Which statement best identifies the error?
+				</p>
+			</statement>
+			<choices randomize="yes">
+				<choice correct="yes">
+					<statement>
+						<p>
+							The radius of each shell is the distance from the
+							shell to the axis <m>x = 3</m>, which is
+							<m>3 - x</m>, not <m>x</m>.  The correct integral is
+							<m>V = 2\pi\displaystyle\int_0^2
+							(3-x)\cdot x^2\,dx</m>.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Correct!  When revolving about <m>x = c</m> with
+							<m>c &gt; b</m>, the shell at position <m>x</m> has
+							radius <m>c - x</m> (the horizontal distance to the
+							axis).  Using <m>x</m> alone assumes the axis is the
+							<m>y</m>-axis (<m>x = 0</m>), which is not the case
+							here.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The limits of integration should run from <m>0</m>
+							to <m>3</m> to match the position of the axis.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  The limits of integration always span
+							the <m>x</m>-extent of the region being revolved,
+							which is <m>[0,2]</m>.  Moving the axis of rotation
+							does not change the limits; it changes the
+							<em>radius expression</em> inside the integrand.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The height of each shell should be <m>2 - x^2</m>
+							rather than <m>x^2</m>, because the height is
+							measured downward from <m>y = 2</m>.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  The height of a shell is the vertical
+							extent of the region at a given <m>x</m>, which is
+							<m>x^2 - 0 = x^2</m>.  The value <m>y = 2</m> has
+							no special role in this problem; the upper boundary
+							is the parabola <m>y = x^2</m>, not a horizontal
+							line.
+						</p>
+					</feedback>
+				</choice>
+				<choice>
+					<statement>
+						<p>
+							The factor <m>2\pi</m> should be replaced by
+							<m>\pi</m>, because the axis of rotation is a
+							vertical line rather than a horizontal one.
+						</p>
+					</statement>
+					<feedback>
+						<p>
+							Incorrect.  The factor <m>2\pi</m> in the shell
+							method represents the circumference of each
+							cylindrical shell and is always present regardless
+							of whether the axis is horizontal or vertical.  The
+							orientation of the axis determines the variable of
+							integration and the radius expression, not the
+							leading constant.
+						</p>
+					</feedback>
+				</choice>
+			</choices>
 		</exercise>
 
 	</section>

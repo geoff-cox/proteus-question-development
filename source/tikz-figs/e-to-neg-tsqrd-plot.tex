@@ -1,0 +1,71 @@
+\begin{tikzpicture}[domain=-3:3, samples=200, scale=0.7]
+			
+    % === Piecewise Function with 2 Parts ===
+
+    % === colors ===
+    \def\ofColor{blue}				\def\ofFill{\ofColor!15}
+    \def\onColor{green!60!black}	\def\onFill{\onColor!15}
+
+    % === figure/domain/tick bounds ===
+    \def\tmin{-3.8}	\def\tmax{3.8}
+    \def\ymin{-1.3}	\def\ymax{2.8}
+
+    \def\a{\tmin}	\def\b{\tmax}
+    
+    \def\tticks{
+        -2 / $-2$,
+        -1 / $-1$,
+        1  / $1$,
+        2  / $2$,
+    }
+    \def\yticks{
+        -1 / $-1$,
+        1  / $1$,
+    }
+
+    % === Transistions ===
+    \def\c{1}
+    \fill[\ofFill]				(\tmin	, \ymin) rectangle (\c		, \ymax);
+    \fill[\onFill]				(\c		, \ymin) rectangle (\tmax	, \ymax);
+    \draw[very thin, dashed]	(\c		, \ymin) 		-- (\c		, \ymax);
+    \node[font=\small, below] at ({\c}, -0.5) {$c$};
+
+    % === Function definitions ===
+    \newcommand{\f}[1]{2*exp(-(0.5*#1*#1))}	\def\ftex{2e^{-\sfrac{t^2}{2}}}
+    \newcommand{\uL}[1]{0}	\def\uLtex{0}
+    \newcommand{\uR}[1]{1}	\def\uRtex{1}
+
+    % === Axes ===
+    \draw[->] (\tmin, 0) -- (\tmax, 0);
+    \draw[->] (0, \ymin) -- (0, \ymax);
+    \node[font=\scriptsize, below] at (\tmax - 0.1 , 0) {$t$};
+    
+    % === Tick marks and labels ===
+    \foreach \t /\n in \tticks {
+        \draw[gray, shift={(\t,0)}] (0pt,2pt) -- (0pt,-2pt) node[black, below, font=\scriptsize] {\n};
+    }
+
+    \foreach \t /\n in \yticks {
+        \draw[gray, shift={(0,\t)}] (2pt,0pt) -- (-2pt,0pt) node[black, left, font=\scriptsize] {\n};
+    }
+
+    % === Function plots on [a, c] ===
+    \draw[\onColor, thin, dashed]	plot[domain=\a:\c, variable=\t]	(\t, {1-\uL{\t}});
+    \draw[\onColor, very thick]		plot[domain=\a:\c, variable=\t]	(\t, {\f{\t}});
+    
+    % === Function plots on [c, b] ===
+    \draw[\ofColor!50, thin, dashed]	plot[domain=\c:\b, variable=\t]			(\t, {\f{\t}});
+    \draw[\ofColor, very thick]			plot[domain=\c+0.06:\b, variable=\t]	(\t, {1-\uR{\t}});
+
+    % === Points at t=c ===
+    \draw[\ofColor, very thick]	(\c,{1-\uR{\c}})	circle[radius=3pt];
+    \fill[\onColor]					(\c,{\f{\c}})	circle[radius=3pt];
+
+    % === Function Labels ===
+    \node[\onColor, font=\scriptsize, above] at ({(\tmin + \c)/2-1}, 1)	{$1-u(t) = 1$};
+    \node[\ofColor, font=\scriptsize, above] at ({(\c + \tmax)/2}, 0)		{$1-u(t) = 0$};
+    \node[\onColor, font=\scriptsize, above] at ({(\tmin + \c)/2}, \ymin)	{$\text{``off''}$};
+    \node[\ofColor, font=\scriptsize, above] at ({(\c + \tmax)/2}, \ymin)	{$\text{``on''}$};
+    \node[font=\small, above] at ({(\c + \tmax)/2}, 1)		{$\ftex\cdot\color{\ofColor}{0}$};
+    \node[font=\small, below] at ({(\tmin + \c)/2}, \ymax)	{$\ftex\cdot\color{\onColor}{1}$};
+\end{tikzpicture}
