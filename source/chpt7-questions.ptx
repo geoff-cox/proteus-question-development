@@ -887,7 +887,7 @@
 				<sidebyside width="50%">
 					<image>
 						<latex-image>
-							<xi:include href="tikz-figs/tikz-washer-x.tex" parse="text" />
+							<xi:include href="tikz-figs/tikz-shell-x.tex" parse="text" />
 						</latex-image>
 					</image>
 				</sidebyside>
