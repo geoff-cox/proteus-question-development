@@ -1135,4 +1135,259 @@
 
 	</section>
 
+	<!-- ============================================================ -->
+	<!-- Shell Method Reading Checkpoint Questions                     -->
+	<!-- Placement: throughout the narrative of sec_shell_method.ptx   -->
+	<!-- ============================================================ -->
+
+	<!-- Q1: Place after the opening two paragraphs (lines 4–17) that -->
+	<!-- introduce the Shell Method as an alternative to the Disk/     -->
+	<!-- Washer Methods by slicing parallel to the axis of rotation.   -->
+	<exercise label="APEX-PROTEUS-shell-method-1-v1" component="proteus">
+		<title>Slicing Direction</title>
+		<statement correct="no">
+			<p>
+				In the Shell Method, the solid is sliced perpendicular to the axis of rotation, just like in the Disk/Washer Method.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				False — the Disk/Washer Method slices perpendicular to the axis of rotation (creating cross-sectional disks or washers), but the Shell Method slices <em>parallel</em> to the axis of rotation, producing thin cylindrical shells instead.
+			</p>
+		</feedback>
+	</exercise>
+
+	<!-- Q2: Place after the shell volume derivation (lines 291–325)  -->
+	<!-- where V ≈ 2π r h Δx is established from unrolling the shell. -->
+	<exercise label="APEX-PROTEUS-shell-method-2-v1" component="proteus">
+		<title>Unrolling a Cylindrical Shell</title>
+		<statement>
+			<p>
+				A single cylindrical shell has radius <m>r</m>, height <m>h</m>, and thickness <m>\Delta x</m>. When the shell is <q>cut and unrolled,</q> the resulting shape is approximately a rectangular solid. What is the approximate volume of that rectangular solid?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>2\pi r h\,\Delta x</m></p></statement>
+				<feedback><p>Correct — cutting the shell and laying it flat gives a rectangle with length <m>2\pi r</m> (the circumference), height <m>h</m>, and depth <m>\Delta x</m>, so <m>V \approx 2\pi r h\,\Delta x</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\pi r^2 h</m></p></statement>
+				<feedback><p>This is the volume of a solid cylinder, not a thin cylindrical shell. The shell has a small thickness <m>\Delta x</m>, which must appear in the volume expression.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\pi r h\,\Delta x</m></p></statement>
+				<feedback><p>Close, but the circumference of the shell is <m>2\pi r</m>, not <m>\pi r</m>. When you unroll the shell, the length of the resulting rectangle is the full circumference.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>2\pi r^2\,\Delta x</m></p></statement>
+				<feedback><p>This expression is missing the height <m>h</m>. The unrolled shell is a rectangular solid whose dimensions are <m>2\pi r</m> (length), <m>h</m> (height), and <m>\Delta x</m> (depth).</p></feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Q3: Place right after the Shell Method formula (Key Idea,     -->
+	<!-- lines 428–441) and the two special cases (lines 443–462).     -->
+	<exercise label="APEX-PROTEUS-shell-method-3-v1" component="proteus">
+		<title>Shell Method Formula Components</title>
+		<statement>
+			<p>
+				Match each component in the Shell Method formula, <m>V = 2\pi\displaystyle\int_a^b r(x)\,h(x)\, dx</m>, with its geometric meaning.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				In the Shell Method, <m>r(x)</m> is always the distance from the sample shell to the axis of rotation, and <m>h(x)</m> is the height of the shell (determined by the bounding curves). The factor <m>2\pi</m> comes from unrolling the shell into a rectangle of length <m>2\pi r</m>.
+			</p>
+		</feedback>
+		<cardsort>
+			<match>
+				<premise><m>r(x)</m></premise>
+				<response>Distance from the axis of rotation to the shell</response>
+			</match>
+			<match>
+				<premise><m>h(x)</m></premise>
+				<response>Height of the cylindrical shell</response>
+			</match>
+			<match>
+				<premise><m>2\pi</m></premise>
+				<response>Comes from the circumference of the shell</response>
+			</match>
+			<match>
+				<premise><m>dx</m></premise>
+				<response>Thickness of the cylindrical shell</response>
+			</match>
+			<match>
+				<premise><m>\pi</m></premise>
+			</match>
+		</cardsort>
+	</exercise>
+
+	<!-- Q4: Place after the special-case list (lines 443–462) where  -->
+	<!-- r(x) = x when revolving around the y-axis is stated.         -->
+	<exercise label="APEX-PROTEUS-shell-method-4-v1" component="proteus">
+		<title>Radius When Revolving Around the <m>y</m>-axis</title>
+		<statement correct="yes">
+			<p>
+				When using the Shell Method to revolve a region around the <m>y</m>-axis, the radius function is simply <m>r(x) = x</m>.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				True — the radius of each shell is the horizontal distance from the shell to the axis of rotation. Since the <m>y</m>-axis is <m>x = 0</m>, the distance from <m>x</m> to <m>x = 0</m> is just <m>x</m>.
+			</p>
+		</feedback>
+	</exercise>
+
+	<!-- Q5: Place after Example 7.3.1 (ex_shell1, lines 468–559)    -->
+	<!-- which sets up and evaluates a shell integral around the       -->
+	<!-- y-axis for y = 1/(1+x^2).                                    -->
+	<exercise label="APEX-PROTEUS-shell-method-5-v1" component="proteus">
+		<title>Setting Up a Shell Integral</title>
+		<statement>
+			<p>
+				The region bounded by <m>y = \sqrt{x}</m>, <m>y = 0</m>, <m>x = 0</m>, and <m>x = 4</m> is revolved about the <m>y</m>-axis. Using the Shell Method, which integral gives the volume of the resulting solid?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>\displaystyle 2\pi\int_0^4 x\sqrt{x}\, dx</m></p></statement>
+				<feedback><p>Correct — rotating about the <m>y</m>-axis means <m>r(x) = x</m>. The shell height is the vertical distance from <m>y = 0</m> to <m>y = \sqrt{x}</m>, so <m>h(x) = \sqrt{x}</m>. Therefore <m>V = 2\pi\int_0^4 x\cdot\sqrt{x}\, dx</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle 2\pi\int_0^4 \sqrt{x}\, dx</m></p></statement>
+				<feedback><p>This is missing the radius factor <m>r(x) = x</m>. The Shell Method integrand is <m>r(x)\cdot h(x)</m>, not just <m>h(x)</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle \pi\int_0^4 \left(\sqrt{x}\right)^2\, dx</m></p></statement>
+				<feedback><p>This is the Disk Method integral (cross-sectional area <m>\pi R^2</m>), not the Shell Method. The Shell Method uses <m>2\pi\int r(x)\,h(x)\, dx</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>\displaystyle 2\pi\int_0^2 y\cdot y^2\, dy</m></p></statement>
+				<feedback><p>Switching to <m>y</m> would be appropriate for the Shell Method only if the axis of rotation were horizontal. Here the axis is the <m>y</m>-axis (vertical), so we integrate with respect to <m>x</m>.</p></feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Q6: Place after Example 7.3.2 (ex_shell2, lines 567–852)    -->
+	<!-- which revolves a triangle about x = 3, showing r(x) = 3−x.  -->
+	<exercise label="APEX-PROTEUS-shell-method-6-v1" component="proteus">
+		<title>Radius for a Non-Standard Vertical Axis</title>
+		<statement>
+			<p>
+				A region is revolved about the vertical line <m>x = 5</m>. If a sample shell is located at position <m>x</m> (with <m>x \lt 5</m>), what is the radius function <m>r(x)</m>?
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>r(x) = 5 - x</m></p></statement>
+				<feedback><p>Correct — the radius is the distance from the shell to the axis of rotation. Since the axis is at <m>x = 5</m> and the shell is at <m>x</m>, that distance is <m>5 - x</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = x</m></p></statement>
+				<feedback><p>This would be the radius only when revolving about the <m>y</m>-axis (<m>x = 0</m>). For any other vertical line, the radius is the distance from <m>x</m> to that line.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = x - 5</m></p></statement>
+				<feedback><p>Since <m>x \lt 5</m>, this expression would be negative. Distance (and therefore the radius) must be positive: <m>r(x) = 5 - x</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>r(x) = x + 5</m></p></statement>
+				<feedback><p>Adding <m>x</m> and <m>5</m> does not give a distance between them. The radius is the <em>difference</em> <m>|x - 5| = 5 - x</m> when <m>x \lt 5</m>.</p></feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Q7: Place after the paragraph (lines 854–858) that introduces -->
+	<!-- revolving around a horizontal axis and switching to y.         -->
+	<exercise label="APEX-PROTEUS-shell-method-7-v1" component="proteus">
+		<title>Horizontal Axis of Rotation</title>
+		<statement>
+			<p>
+				When using the Shell Method to revolve a region around a <em>horizontal</em> axis (such as the <m>x</m>-axis), the radius and height functions must be written in terms of:
+			</p>
+		</statement>
+		<choices randomize="yes">
+			<choice correct="yes">
+				<statement><p><m>y</m></p></statement>
+				<feedback><p>Correct — when revolving around a horizontal axis with the Shell Method, the shells are horizontal. Their radius and height are measured as functions of <m>y</m>, and the integral is <m>2\pi\int r(y)\,h(y)\, dy</m>.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p><m>x</m></p></statement>
+				<feedback><p>When the axis of rotation is horizontal, the shells stack vertically, so the natural variable is <m>y</m>, not <m>x</m>. (Using <m>x</m> would correspond to the Washer Method for a horizontal axis.)</p></feedback>
+			</choice>
+			<choice>
+				<statement><p>Either <m>x</m> or <m>y</m>; it does not matter.</p></statement>
+				<feedback><p>The variable must match the orientation of the shells. For a horizontal axis, shells are horizontal, so <m>y</m> is the correct variable.</p></feedback>
+			</choice>
+			<choice>
+				<statement><p>A parameter <m>t</m>.</p></statement>
+				<feedback><p>A parameter is not needed here. The Shell Method uses either <m>x</m> or <m>y</m> depending on the axis orientation.</p></feedback>
+			</choice>
+		</choices>
+	</exercise>
+
+	<!-- Q8: Place after Example 7.3.4 (ex_shell4, lines 1157–1437)  -->
+	<!-- which highlights when the Shell Method is easier than the     -->
+	<!-- Washer Method (sin(x) about the y-axis).                     -->
+	<exercise label="APEX-PROTEUS-shell-method-8-v1" component="proteus">
+		<title>Shell Method as an Alternative</title>
+		<statement correct="no">
+			<p>
+				The Shell Method can only be used when the Washer Method fails.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				False — both methods can often be applied to the same problem. The Shell Method is an <em>alternative</em> to the Washer Method, not a last resort. Sometimes one method leads to a simpler integral than the other, so having both as options is valuable.
+			</p>
+		</feedback>
+	</exercise>
+
+	<!-- Q9: Place after the Washer/Shell summary table (Key Idea,    -->
+	<!-- lines 1443–1479) that compares the two methods.               -->
+	<exercise label="APEX-PROTEUS-shell-method-9-v1" component="proteus">
+		<title>Washer vs. Shell Method</title>
+		<statement>
+			<p>
+				Match each integral form on the left with the method and axis of rotation on the right.
+			</p>
+		</statement>
+		<feedback>
+			<p>
+				The Washer Method always squares the radius functions (<m>R^2 - r^2</m>) and uses <m>\pi</m>, while the Shell Method multiplies the radius by the height and uses <m>2\pi</m>. The variable of integration tells you whether the method slices perpendicular or parallel to the axis.
+			</p>
+		</feedback>
+		<cardsort>
+			<match>
+				<premise><m>\displaystyle 2\pi\int_a^b r(x)\,h(x)\, dx</m></premise>
+				<response>Shell Method — vertical axis</response>
+			</match>
+			<match>
+				<premise><m>\displaystyle \pi\int_a^b \Big(R(x)^2 - r(x)^2\Big)\, dx</m></premise>
+				<response>Washer Method — horizontal axis</response>
+			</match>
+			<match>
+				<premise><m>\displaystyle 2\pi\int_c^d r(y)\,h(y)\, dy</m></premise>
+				<response>Shell Method — horizontal axis</response>
+			</match>
+			<match>
+				<premise><m>\displaystyle \pi\int_c^d \Big(R(y)^2 - r(y)^2\Big)\, dy</m></premise>
+				<response>Washer Method — vertical axis</response>
+			</match>
+		</cardsort>
+	</exercise>
+
+	<!-- Q10: Place after the closing paragraphs (lines 1481–1498)   -->
+	<!-- that emphasize the "approximate → limit → exact" philosophy. -->
+	<exercise label="APEX-PROTEUS-shell-method-10-v1" component="proteus">
+		<title>From Shells to Integral</title>
+		<statement>
+			<p>
+				Describe, in your own words, how the Shell Method uses the idea of <q>approximate, then refine</q> to arrive at an exact volume. In particular, what role does the Riemann Sum play?
+			</p>
+		</statement>
+		<response/>
+	</exercise>
+
 </chapter>
